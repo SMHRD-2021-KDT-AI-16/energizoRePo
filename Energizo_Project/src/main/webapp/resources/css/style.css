@@ -475,3 +475,40 @@
  .hooms-N51 .contents-btn { margin-top: 4rem; }
  .hooms-N51 .contents-btn .btnset { max-width: 100%; }
 }
+
+/* hooms-N24 [chlQajEcE4] */
+.hooms-N24 .contents-inner { padding: 10rem 2.4rem; }
+.hooms-N24 .textset.textset-h2 { margin-bottom: 4rem; }
+.hooms-N24 .contents-cardgroup { margin-top: 4rem; }
+.hooms-N24 .cardset.cardset-hor { justify-content: space-between; }
+.hooms-N24 .cardset.cardset-hor+.cardset.cardset-hor { margin-top: 4rem; }
+.hooms-N24 .cardset-body { align-self: flex-end; }
+.hooms-N24 .cardset.cardset-hor:nth-child(1) .cardset-body { padding: 0 1.5rem 6.7rem 4rem; }
+.hooms-N24 .cardset.cardset-hor:nth-child(2) .cardset-body { padding: 0 4rem 6.7rem 1.5rem; }
+.hooms-N24 .cardset.cardset-hor .cardset-figure { align-self: flex-start; width: 62rem; height: 50rem; }
+@media (max-width: 1200px) {
+ .hooms-N24 .cardset.cardset-hor .cardset-figure { width: 50%; }
+}
+@media (max-width: 992px) {
+ .hooms-N24 .contents-inner { padding: 6rem 2.4rem; }
+ .hooms-N24 .textset.textset-h2 { margin-bottom: 2.4rem; }
+ .hooms-N24 .contents-cardgroup { margin-top: 1.8rem; }
+ .hooms-N24 .cardset.cardset-hor { flex-direction: column; }
+ .hooms-N24 .cardset.cardset-hor:nth-child(2) { flex-direction: column-reverse; }
+ .hooms-N24 .cardset.cardset-hor+.cardset.cardset-hor { margin-top: 1.8rem; }
+ .hooms-N24 .cardset.cardset-hor .cardset-body { padding: 1.4rem 0 0 0 !important; }
+ .hooms-N24 .cardset.cardset-hor .cardset-figure { width: 100%; height: 30rem; }
+}
+
+/* hooms-N25 [ohLqAjeCeR] */
+.hooms-N25 .contents-container { position: relative; height: 36rem; text-align: center; }
+.hooms-N25 .contents-backimg { width: 100%; height: 100%; object-fit: cover; }
+.hooms-N25 .contents-body { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; padding: 2.4rem; }
+.hooms-N25 .contents-title { font-family: var(--ff-ko2); font-size: 3.2rem; line-height: 4.2rem; font-weight: 500; color: #363636; }
+.hooms-N25 .btnset { width: 100%; max-width: 17.6rem; margin-top: 2.4rem; padding: 0 3rem; background-color: var(--white); border: 0; color: var(--text-color1); }
+@media (max-width: 992px) {
+ .hooms-N25 .contents-container { height: 20rem; }
+ .hooms-N25 .contents-title { line-height: 3.4rem; font-size: 2.4rem; }
+ .hooms-N25 .btnset { margin-top: 1.2rem; max-width: 13.4rem; }
+}
+
