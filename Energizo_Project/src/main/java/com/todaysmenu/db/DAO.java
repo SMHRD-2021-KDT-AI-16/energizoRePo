@@ -1,5 +1,5 @@
 package com.todaysmenu.db;
 
-public class abc2 {
+public class DAO {
 
 }
