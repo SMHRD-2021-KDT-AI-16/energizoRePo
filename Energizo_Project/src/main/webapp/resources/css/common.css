@@ -253,7 +253,7 @@
 .hooms-N55.header-search-active .header-search-form { display: flex; padding: 0 2.4rem; }
 .hooms-N55 .header-container { position: relative; display: flex; align-items: center; justify-content: space-between; width: 100%; height: 10rem; padding: 0 14.2rem; transition: 0.3s; z-index: 200; }
 .hooms-N55 .header-title { margin-bottom: 0; }
-.hooms-N55 .header-logo { width: 11rem; height: 4rem; background-image: url("../../resources/images/img_logo_black.png"); background-repeat: no-repeat; background-size: contain; background-position: center; }
+.hooms-N55 .header-logo { width: 11rem; height: 11rem; background-image: url("../../resources/images/오늘에 메뉴 로고(배경투명화).png"); background-repeat: no-repeat; background-size: contain; background-position: center; }
 .hooms-N55 .header-gnblist { display: flex; justify-content: center; align-items: center; }
 .hooms-N55 .header-gnbitem { position: relative; display: flex; align-items: center; height: 10rem; }
 .hooms-N55 .header-gnblink { position: relative; padding: 0 3rem; font-size: var(--fs-p1); font-weight: 500; text-align: center; white-space: nowrap; }
@@ -344,7 +344,7 @@
 
 /* hooms-N55 [uJLQ6D34F4] : 편집됨 */
 .hooms-N55[data-bid=uJLQ6D34F4].header-search-active .btn-close { background-image: url("../../resources/icons/ico_close_black.svg"); }
-.hooms-N55[data-bid=uJLQ6D34F4] .header-logo { background-image: url("../../resources/images/img_logo_black.png"); }
+.hooms-N55[data-bid=uJLQ6D34F4] .header-logo { background-image: url("../../resources/images/오늘에 메뉴 로고(배경투명화).png"); }
 .hooms-N55[data-bid=uJLQ6D34F4] .header-gnblink { padding: 0 3rem; font-size: var(--fs-p1); font-weight: 500; text-align: center; white-space: nowrap; }
 .hooms-N55[data-bid=uJLQ6D34F4] .btn-profile { background-image: url("../../resources/icons/ico_profile_black.svg"); }
 .hooms-N55[data-bid=uJLQ6D34F4] .btn-search { background-image: url("../../resources/icons/ico_search_black.svg"); }
@@ -372,7 +372,7 @@
 
 /* hooms-N55 [NylqA8BvLM] : 편집됨 */
 .hooms-N55[data-bid=NylqA8BvLM].header-search-active .btn-close { background-image: url("../../resources/icons/ico_close_black.svg"); }
-.hooms-N55[data-bid=NylqA8BvLM] .header-logo { background-image: url("../../resources/images/img_logo_black.png"); }
+.hooms-N55[data-bid=NylqA8BvLM] .header-logo { background-image: url("../../resources/images/오늘에 메뉴 로고(배경투명화).png"); }
 .hooms-N55[data-bid=NylqA8BvLM] .header-gnblink { padding: 0 3rem; font-size: var(--fs-p1); font-weight: 500; text-align: center; white-space: nowrap; }
 .hooms-N55[data-bid=NylqA8BvLM] .btn-profile { background-image: url("../../resources/icons/ico_profile_black.svg"); }
 .hooms-N55[data-bid=NylqA8BvLM] .btn-search { background-image: url("../../resources/icons/ico_search_black.svg"); }
