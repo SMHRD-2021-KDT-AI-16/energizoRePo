@@ -15,7 +15,7 @@
   <meta property="og:description" content="웹사이트입니다">
   <meta property="og:image" content="https://웹사이트/images/opengraph.png">
   <meta property="og:url" content="https://웹사이트">
-  <title>내 정보</title>
+  <title>로그인</title>
   <link rel="stylesheet" href="../resources/css/setting.css">
   <link rel="stylesheet" href="../resources/css/plugin.css">
   <link rel="stylesheet" href="../resources/css/template.css">
@@ -25,117 +25,62 @@
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
   <!-- [S]hooms-N55 -->
-  <header class="hooms-N55" data-bid="uClqa8c34N" id="">
+  <header class="hooms-N55" data-bid="NylqA8BvLM" id="">
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
           <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
         </h1>
       </div>
-      <div class="header-center">
-        <ul class="header-gnblist">
-          <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
-              <span>캘린더</span>
-            </a>
-            
-          </li>
-          <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
-              <span>AI 식단 추천</span>
-            </a>
-            
-          </li>
-          <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
-              <span>레시피 저장소</span>
-            </a>
-          </li>
-          <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
-              <span>레시피 영상</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="header-right">
-        <div class="header-utils">
-          <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
-          <button class="btn-close header-utils-btn" title="close"></button>
-        </div>
-      </div>
-      
     </div>
-   
     <div class="header-dim"></div>
   </header>
   <!-- [E]hooms-N55 -->
   <main class="th-layout-main ">
-    <!-- [S]hooms-N46 -->
-    <div class="hooms-N46" data-bid="XClqA8C36W">
+    <!-- [S]hooms-N52 -->
+    <div class="hooms-N52" data-bid="PhlQA8bVNV" id="">
       <div class="contents-inner">
-        <div class="contents-container container-md">
+        <div class="contents-container">
           <div class="textset textset-h2">
-            <h2 class="textset-tit">마이 페이지</h2>
+            <h2 class="textset-tit">로그인</h2>
+            <p class="textset-desc">오늘의 메뉴를 방문해주셔서 감사합니다.</p>
           </div>
-          <div class="contents-top">
-            <div class="contents-tit">
-              
-              <h3>
-                <strong>홍길동</strong>님 안녕하세요!
-              </h3>
+          
+          <form action="LoginService.do" method="post">
+          <div class="contents-form">
+            <div class="inputset inputset-lg inputset-label">
+              <label>
+                <h6 class="inputset-tit">아이디</h6>
+                <input name="id" type="text" class="inputset-input form-control" placeholder="아이디를 입력해주세요." aria-label="내용">
+              </label>
             </div>
-            
+            <div class="inputset inputset-lg inputset-label">
+              <label>
+                <h6 class="inputset-tit">비밀번호</h6>
+                <input name="pw" type="password" class="inputset-input form-control" placeholder="비밀번호를 입력해주세요." aria-label="내용">
+              </label>
+            </div>            
+            <button type="submit" class="btnset btnset-lg">로그인</button>
           </div>
-          <div class="contents-bottom">
-            <ul class="contents-list">
-              <li class="contents-item">
-                <strong>아이디</strong>
-                <span>hong123</span>
-              </li>
-              <li class="contents-item">
-                <strong>비밀번호</strong>
-                <span>1234</span>
-              </li>
-              <li class="contents-item">
-                <strong>이름</strong>
-                <span>홍길동</span>
-              </li>
-              <li class="contents-item">
-                <strong>나이</strong>
-                <span>20</span>
-              </li>
-              <li class="contents-item">
-                <strong>성별</strong>
-                <span>남</span>
-              </li>
-             
-            </ul>
-            <div class="contents-btn">
-              <a class="btnset" href="update.jsp?id=">내 정보 수정</a>
-              <a class="btnset btnset-ghost" href="deleteService.do?id=">회원탈퇴</a>
-            </div>
+          </form>
+          
+          <ul class="contents-list">
+			 <li class="contents-item">
+              <a href="intro.html" class="contents-link">첫 화면으로</a>
+            </li>
+            <li class="contents-item">
+              <a href="signup.html" class="contents-link">회원가입</a>
+            </li>
+          </ul>
+          <div class="contents-start">
           </div>
         </div>
       </div>
     </div>
-    <!-- [E]hooms-N46 -->
-    <!-- [S]hooms-N47 -->
-    <div class="hooms-N47" data-bid="eDLqA8c37n" id="">
-    </div>
-    <!-- [E]hooms-N47 -->
-    <!-- [S]hooms-N48 -->
-    <div class="hooms-N48" data-bid="uILQa8C387">
-      
-    </div>
-    <!-- [E]hooms-N48 -->
-    <!-- [S]hooms-N9 -->
-    <div class="hooms-N9" data-bid="uwlqa8c38r" id="">
-    </div>
-    <!-- [E]hooms-N9 -->
+    <!-- [E]hooms-N52 -->
   </main>
   <!-- [S]hooms-N57 -->
- 
+
   <!-- [E]hooms-N57 -->
   <script src="../resources/js/setting.js"></script>
   <script src="../resources/js/plugin.js"></script>
