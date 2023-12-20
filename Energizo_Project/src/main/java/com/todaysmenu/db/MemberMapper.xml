@@ -16,8 +16,8 @@
   						>>java안에 있는 기본자료형(int 등)이라면 굳이 안써도됨!
   		 -->
  <insert id="join" parameterType="com.todaysmenu.model.MemberVO">
-   INSERT INTO WEB_MEMBER(email,pw,tel,address)
-   VALUES (#{email},#{pw},#{tel},#{address})
+   INSERT INTO User_info(id,pw,age,gender,name)
+   VALUES (#{id},#{pw},#{age},#{gender},#{name})
   </insert>
   
   
