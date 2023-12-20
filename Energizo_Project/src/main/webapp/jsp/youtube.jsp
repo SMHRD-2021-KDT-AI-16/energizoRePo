@@ -15,7 +15,7 @@
   <meta property="og:description" content="웹사이트입니다">
   <meta property="og:image" content="https://웹사이트/images/opengraph.png">
   <meta property="og:url" content="https://웹사이트">
-  <title>게시글 작성 페이지 | 111</title>
+  <title>레시피 영상 | 111</title>
   <link rel="stylesheet" href="../resources/css/setting.css">
   <link rel="stylesheet" href="../resources/css/plugin.css">
   <link rel="stylesheet" href="../resources/css/template.css">
@@ -25,7 +25,7 @@
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
   <!-- [S]hooms-N54 -->
-  <header class="hooms-N54" data-bid="JsLqA8aT4M" id="">
+  <header class="hooms-N54" data-bid="yiLQA8BBLn" id="">
     <div class="header-inner">
       <div class="header-container container-lg">
         <div class="header-left">
@@ -56,20 +56,6 @@
               <a class="header-gnblink" href="javascript:void(0)">
                 <span>NOTICE</span>
               </a>
-            </li>
-            <li class="header-gnbitem">
-              <ul class="header-sublist">
-                <li class="header-subitem">
-                  <a class="header-sublink" href="javascript:void(0)">
-                    <span>ARTICLE</span>
-                  </a>
-                </li>
-                <li class="header-subitem">
-                  <a class="header-sublink" href="javascript:void(0)">
-                    <span>MEDIA</span>
-                  </a>
-                </li>
-              </ul>
             </li>
           </ul>
         </div>
@@ -202,47 +188,176 @@
   <!-- [E]hooms-N54 -->
   <main class="th-layout-main ">
     <!-- [S]hooms-N2 -->
-    <div class="hooms-N2" data-bid="SllQa8at6Q" id="">
+    <div class="hooms-N2" data-bid="GtlqA8bBNE" id="">
     </div>
     <!-- [E]hooms-N2 -->
     <!-- [S]hooms-N58 -->
-    <div class="hooms-N58" data-bid="KDLqa8at7a" id="">
+    <div class="hooms-N58" data-bid="lQlQA8bbo0" id="">
       <div class="contents-container container-md">
         <div class="tabset tabset-solid">
         </div>
       </div>
     </div>
     <!-- [E]hooms-N58 -->
-    <!-- [S]hooms-N37 -->
-    <div class="hooms-N37" data-bid="goLqA8AT7W" id="">
+    <!-- [S]hooms-N31 -->
+    <div class="hooms-N31" data-bid="OtLQa8BBoj">
       <div class="contents-inner">
         <div class="contents-container container-md">
           <div class="textset textset-h2">
-            <h2 class="textset-tit">Q&amp;A</h2>
+            <h2 class="textset-tit">유튜브 레시피 영상</h2>
           </div>
-          <div class="contents-titgroup">
-            <h5 class="contents-tit">
-              <span>안녕하세요. 문의드립니다.</span>
-            </h5>
-            <span class="contents-date">
-               2023.01.01 </span>
+          <div class="tabset tabset-brick">
+            <ul class="tabset-list tabset-sm tabset-fill">
+              <li class="tabset-item">
+                <a class="tabset-link" href="javascript:void(0)">
+                  <span>뚝딱이형</span>
+                </a>
+              </li>
+              <li class="tabset-item">
+                <a class="tabset-link" href="javascript:void(0)">
+                  <span>자취의신</span>
+                </a>
+              </li>
+              <li class="tabset-item">
+                <a class="tabset-link" href="javascript:void(0)">
+                  <span>백종원의 쿠킹로그</span>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="contents-group">
-            <div class="contents-group-top">
-              
-              <p class="contents-ask"> 템플릿 하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들고 HTML 코드 산출물을 다운받아 본인의 호스팅에 옮겨 자유롭게 추가 개발을 할 수 있습니다. 코로나19로 전 세계의 온라인이 일상화, 디지털 전환의 가속화로 IT 인재 확보의 경쟁이 치열해 지면서 시니어급의 전문가 확보 경쟁으로 과도한 연봉 인상 등 자금력이 부족한 중소기업은 인재를 채용하는데 더 어려움을 겪고 있습니다. 작업 페이지가 많은 금융, 공공기관, 대형 SI 프로젝트인 경우 전체 분량의 50% 이상이 같은 패턴의 반복되는 비 생산적 중복 업무로 이루어져 있어, 업무의 비 생산성을 가지고 있습니다. 웹 페이지 산출물이 나오는 과정은 3명의 전문가들의 각각의 시간을 할애하여 생산하는 부분을 템플릿 하우스를 사용하면 1사람이 원 클릭과 드래그앤 드랍 방식을 통해 웹 페이지를 10분 만에 생성하고 코드 편집과 코드 산출물 다운로드 기능을 통해 더 자유롭게 개발할 수 있습니다. </p>
+          <div class="contents-search">
+            <p class="contents-result"> 전체<span> 24</span>개 </p>
+            <div class="inputset">
+              <button class="inputset-icon icon-right icon-search btn" type="button" aria-label="아이콘"></button>
+              <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요." aria-label="내용">
             </div>
           </div>
-          <div class="contents-btn">
-            <a class="btnset" href="javascript:void(0)">목록으로</a>
+          <div class="contents-group">
+            <div class="contents-cardlist contents-cardlist-active">
+              <a href="javascript:void(0)" class="cardset">
+                <figure class="cardset-figure">
+                  <img class="cardset-img" src="../resources/images/img_press_01_1.png" alt="이미지">
+                </figure>
+                <div class="cardset-body">
+                  <div class="cardset-tit-group">
+                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                  </div>
+                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                </div>
+              </a>
+              <a href="javascript:void(0)" class="cardset">
+                <figure class="cardset-figure">
+                  <img class="cardset-img" src="../resources/images/img_press_01_2.png" alt="이미지">
+                </figure>
+                <div class="cardset-body">
+                  <div class="cardset-tit-group">
+                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                  </div>
+                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                </div>
+              </a>
+              <a href="javascript:void(0)" class="cardset">
+                <figure class="cardset-figure">
+                  <img class="cardset-img" src="../resources/images/img_press_01_3.png" alt="이미지">
+                </figure>
+                <div class="cardset-body">
+                  <div class="cardset-tit-group">
+                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                  </div>
+                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                </div>
+              </a>
+              <a href="javascript:void(0)" class="cardset">
+                <figure class="cardset-figure">
+                  <img class="cardset-img" src="../resources/images/img_press_01_4.png" alt="이미지">
+                </figure>
+                <div class="cardset-body">
+                  <div class="cardset-tit-group">
+                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                  </div>
+                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                </div>
+              </a>
+              <a href="javascript:void(0)" class="cardset">
+                <figure class="cardset-figure">
+                  <img class="cardset-img" src="../resources/images/img_press_01_1.png" alt="이미지">
+                </figure>
+                <div class="cardset-body">
+                  <div class="cardset-tit-group">
+                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                  </div>
+                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                </div>
+              </a>
+              <a href="javascript:void(0)" class="cardset">
+                <figure class="cardset-figure">
+                  <img class="cardset-img" src="../resources/images/img_press_01_2.png" alt="이미지">
+                </figure>
+                <div class="cardset-body">
+                  <div class="cardset-tit-group">
+                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                  </div>
+                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                </div>
+              </a>
+              <a href="javascript:void(0)" class="cardset">
+                <figure class="cardset-figure">
+                  <img class="cardset-img" src="../resources/images/img_press_01_3.png" alt="이미지">
+                </figure>
+                <div class="cardset-body">
+                  <div class="cardset-tit-group">
+                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                  </div>
+                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                </div>
+              </a>
+              <a href="javascript:void(0)" class="cardset">
+                <figure class="cardset-figure">
+                  <img class="cardset-img" src="../resources/images/img_press_01_4.png" alt="이미지">
+                </figure>
+                <div class="cardset-body">
+                  <div class="cardset-tit-group">
+                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                  </div>
+                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                </div>
+              </a>
+            </div>
           </div>
+          <nav class="pagiset pagiset-line">
+            <div class="pagiset-ctrl">
+              <a class="pagiset-link pagiset-first" href="javascript:void(0)">
+                <span class="visually-hidden">처음</span>
+              </a>
+            </div>
+            <div class="pagiset-ctrl">
+              <a class="pagiset-link pagiset-prev" href="javascript:void(0)">
+                <span class="visually-hidden">이전</span>
+              </a>
+            </div>
+            <div class="pagiset-list">
+              <a class="pagiset-link active-fill" href="javascript:void(0)">1</a>
+              <a class="pagiset-link" href="javascript:void(0)">2</a>
+              <a class="pagiset-link" href="javascript:void(0)">3</a>
+            </div>
+            <div class="pagiset-ctrl">
+              <a class="pagiset-link pagiset-next" href="javascript:void(0)">
+                <span class="visually-hidden">다음</span>
+              </a>
+            </div>
+            <div class="pagiset-ctrl">
+              <a class="pagiset-link pagiset-last" href="javascript:void(0)">
+                <span class="visually-hidden">마지막</span>
+              </a>
+            </div>
+          </nav>
         </div>
       </div>
     </div>
-    <!-- [E]hooms-N37 -->
+    <!-- [E]hooms-N31 -->
   </main>
   <!-- [S]hooms-N57 -->
-  <footer class="hooms-N57" data-bid="xaLqa8at8J">
+  <footer class="hooms-N57" data-bid="fZLQa8BBP7">
     <div class="footer-container container-lg">
       <div class="footer-top">
         <h1 class="footer-logo">

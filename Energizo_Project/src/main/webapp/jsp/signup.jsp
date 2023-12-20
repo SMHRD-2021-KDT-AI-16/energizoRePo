@@ -15,7 +15,7 @@
   <meta property="og:description" content="웹사이트입니다">
   <meta property="og:image" content="https://웹사이트/images/opengraph.png">
   <meta property="og:url" content="https://웹사이트">
-  <title>내 정보 수정</title>
+  <title>회원가입</title>
   <link rel="stylesheet" href="../resources/css/setting.css">
   <link rel="stylesheet" href="../resources/css/plugin.css">
   <link rel="stylesheet" href="../resources/css/template.css">
@@ -53,40 +53,47 @@
       <div class="contents-inner">
         <div class="contents-container">
           <div class="textset textset-h2">
-            <h2 class="textset-tit">내 정보 수정</h2>
+            <h2 class="textset-tit">회원가입</h2>
           </div>
-          <form action="UpdateService.do" method="post">
+          <form action="JoinService.do" method="post">
           <div class="contents-form">
             <div class="contents-form-bottom">
-            
               <div class="inputset inputset-lg inputset-label">
                 <label>
-                  <h6 class="inputset-tit"> 비밀번호
+                  <h6 class="inputset-tit"> 아이디<span>*</span>
                   </h6>
-                  <input type="password" class="inputset-input form-control" placeholder="변경하실 비밀번호를 입력해 주세요."
+                  <input name="id" type="text" class="inputset-input form-control" placeholder="사용하실 아이디를 입력해 주세요."
+                    aria-label="내용" required="">
+                </label>
+                <button class="btnset btnset-line btnset-lg">중복확인</button>
+              </div>
+              <div class="inputset inputset-lg inputset-label">
+                <label>
+                  <h6 class="inputset-tit"> 비밀번호<span>*</span>
+                  </h6>
+                  <input name="pw" type="password" class="inputset-input form-control" placeholder="사용하실 비밀번호를 입력해 주세요."
                     aria-label="내용" required="">
                 </label>
               </div>
               <div class="inputset inputset-lg inputset-label">
                 <label>
-                  <h6 class="inputset-tit"> 이름
+                  <h6 class="inputset-tit"> 이름<span>*</span>
                   </h6>
-                  <input type="text" class="inputset-input form-control" placeholder="홍길동" aria-label="내용"
+                  <input name="name" type="text" class="inputset-input form-control" placeholder="이름을 입력해주세요." aria-label="내용"
                     required="">
                 </label>
               </div>
               <div class="inputset inputset-lg inputset-label">
                 <label>
-                  <h6 class="inputset-tit"> 나이
+                  <h6 class="inputset-tit"> 나이<span>*</span>
                   </h6>
-                  <input type="text" class="inputset-input form-control" placeholder="20" aria-label="내용"
+                  <input name="age" type="text" class="inputset-input form-control" placeholder="숫자로 입력해주세요." aria-label="내용"
                     required="">
                 </label>
               </div>
-              <!--
               <div class="inputset inputset-lg inputset-label">
                 <label>
-                  <h6 class="inputset-tit"> 성별
+                  <h6 class="inputset-tit"> 성별<span>*</span>
                   </h6>
                     남자 <input type="radio" name="gender" value="M">
                     여자 <input type="radio" name="gender" value="F">
@@ -94,10 +101,8 @@
                 </label>
               </div>
             </div>
-            -->
-            
           </div>
-          <button class="btnset btnset-lg contents-submit">수정완료</button>
+          <button class="btnset btnset-lg contents-submit">가입완료</button>
           </form>
           
         </div>
