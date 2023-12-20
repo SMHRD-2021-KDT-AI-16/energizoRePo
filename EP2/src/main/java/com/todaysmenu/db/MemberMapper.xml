@@ -7,7 +7,7 @@
   <!-- 2. mapper : 안쪽에 sql구문을 작성할 수 있는 공간 
   		  namespace는 중복이 되지 않게만 선언
   		  >> DAO랑 이름을 이치시켜주는 습관을 들이면 편함.-->
-<mapper namespace="com.todaysmenu.db.MamberMapperDAO">
+<mapper namespace="com.todaysmenu.db.MemberDAO">
   
   <!--  id : sql구문을 구별할 수 있는 중복되지 않는 식별자
   		parameterType : DAO에서 받아오는 매개변수의 자료형(Full name으로 적어야함)
@@ -16,8 +16,8 @@
   						>>java안에 있는 기본자료형(int 등)이라면 굳이 안써도됨!
   		 -->
  <insert id="join" parameterType="com.todaysmenu.model.MemberVO">
-   INSERT INTO WEB_MEMBER(email,pw,tel,address)
-   VALUES (#{email},#{pw},#{tel},#{address})
+   INSERT INTO USER_INFO(id,pw,age,gender,name)
+   VALUES (#{id},#{pw},#{age},#{gender},#{name})
   </insert>
   
   

@@ -9,20 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.todaysmenu.controller.BoardDeleteService;
-import com.todaysmenu.controller.BoardInsertService;
-import com.todaysmenu.controller.BoardSelectService;
-import com.todaysmenu.controller.BoardUpdateService;
-import com.todaysmenu.controller.CalendarInsertService;
-import com.todaysmenu.controller.CalenderDeleteService;
-import com.todaysmenu.controller.CalenderUpdateService;
-import com.todaysmenu.controller.DeleteService;
-import com.todaysmenu.controller.IdCheckService;
 import com.todaysmenu.controller.JoinService;
 import com.todaysmenu.controller.LoginService;
-import com.todaysmenu.controller.LogoutService;
-import com.todaysmenu.controller.UpdateService;
 import com.todaysmenu.controller.command;
 
 @WebServlet("*.do")
@@ -31,12 +19,12 @@ public class FrontController extends HttpServlet {
        
 	HashMap<String, command> map = new HashMap<>();
 	
+	@Override
 	public void init() throws ServletException {
-		
-		map.put("Join.do", new JoinService());
+		super.init();
+
+		map.put("jsp/Join.do", new JoinService());
 		map.put("Login.do", new LoginService());
-		
-		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -49,7 +37,10 @@ public class FrontController extends HttpServlet {
 		
 		String finalpath = null;
 		command com = null;
-		
+		System.out.println(cp);
+		System.out.println(uri);
+		System.out.println(path);
+		System.out.println(map.get(path));
 		if (path.contains("Go")){
 			finalpath = path.replace("Go", "").replace(".do", ".jsp");
 		} else {
