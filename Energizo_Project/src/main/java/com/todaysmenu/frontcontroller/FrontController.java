@@ -44,16 +44,15 @@ public class FrontController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String cp = request.getContextPath();
 		String path = uri.substring(cp.length()+1);
-		
 		request.setCharacterEncoding("UTF-8");
 		
 		String finalpath = null;
 		command com = null;
-		
+		System.out.println(map);
 		if (path.contains("Go")){
 			finalpath = path.replace("Go", "").replace(".do", ".jsp");
 		} else {
-			com = map.get(path);
+			com = new JoinService();
 			finalpath = com.execute(request, response);
 		}
 		
@@ -61,7 +60,7 @@ public class FrontController extends HttpServlet {
 			if (finalpath.contains("redirect:/")) {
 				response.sendRedirect(finalpath.replaceAll("redirect:/", ""));
 			} else {
-				RequestDispatcher rd = request.getRequestDispatcher("jsp/"+finalpath);
+				RequestDispatcher rd = request.getRequestDispatcher(finalpath);
 				//RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/" + finalpath);
 				rd.forward(request, response);
 			}
