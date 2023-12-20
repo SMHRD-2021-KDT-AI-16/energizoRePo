@@ -25,4 +25,35 @@ public class MemberDAO {
 		return row;
 
 	}
-}
+	public MemberVO login(MemberVO vo) {
+		// 1. 연결객체 빌려오기
+		SqlSession sqlsession = factory.openSession(true);
+		// 2. 연결객체 사용하기 --> selectOne()
+		// <T> : 제네릭기법 
+		// --> 클래스 내부에서 사용하게 될 자료형을 다른 클래스(바깥쪽)에서 지정해주는 기법
+		MemberVO login=sqlsession.selectOne("login", vo);
+		// 3. 연결객체 반납하기
+		sqlsession.close();
+		// 4. 결과 반환하기
+		return login;
+	}
+	public boolean IdCheck(String inputI) {
+			boolean checkI = false;
+			SqlSession sqlsession = factory.openSession(true);
+			try {
+			checkI=sqlsession.selectOne("idCheck",inputI);
+			
+			}catch(Exception e) {
+				System.out.println(checkI);	
+			}finally {
+				sqlsession.close();
+				System.out.println(checkI);
+			}
+			
+			
+			return checkI;
+			
+		}
+		
+	}
+

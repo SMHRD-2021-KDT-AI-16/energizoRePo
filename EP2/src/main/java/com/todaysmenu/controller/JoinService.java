@@ -36,7 +36,7 @@ public class JoinService implements command {
 				if (row > 0) {
 					// 5. 성공했다면 join_success.jsp로 foward방식 이동
 					request.setAttribute("id", id);
-					return "join_success.jsp";
+					return "Join_Success.jsp";
 				} else {
 					// 6. 실패했다면 main.jsp로 redirect방식 이동
 					// redirect:/ ===> 우리끼리 정한 약속!!!
