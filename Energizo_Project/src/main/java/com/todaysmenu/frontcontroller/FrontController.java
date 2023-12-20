@@ -35,19 +35,6 @@ public class FrontController extends HttpServlet {
 		
 		map.put("Join.do", new JoinService());
 		map.put("Login.do", new LoginService());
-		map.put("Logout.do", new LogoutService());
-		map.put("IdCheck.do", new IdCheckService());
-		map.put("Delete.do", new DeleteService());
-		map.put("Update.do", new UpdateService());
-		
-		map.put("BoardDelete.do", new BoardDeleteService());
-		map.put("BoardInsert.do", new BoardInsertService());
-		map.put("BoardSelect.do", new BoardSelectService());
-		map.put("BoardUpdate.do", new BoardUpdateService());
-		
-		map.put("CalendarInsert.do", new CalendarInsertService());
-		map.put("CalendarDelete.do", new CalenderDeleteService());
-		map.put("CalendarUpdate.do", new CalenderUpdateService());
 		
 		
 	}
@@ -64,7 +51,7 @@ public class FrontController extends HttpServlet {
 		command com = null;
 		
 		if (path.contains("Go")){
-			path.replace("Go", "").replace(".do", ".jsp");
+			finalpath = path.replace("Go", "").replace(".do", ".jsp");
 		} else {
 			com = map.get(path);
 			finalpath = com.execute(request, response);
