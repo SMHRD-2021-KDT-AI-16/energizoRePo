@@ -6,6 +6,7 @@
 	<artifactId>Energizo_Project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	<!-- 라이브러리들 기술하는 공간 -->
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
