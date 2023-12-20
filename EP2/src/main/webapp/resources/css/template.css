@@ -665,6 +665,7 @@ progress { vertical-align: baseline; }
 .btnset { display: inline-flex; justify-content: center; align-items: center; min-width: 17rem; padding: 0 5rem; height: var(--ht-md); font-size: var(--fs-p1); color: var(--white); background-color: var(--primary); border-width: 1px; border-style: solid; border-color: var(--primary); font-weight: 500; letter-spacing: var(--letter-spacing); transition: .3s; }
 .btnset::before { transition: inherit; }
 .btnset::after { transition: inherit; }
+a#signup { font-size: 30px; height: 70px; min-width: 180px; }
 .btnset + .btnset { margin-left: .8rem; }
 .btnset:hover { color: var(--white); background-color: var(--secondary); border-color: var(--secondary); }
 .btnset:disabled, .btnset.disabled { color: var(--text-color4); background-color: var(--bg-color); border-color: var(--bg-color); }
