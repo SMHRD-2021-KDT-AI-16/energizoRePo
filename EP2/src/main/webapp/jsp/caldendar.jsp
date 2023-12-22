@@ -192,21 +192,48 @@
       <div class="contents-inner">
         <div class="contents-container container-md">
           <div class="textset textset-h2">
-            <h2 class="textset-tit">PRESS CENTER</h2>
+            <h2 class="textset-tit">Calendar</h2>
           </div>
           <div class="contents-group">
           </div>
           <div class="contents-cardlist contents-cardlist-active">
             <a href="javascript:void(0)" class="cardset">
-              <div class="cardset-body">
-              </div>
               <figure class="cardset-figure">
+			    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css">
+			
+				<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script>
+			
+				<div id='calendar'></div>
+			
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+						var calendarEl = document.getElementById('calendar');
+						var calendar = new FullCalendar.Calendar(calendarEl, {
+							initialView: 'dayGridMonth', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
+							headerToolbar: { // 헤더에 표시할 툴 바
+								start: 'prev next today',
+								center: 'title',
+								end: 'dayGridMonth,dayGridWeek,dayGridDay'
+							},
+							titleFormat: function (date) {
+								return date.date.year + '년 ' + (parseInt(date.date.month) + 1) + '월';
+							},
+							//initialDate: '2021-07-15', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
+							selectable: true, // 달력 일자 드래그 설정가능
+							droppable: true,
+							editable: true,
+							nowIndicator: true, // 현재 시간 마크
+							locale: 'ko' // 한국어 설정
+						});
+						calendar.render();
+					});
+				</script>
               </figure>
             </a>
           </div>
-          <div class="contents-btn">
-            <a class="btnset" href="javascript:void(0)">목록으로</a>
-          </div>
+         
         </div>
       </div>
     </div>
@@ -230,73 +257,7 @@
     <!-- [E]hooms-N32 -->
   </main>
   <!-- [S]hooms-N57 -->
-  <footer class="hooms-N57" data-bid="DulqA88ooy">
-    <div class="footer-container container-lg">
-      <div class="footer-top">
-        <h1 class="footer-logo">
-          <a href="javascript:void(0)">
-            <img src="../resources/images/img_logo_gray.png" alt="로고">
-          </a>
-        </h1>
-        <ul class="footer-menulist">
-          <li class="footer-menuitem">
-            <a href="javascript:void(0)">
-              <span>이용약관</span>
-            </a>
-          </li>
-          <li class="footer-menuitem">
-            <a href="javascript:void(0)">
-              <span>개인정보처리방침</span>
-            </a>
-          </li>
-          <li class="footer-menuitem">
-            <a href="javascript:void(0)">
-              <span>푸터메뉴1</span>
-            </a>
-          </li>
-          <li class="footer-menuitem">
-            <a href="javascript:void(0)">
-              <span>푸터메뉴2</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="footer-snslist">
-          <li class="footer-snsitem">
-            <a class="footer-snslink" href="javascript:void(0)">
-              <img src="../resources/icons/ico_instagram_lightgrey.svg" alt="인스타그램">
-            </a>
-          </li>
-          <li class="footer-snsitem">
-            <a class="footer-snslink" href="javascript:void(0)">
-              <img src="../resources/icons/ico_youtube_lightgrey.svg" alt="유튜브">
-            </a>
-          </li>
-          <li class="footer-snsitem">
-            <a class="footer-snslink" href="javascript:void(0)">
-              <img src="../resources/icons/ico_facebook_lightgrey.svg" alt="페이스북">
-            </a>
-          </li>
-          <li class="footer-snsitem">
-            <a class="footer-snslink" href="javascript:void(0)">
-              <img src="../resources/icons/ico_kakao_lightgrey.svg" alt="카카오톡">
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-txt">
-          <p> 서울시 영등포구 선유로70 우리벤처타운2 705호 </p>
-          <p>
-            <span>T. 070-8872-8874</span>
-            <span>E. help@openfield.co.kr</span>
-          </p>
-        </div>
-        <div class="footer-txt">
-          <p>2022 BY TEMPLATEHOUSE. ALL RIGHTS RESEVED</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  
   <!-- [E]hooms-N57 -->
   <script src="../resources/js/setting.js"></script>
   <script src="../resources/js/plugin.js"></script>
