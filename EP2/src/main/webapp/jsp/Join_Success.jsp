@@ -62,7 +62,7 @@
           </div>
           <p class="contents-message">오늘의 메뉴 회원이 되신 것을 환영합니다.</p>
           <div class="contents-btn">
-            <a href="login.html" class="btnset btnset-lg">로그인하러 가기</a>
+            <a href="Gologin.do" class="btnset btnset-lg">로그인하러 가기</a>
           </div>
         </div>
       </div>

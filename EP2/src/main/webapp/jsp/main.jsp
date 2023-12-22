@@ -251,7 +251,7 @@
      	<span class="keyword">대두<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
      	<span class="keyword">견과<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
      	<span class="keyword">밀<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
-     	<span class="keyword">젖당<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">유당<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
      	<span class="keyword">이스트<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
      </div>
      <div class = "keybox">
