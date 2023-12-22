@@ -17,7 +17,7 @@ public class JoinService implements command {
 		// 1. 요청받은 데이터 꺼내오기
 				String id = request.getParameter("id");
 				String pw = request.getParameter("pw");
-				int age =Integer.parseInt(request.getParameter("age"));
+				String age =request.getParameter("age");
 				String name = request.getParameter("name");
 				String gender = request.getParameter("gender");
 				// 2. MemberVO 클래스를 생성해서 요청받은 데이터를 하나로 묶어주기

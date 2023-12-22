@@ -5,7 +5,7 @@ public class MemberVO {
 	private String id;
 	private String pw;
 	private String name;
-	private int age;
+	private String age;
 	private String gender;
 	
 	
@@ -29,10 +29,10 @@ public class MemberVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 	public String getGender() {
