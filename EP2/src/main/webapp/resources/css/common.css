@@ -3,7 +3,7 @@
 /* hooms-N54 [oClqA9Wim2] */
 .hooms-N54 { position: absolute; width: 100%; }
 .hooms-N54.header-top-active { position: fixed; top: 0; left: 0; transition: 0.3s; background-color: var(--white); z-index: 200; }
-.hooms-N54.header-top-active .header-logo { background-image: url("../../resources/images/img_logo_black.png"); }
+.hooms-N54.header-top-active .header-logo { background-image: url("../../resources/images/오늘에 메뉴 로고(배경투명화).png"); }
 .hooms-N54.header-top-active .header-gnblink { color: var(--text-color1); }
 .hooms-N54.header-top-active .header-gnblink.on::after { background-color: var(--black); }
 .hooms-N54.header-top-active .btn-profile { background-image: url("../../resources/icons/ico_profile_black.svg"); }
@@ -111,7 +111,7 @@
 }
 
 /* hooms-N54 [odLQa88Okr] : 편집됨 */
-.hooms-N54[data-bid=odLQa88Okr].header-top-active .header-logo { background-image: url("../../resources/images/img_logo_black.png"); }
+.hooms-N54[data-bid=odLQa88Okr].header-top-active .header-logo { background-image: url("../../resources/images/오늘에 메뉴 로고(배경투명화).png"); }
 .hooms-N54[data-bid=odLQa88Okr].header-top-active .btn-profile { background-image: url("../../resources/icons/ico_profile_black.svg"); }
 .hooms-N54[data-bid=odLQa88Okr].header-top-active .btn-search { background-image: url("../../resources/icons/ico_search_black.svg"); }
 .hooms-N54[data-bid=odLQa88Okr].header-top-active .btn-menu { background-image: url("../../resources/icons/ico_menu_black.svg"); }
@@ -144,7 +144,7 @@
 }
 
 /* hooms-N54 [mslQa89V3k] : 편집됨 */
-.hooms-N54[data-bid=mslQa89V3k].header-top-active .header-logo { background-image: url("../../resources/images/img_logo_black.png"); }
+.hooms-N54[data-bid=mslQa89V3k].header-top-active .header-logo { background-image: url("../../resources/images/오늘에 메뉴 로고(배경투명화).png"); }
 .hooms-N54[data-bid=mslQa89V3k].header-top-active .btn-profile { background-image: url("../../resources/icons/ico_profile_black.svg"); }
 .hooms-N54[data-bid=mslQa89V3k].header-top-active .btn-search { background-image: url("../../resources/icons/ico_search_black.svg"); }
 .hooms-N54[data-bid=mslQa89V3k].header-top-active .btn-menu { background-image: url("../../resources/icons/ico_menu_black.svg"); }
@@ -177,13 +177,13 @@
 }
 
 /* hooms-N54 [JsLqA8aT4M] : 편집됨 */
-.hooms-N54[data-bid=JsLqA8aT4M].header-top-active .header-logo { background-image: url("../../resources/images/img_logo_black.png"); }
+.hooms-N54[data-bid=JsLqA8aT4M].header-top-active .header-logo { background-image: url("../../resources/images/오늘에 메뉴 로고(배경투명화).png"); }
 .hooms-N54[data-bid=JsLqA8aT4M].header-top-active .btn-profile { background-image: url("../../resources/icons/ico_profile_black.svg"); }
 .hooms-N54[data-bid=JsLqA8aT4M].header-top-active .btn-search { background-image: url("../../resources/icons/ico_search_black.svg"); }
 .hooms-N54[data-bid=JsLqA8aT4M].header-top-active .btn-menu { background-image: url("../../resources/icons/ico_menu_black.svg"); }
 .hooms-N54[data-bid=JsLqA8aT4M].header-search-active .header-logo { background-image: url("../../resources/images/img_logo_black.png"); }
 .hooms-N54[data-bid=JsLqA8aT4M].header-search-active .btn-close { background-image: url("../../resources/icons/ico_close_black.svg"); }
-.hooms-N54[data-bid=JsLqA8aT4M] .header-logo { background-image: url("../../resources/images/img_logo_white.png"); }
+.hooms-N54[data-bid=JsLqA8aT4M] .header-logo { background-image: url("../../resources/images/오늘에 메뉴 로고(배경투명화).png"); }
 .hooms-N54[data-bid=JsLqA8aT4M] .header-gnblink { padding: 0 3rem; font-size: var(--fs-p1); font-weight: 500; text-align: center; color: var(--text-color5); white-space: nowrap; }
 .hooms-N54[data-bid=JsLqA8aT4M] .btn-profile { background-image: url("../../resources/icons/ico_profile_white.svg"); }
 .hooms-N54[data-bid=JsLqA8aT4M] .btn-search { background-image: url("../../resources/icons/ico_search_white.svg"); }
