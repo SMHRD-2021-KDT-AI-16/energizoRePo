@@ -92,6 +92,7 @@
                 box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
             }
 
+<<<<<<< HEAD
             .key_title {
                 box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
                 border-radius: 20px;
@@ -108,6 +109,162 @@
                 background-color: black;
                 color: white;
             }
+=======
+     <form align="center">
+     <div class = "keybox">
+     	<span class="key_title">목적</span>
+     	<span class="keyword">체중감소<input type="checkbox" name="checkbox" value="diet" class="checkbox"></span>
+     	<span class="keyword">체중증가<input type="checkbox" name="checkbox" value="bulk" class="checkbox"></span>
+     	<span class="keyword">비조리요리<input type="checkbox" name="checkbox" value="nocook" class="checkbox"></span>
+     	<span class="keyword">저당식<input type="checkbox" name="checkbox" value="lowsugar" class="checkbox"></span>
+     	<span class="keyword">저염식<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     </div>
+     <div class = "keybox">
+     	<span class="key_title">피해야할 식재료</span>
+     	<span class="keyword">카페인<input type="checkbox" name="checkbox" value="caffeine" class="checkbox"></span>
+     	<span class="keyword">샐러리<input type="checkbox" name="checkbox" value="Celery" class="checkbox"></span>
+     	<span class="keyword">갑각류<input type="checkbox" name="checkbox" value="nocook" class="checkbox"></span>
+     	<span class="keyword">달걀<input type="checkbox" name="checkbox" value="lowsugar" class="checkbox"></span>
+     	<span class="keyword">생선<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">글루텐<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">땅콩<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">우유<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     </div>
+      <div class = "keybox">
+     	<span class="key_title">피해야할 식재료</span>
+     	<span class="keyword">연체동물<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+		<span class="keyword">겨자<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">참깨<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">대두<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">견과<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">밀<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">유당<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     	<span class="keyword">이스트<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     </div>
+     <div class = "keybox">
+     	<span class="key_title">식단 스타일</span>
+     	<span class="keyword">채식주의<input type="checkbox" name="checkbox" value="diet" class="checkbox"></span>
+     	<span class="keyword">비건식<input type="checkbox" name="checkbox" value="diet" class="checkbox"></span>
+     	<span class="keyword">키토제닉<input type="checkbox" name="checkbox" value="bulk" class="checkbox"></span>
+     	<span class="keyword">유제품 미포함<input type="checkbox" name="checkbox" value="nocook" class="checkbox"></span>
+     	<span class="keyword">저탄수화물<input type="checkbox" name="checkbox" value="lowsugar" class="checkbox"></span>
+     	<span class="keyword">글루텐 프리<input type="checkbox" name="checkbox" value="lowsalt" class="checkbox"></span>
+     </div>
+     </form>
+     <span>
+     <input type="text" id="keywords" name="keywords" required />
+		<button id="btn_click" onclick="chatGPT()">추천받기</button>
+		<div id="result"></div>
+			
+		<div id="loading">
+		<img src="https://studentrights.sen.go.kr/images/common/loading.gif">
+		</div>
+		
+		
+		<script>
+		    $(document).ready(function () {
+		        $('#loading').hide();
+		    });
+		
+		    function chatGPT() {
+		        const api_key = "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"  // <- API KEY 입력
+		        const keywords = document.getElementById('keywords').value
+		        $('#loading').show();
+		
+		        const messages = [
+		            { role: 'system', content: 'You are a helpful assistant.' },
+		            { role: 'user', content: keywords + '이것을 토대로 추천해줘.' },
+		        ]
+		
+		        const data = {
+		            model: 'gpt-3.5-turbo',
+		            temperature: 0.5,
+		            n: 1,
+		            messages: messages,
+		        }
+		
+		        $.ajax({
+		            url: "https://api.openai.com/v1/chat/completions",
+		            method: 'POST',
+		            headers: {
+		                Authorization: "Bearer " + api_key,
+		                'Content-Type': 'application/json',
+		            },
+		            data: JSON.stringify(data),
+		        }).then(function (response) {
+		            $('#loading').hide();
+		            console.log(response)
+		            let result = document.getElementById('result')
+		
+		            // 이전 결과를 지우고 새로운 결과를 추가
+		            result.innerHTML = ''; // 결과를 지움
+		
+		            let pre = document.createElement('pre')
+		            pre.innerHTML = "\n\n" + response.choices[0].message.content
+		            result.appendChild(pre)
+		
+		            document.getElementById('keywords').value = ''
+		        });
+		    }
+		</script>
+		
+		
+ 			<!-- <script>
+			    $(document).ready(function () {
+			      $('#loading').hide();
+			    });
+			
+			    function chatGPT() {
+			      const api_key = "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"  // <- API KEY 입력
+			      const keywords = document.getElementById('keywords').value
+			      $('#loading').show();
+			
+			      const messages = [
+			        { role: 'system', content: 'You are a helpful assistant.' },
+			        { role: 'user', content: keywords + '이것을 토대로 추천해줘.' },
+			      ]
+			
+			      const data = {
+			        model: 'gpt-3.5-turbo',
+			        temperature: 0.5,
+			        n: 1,
+			        messages: messages,
+			      }
+			
+			      $.ajax({
+			        url: "https://api.openai.com/v1/chat/completions",
+			        method: 'POST',
+			        headers: {
+			          Authorization: "Bearer " + api_key,
+			          'Content-Type': 'application/json',
+			        },
+			        data: JSON.stringify(data),
+			      }).then(function (response) {
+			        $('#loading').hide();
+			        console.log(response)
+			        let result = document.getElementById('result')
+			        let pre = document.createElement('pre')
+			
+			        pre.innerHTML = "\n\n" + response.choices[0].message.content
+			        result.appendChild(pre)
+			
+			        document.getElementById('keywords').value = ''
+			      });
+			    }
+			  </script> -->
+     </span>
+     
+    </div>
+      <!-- [S]hooms-N17 -->
+      <div class="hooms-N17" data-bid="UwLqa9WdPl">
+        <div class="contents-inner" align="center">
+        
+        
+        </div>
+      </div>
+      <!-- [E]hooms-N17 -->
+    </div>
+>>>>>>> branch 'master' of https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo.git
 
             #btn_click {
                 box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
