@@ -137,11 +137,10 @@
 			success: function(data){
 				if(data =='true'){
 					$('#resultCheck').text('사용할 수 없는 아이디')
-					alert('사용할 수 없는 아이디')
-					
+					alert('사용불가 아이디')
 				}else if (data =='false'){
 					$('#resultCheck').text('사용할 수 있는 아이디')
-					alert('사용할 수 있는 아이디')
+					alert('사용가능 아이디')
 				}	
 			},
 			//요청 실패시
