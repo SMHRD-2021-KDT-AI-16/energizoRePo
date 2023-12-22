@@ -89,7 +89,7 @@
                 <label>
                   <h6 class="inputset-tit"> 생년월일<span>*</span>
                   </h6>
-                  <input name="age" type="text" class="inputset-input form-control" placeholder="숫자로 입력해주세요." aria-label="내용"
+                  <input name="age" type="date" class="inputset-input form-control" placeholder="숫자로 입력해주세요." aria-label="내용"
                     required="">
                 </label>
               </div>

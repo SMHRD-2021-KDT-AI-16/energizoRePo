@@ -15,7 +15,7 @@
   <meta property="og:description" content="웹사이트입니다">
   <meta property="og:image" content="https://웹사이트/images/opengraph.png">
   <meta property="og:url" content="https://웹사이트">
-  <title>캘린더 | 111</title>
+  <title>캘린더</title>
   <link rel="stylesheet" href="../resources/css/setting.css">
   <link rel="stylesheet" href="../resources/css/plugin.css">
   <link rel="stylesheet" href="../resources/css/template.css">
@@ -37,24 +37,24 @@
           <ul class="header-gnblist">
             <li class="header-gnbitem">
               <a class="header-gnblink" href="javascript:void(0)">
-                <span>ABOUT US</span>
+                <span>캘린더</span>
               </a>
               
             </li>
             <li class="header-gnbitem">
               <a class="header-gnblink" href="javascript:void(0)">
-                <span>PRODUCT</span>
+                <span>AI 식단 추천</span>
               </a>
               
             </li>
             <li class="header-gnbitem">
               <a class="header-gnblink" href="javascript:void(0)">
-                <span>SHOP</span>
+                <span>레시피 저장소</span>
               </a>
             </li>
             <li class="header-gnbitem">
               <a class="header-gnblink" href="javascript:void(0)">
-                <span>NOTICE</span>
+                <span>레시피 영상</span>
               </a>
             </li>
           </ul>
