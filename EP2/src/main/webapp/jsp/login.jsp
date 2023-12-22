@@ -46,7 +46,7 @@
             <p class="textset-desc">오늘의 메뉴를 방문해주셔서 감사합니다.</p>
           </div>
           
-          <form action="LoginService.do" method="post">
+          <form action="Login.do" method="post">
           <div class="contents-form">
             <div class="inputset inputset-lg inputset-label">
               <label>
@@ -86,7 +86,8 @@
   <script src="../resources/js/plugin.js"></script>
   <script src="../resources/js/template.js"></script>
   <script src="../resources/js/common.js"></script>
-  <script src="../resources/js/script.js"></script>
+  <script src="../resources/js/script.js"></script> 
+ </script>
 <!-- Code injected by live-server -->
 <script>
 	// <![CDATA[  <-- For SVG support

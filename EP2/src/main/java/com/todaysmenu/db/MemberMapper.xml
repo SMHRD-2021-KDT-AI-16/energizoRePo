@@ -19,8 +19,18 @@
    INSERT INTO USER_INFO(id,pw,age,gender,name)
    VALUES (#{id},#{pw},#{age},#{gender},#{name})
   </insert>
+  <select id="login" parameterType="com.todaysmenu.model.MemberVO" resultType="com.todaysmenu.model.MemberVO">
+  SELECT * FROM USER_INFO 
+  WHERE ID = #{id} 
+  AND PW = #{pw}
+  </select>
   
-  
+    <select id="idCheck" parameterType="String" resultType="boolean">
+  SELECT CASE WHEN COUNT(*)>0 THEN 1
+ 				   ELSE 0
+			   END RESULT
+  FROM USER_INFO WHERE ID = #{id}
+  </select>
   
   
   

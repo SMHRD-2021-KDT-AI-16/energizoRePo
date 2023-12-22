@@ -64,10 +64,10 @@
                 <label>
                   <h6 class="inputset-tit"> 아이디<span>*</span>
                   </h6>
-                  <input name="id" type="text" class="inputset-input form-control" placeholder="사용하실 아이디를 입력해 주세요."
-                    aria-label="내용" required="">
+                  <input name="id" id="inputI" type="text" class="inputset-input form-control" placeholder="사용하실 아이디를 입력해 주세요."
+                    aria-label="내용">
                 </label>
-                <button class="btnset btnset-line btnset-lg">중복확인</button>
+                <button id="inputI" class="btnset btnset-line btnset-lg" onclick="checkI()">중복확인</button>
               </div>
               <div class="inputset inputset-lg inputset-label">
                 <label>
@@ -120,6 +120,37 @@
   <script src="../resources/js/template.js"></script>
   <script src="../resources/js/common.js"></script>
   <script src="../resources/js/script.js"></script>
+   <script src="jquery-3.7.1.min.js"></script>
+ <!-- Jquery -->
+ <script>
+ function checkI(){
+		var inputI = $("#inputI").val();
+		console.log(inputI);
+		$.ajax({
+			// 어디로 요청할건지?
+			url : 'IdCheck.do',
+			// 요청할 데이터(json,{key:value})
+			data : {'inputI':inputI},
+			// 요청방식
+			type : 'get',
+			// 요청이 성공할 경우 무엇을 할지?
+			success: function(data){
+				if(data =='true'){
+					$('#resultCheck').text('사용할 수 없는 아이디')
+					alert('사용가능 아이디')
+					
+				}else if (data =='false'){
+					$('#resultCheck').text('사용할 수 있는 아이디')
+					alert('사용불가 아이디')
+				}	
+			},
+			//요청 실패시
+			error : function(){
+				alert('통신실패');
+			}
+		});
+	}
+	</script>
   <!-- Code injected by live-server -->
   <script>
     // <![CDATA[  <-- For SVG support

@@ -21,6 +21,42 @@
   <link rel="stylesheet" href="../resources/css/template.css">
   <link rel="stylesheet" href="../resources/css/common.css">
   <link rel="stylesheet" href="../resources/css/style.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    /* page-loading */
+    #loading {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: fixed;
+      display: block;
+      opacity: 0.6;
+      background: #e4e4e4;
+      z-index: 99;
+      text-align: center;
+    }
+
+    #loading>img {
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      z-index: 100;
+    }
+
+    #loading>p {
+      position: absolute;
+      top: 57%;
+      left: 43%;
+      z-index: 101;
+    }
+    
+    #blank_area{
+    	height: 200px;
+    }
+  </style>
+  
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
@@ -81,107 +117,6 @@
         </h4>
         <button class="fullmenu-close"></button>
       </div>
-      <div class="fullmenu-wrapper container-lg">
-        <ul class="fullmenu-gnblist">
-          <li class="fullmenu-gnbitem">
-            <a class="fullmenu-gnblink" href="javascript:void(0)">
-              <span>ABOUT US</span>
-            </a>
-            <ul class="fullmenu-sublist">
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span>INTRO</span>
-                </a>
-              </li>
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span>BRAND STORY</span>
-                </a>
-              </li>
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span>OUR PHILOSOPHY</span>
-                </a>
-              </li>
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span>HERITAGE</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="fullmenu-gnbitem">
-            <a class="fullmenu-gnblink" href="javascript:void(0)">
-              <span>PRODUCT</span>
-            </a>
-            <ul class="fullmenu-sublist">
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span>BEAUTYREST</span>
-                </a>
-              </li>
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span>KENOSA SERIES</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="fullmenu-gnbitem">
-            <a class="fullmenu-gnblink" href="javascript:void(0)">
-              <span>SHOP</span>
-            </a>
-            <ul class="fullmenu-sublist" style="display: none;">
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span></span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="fullmenu-gnbitem">
-            <a class="fullmenu-gnblink" href="javascript:void(0)">
-              <span>NOTICE</span>
-            </a>
-            <ul class="fullmenu-sublist" style="display: none;">
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span></span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="fullmenu-gnbitem">
-            <a class="fullmenu-gnblink" href="javascript:void(0)">
-              <span>NEWS</span>
-            </a>
-            <ul class="fullmenu-sublist">
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span>ARTICLE</span>
-                </a>
-              </li>
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span>MEDIA</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="fullmenu-gnbitem">
-            <a class="fullmenu-gnblink" href="javascript:void(0)">
-              <span>CONTACT</span>
-            </a>
-            <ul class="fullmenu-sublist" style="display: none;">
-              <li class="fullmenu-subitem">
-                <a class="fullmenu-sublink" href="javascript:void(0)">
-                  <span></span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="header-dim"></div>
   </div>
@@ -212,678 +147,79 @@
       </div>
       <!-- [E]hooms-N42 -->
     </div>
+    
     <div class="th-layout-content">
-      <!-- [S]hooms-N55 -->
-      <div class="hooms-N55" data-bid="eZLQA9vZgY">
-        <div class="header-container container-lg">
-          <div class="header-left">
-            <h1 class="header-title">
-              <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
-            </h1>
-          </div>
-          <div class="header-center">
-            <ul class="header-gnblist">
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>ABOUT US</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>INTRO</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>BRAND STORY</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>OUR PHILOSOPHY</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>HERITAGE</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>PRODUCT</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>BEAUTYREST</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>KENOSA SERIES</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>SHOP</span>
-                </a>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>NOTICE</span>
-                </a>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>NEWS</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>ARTICLE</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>MEDIA</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>CONTACT</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="header-right">
-            <div class="header-utils">
-              <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
-              <button class="btn-search header-utils-btn" title="search"></button>
-              <button class="btn-menu header-utils-btn" title="menu"></button>
-              <button class="btn-close header-utils-btn" title="close"></button>
-            </div>
-          </div>
-          <div class="header-search-form">
-            <div class="inputset inputset-line">
-              <button class="icon-right icon-search btn" type="button" aria-label="아이콘">
-              </button>
-              <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요." aria-label="내용">
-            </div>
-          </div>
-        </div>
-        <div class="header-fullmenu fullmenu-top">
-          <div class="fullmenu-head container-lg">
-            <h4 class="fullmenu-title">
-              <a class="fullmenu-logo" href="javascript:void(0)" title="hooms"></a>
-            </h4>
-            <button class="fullmenu-close"></button>
-          </div>
-          <div class="fullmenu-wrapper container-lg">
-            <ul class="fullmenu-gnblist">
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>ABOUT US</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>INTRO</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>BRAND STORY</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>OUR PHILOSOPHY</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>HERITAGE</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>PRODUCT</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>BEAUTYREST</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>KENOSA SERIES</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>SHOP</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>NOTICE</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>NEWS</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>ARTICLE</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>MEDIA</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>CONTACT</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="header-dim"></div>
-      </div>
-      <!-- [E]hooms-N55 -->
-      <!-- [S]hooms-N55 -->
-      <div class="hooms-N55" data-bid="eOLQA9w46a">
-        <div class="header-container container-lg">
-          <div class="header-left">
-            <h1 class="header-title">
-              <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
-            </h1>
-          </div>
-          <div class="header-center">
-            <ul class="header-gnblist">
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>ABOUT US</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>INTRO</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>BRAND STORY</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>OUR PHILOSOPHY</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>HERITAGE</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>PRODUCT</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>BEAUTYREST</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>KENOSA SERIES</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>SHOP</span>
-                </a>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>NOTICE</span>
-                </a>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>NEWS</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>ARTICLE</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>MEDIA</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>CONTACT</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="header-right">
-            <div class="header-utils">
-              <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
-              <button class="btn-search header-utils-btn" title="search"></button>
-              <button class="btn-menu header-utils-btn" title="menu"></button>
-              <button class="btn-close header-utils-btn" title="close"></button>
-            </div>
-          </div>
-          <div class="header-search-form">
-            <div class="inputset inputset-line">
-              <button class="icon-right icon-search btn" type="button" aria-label="아이콘">
-              </button>
-              <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요." aria-label="내용">
-            </div>
-          </div>
-        </div>
-        <div class="header-fullmenu fullmenu-top">
-          <div class="fullmenu-head container-lg">
-            <h4 class="fullmenu-title">
-              <a class="fullmenu-logo" href="javascript:void(0)" title="hooms"></a>
-            </h4>
-            <button class="fullmenu-close"></button>
-          </div>
-          <div class="fullmenu-wrapper container-lg">
-            <ul class="fullmenu-gnblist">
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>ABOUT US</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>INTRO</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>BRAND STORY</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>OUR PHILOSOPHY</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>HERITAGE</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>PRODUCT</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>BEAUTYREST</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>KENOSA SERIES</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>SHOP</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>NOTICE</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>NEWS</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>ARTICLE</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>MEDIA</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>CONTACT</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="header-dim"></div>
-      </div>
-      <!-- [E]hooms-N55 -->
-      <!-- [S]hooms-N55 -->
-      <div class="hooms-N55" data-bid="NSLqa9w6ka">
-        <div class="header-container container-lg">
-          <div class="header-left">
-            <h1 class="header-title">
-              <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
-            </h1>
-          </div>
-          <div class="header-center">
-            <ul class="header-gnblist">
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>ABOUT US</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>INTRO</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>BRAND STORY</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>OUR PHILOSOPHY</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>HERITAGE</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>PRODUCT</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>BEAUTYREST</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>KENOSA SERIES</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>SHOP</span>
-                </a>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>NOTICE</span>
-                </a>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>NEWS</span>
-                </a>
-                <ul class="header-sublist">
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>ARTICLE</span>
-                    </a>
-                  </li>
-                  <li class="header-subitem">
-                    <a class="header-sublink" href="javascript:void(0)">
-                      <span>MEDIA</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-gnbitem">
-                <a class="header-gnblink" href="javascript:void(0)">
-                  <span>CONTACT</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="header-right">
-            <div class="header-utils">
-              <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
-              <button class="btn-search header-utils-btn" title="search"></button>
-              <button class="btn-menu header-utils-btn" title="menu"></button>
-              <button class="btn-close header-utils-btn" title="close"></button>
-            </div>
-          </div>
-          <div class="header-search-form">
-            <div class="inputset inputset-line">
-              <button class="icon-right icon-search btn" type="button" aria-label="아이콘">
-              </button>
-              <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요." aria-label="내용">
-            </div>
-          </div>
-        </div>
-        <div class="header-fullmenu fullmenu-top">
-          <div class="fullmenu-head container-lg">
-            <h4 class="fullmenu-title">
-              <a class="fullmenu-logo" href="javascript:void(0)" title="hooms"></a>
-            </h4>
-            <button class="fullmenu-close"></button>
-          </div>
-          <div class="fullmenu-wrapper container-lg">
-            <ul class="fullmenu-gnblist">
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>ABOUT US</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>INTRO</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>BRAND STORY</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>OUR PHILOSOPHY</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>HERITAGE</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>PRODUCT</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>BEAUTYREST</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>KENOSA SERIES</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>SHOP</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>NOTICE</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>NEWS</span>
-                </a>
-                <ul class="fullmenu-sublist">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>ARTICLE</span>
-                    </a>
-                  </li>
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span>MEDIA</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullmenu-gnbitem">
-                <a class="fullmenu-gnblink" href="javascript:void(0)">
-                  <span>CONTACT</span>
-                </a>
-                <ul class="fullmenu-sublist" style="display: none;">
-                  <li class="fullmenu-subitem">
-                    <a class="fullmenu-sublink" href="javascript:void(0)">
-                      <span></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="header-dim"></div>
-      </div>
-      <!-- [E]hooms-N55 -->
+    
+    <div id="blank_area">
+    </div>
       <!-- [S]hooms-N17 -->
       <div class="hooms-N17" data-bid="UwLqa9WdPl">
-        <div class="contents-inner">
-          <div class="contents-container container-md">
-            <div class="textset textset-h2">
-              <h2 class="textset-tit"> THE HISTORY <br> OF HOOMS SIGNIFIES </h2>
-            </div>
-            <div class="textset">
-              <h5 class="textset-tit"> 훔스의 역사가 세계 침대의 역사입니다. </h5>
-              <p class="textset-desc"> 템플릿 하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들고 HTML 코드 산출물을 다운받아 본인의 호스팅에 옮겨 자유롭게 추가 개발을 할 수있습니다. <br>한사람이 원 클릭과 드래그앤 드랍 방식을 통해 웹 페이지를 10분 만에 생성하고 코드 편집과 코드 산출물 다운로드 기능을 통해 더 자유롭게 개발할 수 있습니다. </p>
-            </div>
-            <ul class="contents-textlist">
-              <li class="contents-textitem subtitle">
-                <strong></strong>
-              </li>
-              <li class="contents-textitem">
-              </li>
-            </ul>
-          </div>
+        <div class="contents-inner" align="center">
+        
+        
+        
+        	<h1>chatGPT API</h1>
+			  <div>무엇이든 질문해보세요!!</div>
+			
+			  <input type="text" id="keywords" name="keywords" required />
+			  <button onclick="chatGPT()">입력</button>
+			  <div id="result"></div>
+			
+			  <div id="loading">
+			    <img src="https://studentrights.sen.go.kr/images/common/loading.gif">
+			  </div>
+			  <script>
+			    $(document).ready(function () {
+			      $('#loading').hide();
+			    });
+			
+			    function chatGPT() {
+			      const api_key = "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"  // <- API KEY 입력
+			      const keywords = document.getElementById('keywords').value
+			      $('#loading').show();
+			
+			      const messages = [
+			        { role: 'system', content: 'You are a helpful assistant.' },
+			        { role: 'user', content: keywords + '에 대하여 최대한 도움이 되는 답변을 해줘.' },
+			      ]
+			
+			      const data = {
+			        model: 'gpt-3.5-turbo',
+			        temperature: 0.5,
+			        n: 1,
+			        messages: messages,
+			      }
+			
+			      $.ajax({
+			        url: "https://api.openai.com/v1/chat/completions",
+			        method: 'POST',
+			        headers: {
+			          Authorization: "Bearer " + api_key,
+			          'Content-Type': 'application/json',
+			        },
+			        data: JSON.stringify(data),
+			      }).then(function (response) {
+			        $('#loading').hide();
+			        console.log(response)
+			        let result = document.getElementById('result')
+			        let pre = document.createElement('pre')
+			
+			        pre.innerHTML = "\n\n" + response.choices[0].message.content
+			        result.appendChild(pre)
+			
+			        document.getElementById('keywords').value = ''
+			      });
+			    }
+			  </script>
+        
+        
+        
+          
         </div>
       </div>
       <!-- [E]hooms-N17 -->
     </div>
+
   </main>
   <!-- [S]hooms-N57 -->
   <div class="hooms-N57" data-bid="xpLQA9WWJd">
