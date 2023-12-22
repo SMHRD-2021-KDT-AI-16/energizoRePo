@@ -29,7 +29,7 @@
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
+          <a class="header-logo" href="javascript:void(0)"></a>
         </h1>
       </div>
       <div class="header-center">
@@ -37,7 +37,7 @@
       </div>
       <div class="header-right">
         <div class="header-utils">
-          <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
+          <a href="login.jsp" class="btn-profile header-utils-btn"></a>
           <button class="btn-close header-utils-btn" title="close"></button>
         </div>
       </div>
@@ -87,7 +87,7 @@
               </div>
               <div class="inputset inputset-lg inputset-label">
                 <label>
-                  <h6 class="inputset-tit"> 나이<span>*</span>
+                  <h6 class="inputset-tit"> 생년월일<span>*</span>
                   </h6>
                   <input name="age" type="text" class="inputset-input form-control" placeholder="숫자로 입력해주세요." aria-label="내용"
                     required="">
