@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CalenderUpdateService implements command {
+public class CalendarDeleteService implements command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
