@@ -144,8 +144,10 @@
 	        success: function(data){
 	            if(data =='true'){
 	                $('#resultCheck').text('사용할 수 없는 아이디')
+	                alert('사용할 수 없는 아이디')
 	            } else if (data =='false'){
 	                $('#resultCheck').text('사용할 수 있는 아이디')
+	                alert('사용할 수 있는 아이디')
 	                // 여기서 회원가입 페이지로 넘어가도록 구현 추가
 	                // 예: window.location.href = "회원가입완료페이지URL";
 	            }   

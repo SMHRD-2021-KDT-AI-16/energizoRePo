@@ -116,7 +116,7 @@
       <div class="contents-container">
         <img class="contents-backimg" src="../resources/images/인트로_상단_뒷배경2.png" alt="배너 이미지">
         <div class="contents-body container-md">
-          <a class="btnset" id="signup" href="Join.jsp">회원가입</a>
+          <a class="btnset" id="signup" href="GoJoin.do">회원가입</a>
           <!--
           <h6 class="contents-title" contenteditable="true"> 이미 회원이신가요?</h6>
           <a class="btnset" href="login.jsp">로그인</a>
