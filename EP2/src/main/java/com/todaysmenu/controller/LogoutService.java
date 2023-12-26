@@ -17,7 +17,7 @@ public class LogoutService implements command {
 				// 2. 세션영역 안에 있는 모든 데이터 무효화 시키기
 				session.invalidate();
 				// 3. main.jsp로 redirect방식 이동
-				return "redirect:/Gomain.do";
+				return "redirect:/Gointro.do";
 				
 				
 	}
