@@ -291,7 +291,7 @@
                             });
 
                             function chatGPT() {
-                                const api_key = "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"
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
@@ -314,7 +314,11 @@
                                             '나의 목적은 ' + purposeValues + '이고 ' +
                                             '피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고 ' +
                                             '식단 스타일은 ' + styleValues + '이야' +
-                                            '기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘. 구성방식은 1.음식명: [내용] 2.식재료: [내용] 3.조리법 : [내용] 식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 레시피 내용에 모든 줄마다 번호를 적어줘. 이것을 토대로 추천해줘.'
+                                            '기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘.'+
+                                            '구성방식은 1.음식명: [내용]'+
+                                    		'2.식재료: [내용]'+
+                                    		'3.조리법 : [내용]'+
+                                    		'식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 이것을 토대로 추천해줘.'
                                     },
                                 ];
 
