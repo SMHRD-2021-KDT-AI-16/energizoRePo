@@ -17,19 +17,19 @@
   		 -->
  <insert id="join" parameterType="com.todaysmenu.model.MemberVO">
    INSERT INTO USER_INFO(user_id,user_pw,user_name,user_gender,user_birthdate)
-   VALUES (#{id},#{pw},#{name},#{gender},#{age})
+   VALUES (#{user_id},#{user_pw},#{user_name},#{user_gender},#{user_birthdate})
   </insert>
   <select id="login" parameterType="com.todaysmenu.model.MemberVO" resultType="com.todaysmenu.model.MemberVO">
-  SELECT * FROM USER_INFO 
-  WHERE user_ID = #{id} 
-  AND user_PW = #{pw}
+  SELECT * FROM USER_INFO
+  WHERE USER_ID = #{user_id}
+  AND USER_PW = #{user_pw}
   </select>
   
     <select id="idCheck" parameterType="String" resultType="boolean">
   SELECT CASE WHEN COUNT(*)>0 THEN 1
  				   ELSE 0
 			   END RESULT
-  FROM USER_INFO WHERE user_ID = #{id}
+  FROM USER_INFO WHERE user_ID = #{user_id}
   </select>
   
   

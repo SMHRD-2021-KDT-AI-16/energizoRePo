@@ -15,27 +15,27 @@ public class JoinService implements command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 1. 요청받은 데이터 꺼내오기
-				String id = request.getParameter("id");
-				String pw = request.getParameter("pw");
-				String age =request.getParameter("age");
-				String name = request.getParameter("name");
-				String gender = request.getParameter("gender");
+				String user_id = request.getParameter("user_id");
+				String user_pw = request.getParameter("user_pw");
+				String user_birthdate =request.getParameter("user_birthdate");
+				String user_name = request.getParameter("user_name");
+				String user_gender = request.getParameter("user_gender");
 				// 2. MemberVO 클래스를 생성해서 요청받은 데이터를 하나로 묶어주기
 				// 2-1) MemberVO vo라는 객체 생성
 				MemberVO vo = new MemberVO();
 				// 2-2) setter메소드 사용해서 데이터보관
-				vo.setId(id);
-				vo.setPw(pw);
-				vo.setAge(age);
-				vo.setName(name);
-				vo.setGender(gender);
+				vo.setUser_id(user_id);
+				vo.setUser_pw(user_pw);
+				vo.setUser_birthdate(user_birthdate);
+				vo.setUser_name(user_name);
+				vo.setUser_gender(user_gender);
 				// 3. DAO 생성하기
 				MemberDAO dao = new MemberDAO();
 				// 4. DAO 사용하기
 				int row = dao.join(vo);
 				if (row > 0) {
 					// 5. 성공했다면 join_success.jsp로 foward방식 이동
-					request.setAttribute("id", id);
+					request.setAttribute("user_id", user_id);
 					return "Join_Success.jsp";
 				} else {
 					// 6. 실패했다면 main.jsp로 redirect방식 이동

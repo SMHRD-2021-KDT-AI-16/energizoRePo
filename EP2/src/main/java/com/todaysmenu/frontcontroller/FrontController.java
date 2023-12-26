@@ -17,6 +17,7 @@ import com.todaysmenu.controller.BoardUpdateService;
 import com.todaysmenu.controller.CalendarInsertService;
 import com.todaysmenu.controller.CalendarDeleteService;
 import com.todaysmenu.controller.CalendarUpdateService;
+import com.todaysmenu.controller.FilteringService;
 import com.todaysmenu.controller.IdCheckService;
 import com.todaysmenu.controller.JoinService;
 import com.todaysmenu.controller.LoginService;
@@ -44,6 +45,7 @@ public class FrontController extends HttpServlet {
 		map.put("jsp/CalendarInsert.do", new CalendarInsertService());
 		map.put("jsp/CalendarDelete.do", new CalendarDeleteService());
 		map.put("jsp/CalendarUpdate.do", new CalendarUpdateService());
+		map.put("jsp/Filtering.do", new FilteringService());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

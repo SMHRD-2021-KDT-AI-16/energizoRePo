@@ -64,7 +64,7 @@
                 <label>
                   <h6 class="inputset-tit"> 아이디<span>*</span>
                   </h6>
-                  <input name="id" id="inputI" type="text" class="inputset-input form-control" placeholder="사용하실 아이디를 입력해 주세요."
+                  <input name="user_id" id="inputI" type="text" class="inputset-input form-control" placeholder="사용하실 아이디를 입력해 주세요."
                     aria-label="내용">
                 </label>
                 <button id="checkButton" class="btnset btnset-line btnset-lg" onclick="checkI()">중복확인</button>
@@ -73,7 +73,7 @@
                 <label>
                   <h6 class="inputset-tit"> 비밀번호<span>*</span>
                   </h6>
-                  <input name="pw" type="password" class="inputset-input form-control" placeholder="사용하실 비밀번호를 입력해 주세요."
+                  <input name="user_pw" type="password" class="inputset-input form-control" placeholder="사용하실 비밀번호를 입력해 주세요."
                     aria-label="내용" required="">
                 </label>
               </div>
@@ -81,7 +81,7 @@
                 <label>
                   <h6 class="inputset-tit"> 이름<span>*</span>
                   </h6>
-                  <input name="name" type="text" class="inputset-input form-control" placeholder="이름을 입력해주세요." aria-label="내용"
+                  <input name="user_name" type="text" class="inputset-input form-control" placeholder="이름을 입력해주세요." aria-label="내용"
                     required="">
                 </label>
               </div>
@@ -89,7 +89,7 @@
                 <label>
                   <h6 class="inputset-tit"> 생년월일<span>*</span>
                   </h6>
-                  <input name="age" type="date" class="inputset-input form-control" placeholder="숫자로 입력해주세요." aria-label="내용"
+                  <input name="user_birthdate" type="date" class="inputset-input form-control" placeholder="숫자로 입력해주세요." aria-label="내용"
                     required="">
                 </label>
               </div>
@@ -97,8 +97,8 @@
                 <label>
                   <h6 class="inputset-tit"> 성별<span>*</span>
                   </h6>
-                    남자 <input type="radio" name="gender" value="M">
-                    여자 <input type="radio" name="gender" value="F">
+                    남자 <input type="radio" name="user_gender" value="M">
+                    여자 <input type="radio" name="user_gender" value="F">
                   </h6>
                 </label>
               </div>
@@ -143,10 +143,8 @@
 	        success: function(data){
 	            if(data =='true'){
 	                $('#resultCheck').text('사용할 수 없는 아이디')
-	                alert('사용불가 아이디')
 	            } else if (data =='false'){
 	                $('#resultCheck').text('사용할 수 있는 아이디')
-	                alert('사용가능 아이디')
 	                // 여기서 회원가입 페이지로 넘어가도록 구현 추가
 	                // 예: window.location.href = "회원가입완료페이지URL";
 	            }   
@@ -195,6 +193,6 @@
       console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
     }
     // ]]>
-  </script>
+  </script> 
 </body>
 </html>
