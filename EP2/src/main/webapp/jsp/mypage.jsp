@@ -29,7 +29,7 @@
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
+          <a class="header-logo" href="Gomain.do" title="hooms"></a>
         </h1>
       </div>
       <div class="header-center">
@@ -60,7 +60,11 @@
       </div>
       <div class="header-right">
         <div class="header-utils">
-          <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
+          <a href="Gomypage.do" class="btn-profile header-utils-btn" title="마이페이지"></a>
+          <button class="btn-close header-utils-btn" title="close"></button>
+        </div>
+       <div class="header-utils">
+          <a href="Logout.do" class="btn-search header-utils-btn" title="로그아웃"></a>
           <button class="btn-close header-utils-btn" title="close"></button>
         </div>
       </div>
@@ -109,7 +113,7 @@
             </ul>
             <div class="contents-btn">
               <a class="btnset" href="update.jsp?id=">내 정보 수정</a>
-              <a class="btnset btnset-ghost" href="deleteService.do?id=">회원탈퇴</a>
+              <a class="btnset btnset-ghost" href="DeleteService.do?id=${member.user_id}">회원탈퇴</a>
             </div>
           </div>
         </div>

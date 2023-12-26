@@ -25,25 +25,52 @@
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
   <!-- [S]hooms-N55 -->
-  <header class="hooms-N55" data-bid="uJLQ6D34F4" id="">
+    <header class="hooms-N55" data-bid="uClqa8c34N" id="">
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
+          <a class="header-logo" href="Gomain.do" title="hooms"></a>
         </h1>
       </div>
       <div class="header-center">
-        
+        <ul class="header-gnblist">
+                            <li class="header-gnbitem">
+                                <a class="header-gnblink" href="Gocalendar.do">
+                                    <span>캘린더</span>
+                                </a>
+
+                            </li>
+                            <li class="header-gnbitem">
+                                <a class="header-gnblink" href="Gomain.do">
+                                    <span>AI 식단 추천</span>
+                                </a>
+
+                            </li>
+                            <li class="header-gnbitem">
+                                <a class="header-gnblink" href="Goboard.do">
+                                    <span>레시피 저장소</span>
+                                </a>
+                            </li>
+                            <li class="header-gnbitem">
+                                <a class="header-gnblink" href="Goyoutube.do">
+                                    <span>레시피 영상</span>
+                                </a>
+                            </li>
+                        </ul>
       </div>
       <div class="header-right">
         <div class="header-utils">
-          <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
+          <a href="Gomypage.do" class="btn-profile header-utils-btn" title="마이페이지"></a>
+          <button class="btn-close header-utils-btn" title="close"></button>
+        </div>
+       <div class="header-utils">
+          <a href="Logout.do" class="btn-search header-utils-btn" title="로그아웃"></a>
           <button class="btn-close header-utils-btn" title="close"></button>
         </div>
       </div>
       
     </div>
-  
+   
     <div class="header-dim"></div>
   </header>
   <!-- [E]hooms-N55 -->
