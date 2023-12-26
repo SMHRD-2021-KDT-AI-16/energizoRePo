@@ -141,16 +141,15 @@
 
     <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
         <!-- [S]hooms-N54 -->
-        <div class="hooms-N54" data-bid="oClqA9Wim2" id="">
-            <div class="header-inner">
-                <div class="header-container container-lg">
-                    <div class="header-left">
-                        <h1 class="header-title">
-                            <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
-                        </h1>
-                    </div>
-                    <div class="header-center">
-                        <ul class="header-gnblist">
+   <header class="hooms-N55" data-bid="uClqa8c34N" id="">
+    <div class="header-container container-lg">
+      <div class="header-left">
+        <h1 class="header-title">
+          <a class="header-logo" href="Gomain.do" title="hooms"></a>
+        </h1>
+      </div>
+      <div class="header-center">
+        <ul class="header-gnblist">
                             <li class="header-gnbitem">
                                 <a class="header-gnblink" href="Gocalendar.do">
                                     <span>캘린더</span>
@@ -174,33 +173,22 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="header-right">
-                        <div class="header-utils">
-                            <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
-                            <button class="btn-close header-utils-btn" title="close"></button>
-                        </div>
-                    </div>
-                    <div class="header-search-form">
-                        <div class="inputset inputset-line">
-                            <button class="icon-right icon-search btn" type="button" aria-label="아이콘">
-                            </button>
-                            <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요."
-                                aria-label="내용">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-fullmenu-dark fullmenu-top">
-                <div class="fullmenu-head container-lg">
-                    <h4 class="fullmenu-title">
-                        <a class="fullmenu-logo" href="javascript:void(0)" title="hooms"></a>
-                    </h4>
-                    <button class="fullmenu-close"></button>
-                </div>
-            </div>
-            <div class="header-dim"></div>
+      </div>
+      <div class="header-right">
+        <div class="header-utils">
+          <a href="Gomypage.do" class="btn-profile header-utils-btn" title="마이페이지"></a>
+          <button class="btn-close header-utils-btn" title="close"></button>
         </div>
+       <div class="header-utils">
+          <a href="Logout.do" class="btn-search header-utils-btn" title="로그아웃"></a>
+          <button class="btn-close header-utils-btn" title="close"></button>
+        </div>
+      </div>
+      
+    </div>
+   
+    <div class="header-dim"></div>
+  </header>
         <!-- [E]hooms-N54 -->
         <main class="th-layout-main th-layout-side">
             <div class="th-layout-sideleft">

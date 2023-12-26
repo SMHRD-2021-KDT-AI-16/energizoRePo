@@ -207,6 +207,7 @@
 }
 
 /* hooms-N46 [XClqA8C36W] */
+.hooms-N46 #userInfo {max-width: 700px;}
 .hooms-N46 .contents-inner { padding: 10rem 2.4rem; }
 .hooms-N46 .textset.textset-h2 .textset-tit { margin-bottom: 4rem; text-align: center; }
 .hooms-N46 .contents-top { display: flex; align-items: center; justify-content: space-between; padding: 4rem 0; border-top: 1px solid var(--primary); }
