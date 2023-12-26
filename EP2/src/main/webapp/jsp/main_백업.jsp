@@ -68,12 +68,6 @@
                 margin: 30px;
             }
 
-            #keybox_purpose,
-            #keybox_ingre1,
-            #keybox_ingre2,
-            #keybox_style {
-                margin: 20px;
-            }
 
             .keyword_purpose,
             .keyword_ingre1,
@@ -153,24 +147,24 @@
                         <ul class="header-gnblist">
                             <li class="header-gnbitem">
                                 <a class="header-gnblink" href="javascript:void(0)">
-                                    <span>캘린더</span>
+                                    <span>ABOUT US</span>
                                 </a>
 
                             </li>
                             <li class="header-gnbitem">
                                 <a class="header-gnblink" href="javascript:void(0)">
-                                    <span>AI 식단 추천</span>
+                                    <span>PRODUCT</span>
                                 </a>
 
                             </li>
                             <li class="header-gnbitem">
                                 <a class="header-gnblink" href="javascript:void(0)">
-                                    <span>레시피 저장소</span>
+                                    <span>SHOP</span>
                                 </a>
                             </li>
                             <li class="header-gnbitem">
                                 <a class="header-gnblink" href="javascript:void(0)">
-                                    <span>레시피 영상</span>
+                                    <span>NOTICE</span>
                                 </a>
                             </li>
                         </ul>
@@ -231,11 +225,11 @@
 
             <div class="th-layout-content">
 
-                <div id="blank_area"></div>
-
+                <div id="blank_area">
+                </div>
                 <div id="keyword_area">
 
-                    <span align="center">
+                    <form align="center">
                         <div id="keybox_purpose">
                             <span class="key_title">목적</span>
                             <span class="keyword_purpose">체중감소<input type="checkbox" value="체중감소"></span>
@@ -275,9 +269,13 @@
                             <span class="keyword_style">저탄수화물<input type="checkbox" value="저탄수화물"></span>
                             <span class="keyword_style">글루텐 프리<input type="checkbox" value="글루텐프리"></span>
                         </div>
-                        <button id="btn_click" onclick="chatGPT()">추천받기</button>
-                    </span>
+
+                    </form>
                     <span>
+                        <div>
+                            <input type="text" id="keywords" name="keywords" required />
+                            <button id="btn_click" onclick="chatGPT()">추천받기</button>
+                        </div>
                         <div id="result"></div>
 
                         <div id="loading">
@@ -291,32 +289,14 @@
                             });
 
                             function chatGPT() {
-                                const api_key = "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"
-
-                                const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
-                                const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
-                                const ingre2Checkboxes = document.querySelectorAll('#keybox_ingre2 input[type="checkbox"]:checked');
-                                const styleCheckboxes = document.querySelectorAll('#keybox_style input[type="checkbox"]:checked');
-
-                                // 가져온 값을 배열로 변환
-                                const purposeValues = Array.from(purposeCheckboxes).map(checkbox => checkbox.value).join(', ');
-                                const ingre1Values = Array.from(ingre1Checkboxes).map(checkbox => checkbox.value).join(', ');
-                                const ingre2Values = Array.from(ingre2Checkboxes).map(checkbox => checkbox.value).join(', ');
-                                const styleValues = Array.from(styleCheckboxes).map(checkbox => checkbox.value).join(', ');
-
+                                const api_key = "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"  // <- API KEY 입력
+                                const keywords = document.getElementById('keywords').value
                                 $('#loading').show();
 
                                 const messages = [
                                     { role: 'system', content: 'You are a helpful assistant.' },
-                                    {
-                                        role: 'user',
-                                        content:
-                                            '나의 목적은 ' + purposeValues + '이고 ' +
-                                            '피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고 ' +
-                                            '식단 스타일은 ' + styleValues + '이야' +
-                                            '기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘. 구성방식은 1.음식명: [내용] 2.식재료: [내용] 3.조리법 : [내용] 식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 레시피 내용에 모든 줄마다 번호를 적어줘. 이것을 토대로 추천해줘.'
-                                    },
-                                ];
+                                    { role: 'user', content: keywords + '기본 : 아침,점심,저녁메뉴, 각메뉴는 하나씩만 알려줘. 구성방식은 1.음식명: [내용 ] 2.식재료: [내용] 3.조리법 : [내용] 식재료는 1인기준 정량으로 레시피는 자세히 알려주고 모든 줄마다 번호를 적어줘. 조건 : (문단뒤에 조건 : +내용). 이것을 토대로 추천해줘.' },
+                                ]
 
                                 const data = {
                                     model: 'gpt-3.5-turbo',
@@ -348,8 +328,8 @@
                                     document.getElementById('keywords').value = ''
                                 });
                             }
-
                         </script>
+
                     </span>
 
                 </div>
