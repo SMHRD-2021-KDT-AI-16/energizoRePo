@@ -66,10 +66,10 @@
           
           <ul class="contents-list">
 			 <li class="contents-item">
-              <a href="intro.jsp" class="contents-link">첫 화면으로</a>
+              <a href="Gointro.do" class="contents-link">첫 화면으로</a>
             </li>
             <li class="contents-item">
-              <a href="Join.jsp" class="contents-link">회원가입</a>
+              <a href="GoJoin.do" class="contents-link">회원가입</a>
             </li>
           </ul>
           <div class="contents-start">
