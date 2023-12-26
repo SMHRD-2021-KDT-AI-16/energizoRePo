@@ -82,7 +82,7 @@
             <div class="contents-tit">
               
               <h3>
-                <strong>홍길동</strong>님 안녕하세요!
+                <strong>${member.user_name}</strong>님 안녕하세요!
               </h3>
             </div>
             
@@ -91,19 +91,19 @@
             <ul class="contents-list">
               <li class="contents-item">
                 <strong>아이디</strong>
-                <span>hong123</span>
+                <span>${member.user_id}</span>
               </li>
               <li class="contents-item">
                 <strong>이름</strong>
-                <span>홍길동</span>
+                <span>${member.user_name}</span>
               </li>
               <li class="contents-item">
-                <strong>나이</strong>
-                <span>20</span>
+                <strong>생년월일</strong>
+                <span>${member.user_birthdate}</span>
               </li>
               <li class="contents-item">
                 <strong>성별</strong>
-                <span>남</span>
+                <span>${member.user_gender}</span>
               </li>
              
             </ul>
