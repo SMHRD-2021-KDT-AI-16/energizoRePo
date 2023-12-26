@@ -51,13 +51,13 @@
             <div class="inputset inputset-lg inputset-label">
               <label>
                 <h6 class="inputset-tit">아이디</h6>
-                <input name="id" type="text" class="inputset-input form-control" placeholder="아이디를 입력해주세요." aria-label="내용">
+                <input name="user_id" type="text" class="inputset-input form-control" placeholder="아이디를 입력해주세요." aria-label="내용">
               </label>
             </div>
             <div class="inputset inputset-lg inputset-label">
               <label>
                 <h6 class="inputset-tit">비밀번호</h6>
-                <input name="pw" type="password" class="inputset-input form-control" placeholder="비밀번호를 입력해주세요." aria-label="내용">
+                <input name="user_pw" type="password" class="inputset-input form-control" placeholder="비밀번호를 입력해주세요." aria-label="내용">
               </label>
             </div>            
             <button type="submit" class="btnset btnset-lg">로그인</button>
