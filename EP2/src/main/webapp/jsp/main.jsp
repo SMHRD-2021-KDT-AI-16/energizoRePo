@@ -291,7 +291,7 @@
                             });
 
                             function chatGPT() {
-                                const api_key = "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"
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
