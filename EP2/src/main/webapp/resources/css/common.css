@@ -267,7 +267,7 @@
 .hooms-N55 .header-sublink:hover { font-weight: 700; }
 .hooms-N55 .header-right { display: flex; align-items: center; }
 .hooms-N55 .header-utils { display: flex; align-items: center; }
-.hooms-N55 .header-utils .header-utils-btn { width: 3.2rem; height: 3.2rem; border: transparent; background-color: transparent; background-position: center; background-size: cover; }
+.hooms-N55 .header-utils .header-utils-btn { width: 3.2rem; height: 3.2rem; border: transparent; background-color: transparent; background-position: center; background-size: cover; margin-left: 1rem; }
 .hooms-N55 .header-utils .header-utils-btn+.header-utils-btn { margin-left: 2.4rem; }
 .hooms-N55 .btn-profile { background-image: url("../../resources/icons/ico_profile_black.svg"); }
 .hooms-N55 .btn-search { background-image: url("../../resources/icons/box-arrow-right.svg"); }

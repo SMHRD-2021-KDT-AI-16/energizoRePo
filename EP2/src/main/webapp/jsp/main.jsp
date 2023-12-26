@@ -291,7 +291,11 @@
                             });
 
                             function chatGPT() {
+<<<<<<< HEAD
                                 const api_key = "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"
+=======
+                                const api_key = "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"
+>>>>>>> branch 'master' of https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo.git
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
