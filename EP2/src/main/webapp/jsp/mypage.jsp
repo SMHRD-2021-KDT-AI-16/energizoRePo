@@ -34,29 +34,29 @@
       </div>
       <div class="header-center">
         <ul class="header-gnblist">
-          <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
-              <span>캘린더</span>
-            </a>
-            
-          </li>
-          <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
-              <span>AI 식단 추천</span>
-            </a>
-            
-          </li>
-          <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
-              <span>레시피 저장소</span>
-            </a>
-          </li>
-          <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
-              <span>레시피 영상</span>
-            </a>
-          </li>
-        </ul>
+                            <li class="header-gnbitem">
+                                <a class="header-gnblink" href="Gocalendar.do">
+                                    <span>캘린더</span>
+                                </a>
+
+                            </li>
+                            <li class="header-gnbitem">
+                                <a class="header-gnblink" href="Gomain.do">
+                                    <span>AI 식단 추천</span>
+                                </a>
+
+                            </li>
+                            <li class="header-gnbitem">
+                                <a class="header-gnblink" href="Goboard.do">
+                                    <span>레시피 저장소</span>
+                                </a>
+                            </li>
+                            <li class="header-gnbitem">
+                                <a class="header-gnblink" href="Goyoutube.do">
+                                    <span>레시피 영상</span>
+                                </a>
+                            </li>
+                        </ul>
       </div>
       <div class="header-right">
         <div class="header-utils">

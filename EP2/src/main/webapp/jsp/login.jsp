@@ -51,13 +51,13 @@
             <div class="inputset inputset-lg inputset-label">
               <label>
                 <h6 class="inputset-tit">아이디</h6>
-                <input name="id" type="text" class="inputset-input form-control" placeholder="아이디를 입력해주세요." aria-label="내용">
+                <input name="user_id" type="text" class="inputset-input form-control" placeholder="아이디를 입력해주세요." aria-label="내용">
               </label>
             </div>
             <div class="inputset inputset-lg inputset-label">
               <label>
                 <h6 class="inputset-tit">비밀번호</h6>
-                <input name="pw" type="password" class="inputset-input form-control" placeholder="비밀번호를 입력해주세요." aria-label="내용">
+                <input name="user_pw" type="password" class="inputset-input form-control" placeholder="비밀번호를 입력해주세요." aria-label="내용">
               </label>
             </div>            
             <button type="submit" class="btnset btnset-lg">로그인</button>
@@ -66,10 +66,10 @@
           
           <ul class="contents-list">
 			 <li class="contents-item">
-              <a href="intro.jsp" class="contents-link">첫 화면으로</a>
+              <a href="Gointro.do" class="contents-link">첫 화면으로</a>
             </li>
             <li class="contents-item">
-              <a href="Join.jsp" class="contents-link">회원가입</a>
+              <a href="GoJoin.do" class="contents-link">회원가입</a>
             </li>
           </ul>
           <div class="contents-start">
