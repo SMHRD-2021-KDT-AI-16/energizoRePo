@@ -291,11 +291,8 @@
                             });
 
                             function chatGPT() {
-<<<<<<< HEAD
-                                const api_key = "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"
-=======
-                                const api_key = "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"
->>>>>>> branch 'master' of https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo.git
+
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
@@ -309,6 +306,19 @@
                                 const styleValues = Array.from(styleCheckboxes).map(checkbox => checkbox.value).join(', ');
 
                                 $('#loading').show();
+                                
+                                if (purposeValues.length===0 && ingre1Values.length===0 && ingre2Values.length===0 && styleValues.length===0) {
+                                	const messages = [
+                                        { role: 'system', content: '도움이 필요하시면 말씀해주세요!' },
+                                        {
+                                            role: 'user',
+                                            content:
+                                                '음, 아무 것도 선택하지 않으셨네요. ' +
+                                                '여러분의 식단 선호 사항과 관련된 목적, 피해야할 식재료, 식단 스타일을 선택해주세요!' +
+                                                '그럼 제가 더 나은 추천을 도와드릴 수 있어요.'
+                                        },
+                                    ];
+                                }else{
 
                                 const messages = [
                                     { role: 'system', content: 'You are a helpful assistant.' },
@@ -325,6 +335,8 @@
                                     		'식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 이것을 토대로 추천해줘.'
                                     },
                                 ];
+                                }
+                                
 
                                 const data = {
                                     model: 'gpt-3.5-turbo',
