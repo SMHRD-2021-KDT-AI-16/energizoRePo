@@ -143,9 +143,9 @@
 	        // 요청이 성공할 경우 무엇을 할지?
 	        success: function(data){
 	            if(data =='true'){
-	                $('#resultCheck').text('사용할 수 없는 아이디')
+	                $('#resultCheck').text('이미 있는 아이디입니다')
 	            } else if (data =='false'){
-	                $('#resultCheck').text('사용할 수 있는 아이디')
+	                $('#resultCheck').text('사용할 수 있는 아이디입니다')
 	                // 여기서 회원가입 페이지로 넘어가도록 구현 추가
 	                // 예: window.location.href = "회원가입완료페이지URL";
 	            }   
