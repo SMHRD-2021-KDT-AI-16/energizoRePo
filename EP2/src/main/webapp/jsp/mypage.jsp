@@ -74,7 +74,7 @@
     <!-- [S]hooms-N46 -->
     <div class="hooms-N46" data-bid="XClqA8C36W">
       <div class="contents-inner">
-        <div class="contents-container container-md">
+        <div class="contents-container container-md" id="userInfo">
           <div class="textset textset-h2">
             <h2 class="textset-tit">마이 페이지</h2>
           </div>
@@ -92,10 +92,6 @@
               <li class="contents-item">
                 <strong>아이디</strong>
                 <span>hong123</span>
-              </li>
-              <li class="contents-item">
-                <strong>비밀번호</strong>
-                <span>1234</span>
               </li>
               <li class="contents-item">
                 <strong>이름</strong>
