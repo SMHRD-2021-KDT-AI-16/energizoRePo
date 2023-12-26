@@ -291,7 +291,9 @@
                             });
 
                             function chatGPT() {
-                                const api_key = "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"
+
+                                const api_key = "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"
+
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
@@ -305,8 +307,23 @@
                                 const styleValues = Array.from(styleCheckboxes).map(checkbox => checkbox.value).join(', ');
 
                                 $('#loading').show();
+                                
+                                if (purposeValues.length===0 && ingre1Values.length===0 && ingre2Values.length===0 && styleValues.length===0) {
+                                	messages = [
+                                        { role: 'system', content: '도움이 필요하시면 말씀해주세요!' },
+                                        {
+                                            role: 'user',
+                                            content:
+                                            	'기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘.'+
+                                                '구성방식은 1.음식명: [내용]'+
+                                                '2.식재료: [내용]'+
+                                                '3.조리법 : [내용]'+
+                                                '식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 위의 음식명,식재료,조리법은 각각 한줄 씩 추천해줘.'
+                                        },
+                                    ];
+                                }else{
 
-                                const messages = [
+                                	messages = [
                                     { role: 'system', content: 'You are a helpful assistant.' },
                                     {
                                         role: 'user',
@@ -314,9 +331,15 @@
                                             '나의 목적은 ' + purposeValues + '이고 ' +
                                             '피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고 ' +
                                             '식단 스타일은 ' + styleValues + '이야' +
-                                            '기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘. 구성방식은 1.음식명: [내용] 2.식재료: [내용] 3.조리법 : [내용] 식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 레시피 내용에 모든 줄마다 번호를 적어줘. 이것을 토대로 추천해줘.'
+                                            '기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘.'+
+                                            '구성방식은 1.음식명: [내용]'+
+                                            '2.식재료: [내용]'+
+                                            '3.조리법 : [내용]'+
+                                            '식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 위의 음식명,식재료,조리법은 각각 한줄 씩 추천해줘.'
                                     },
                                 ];
+                                }
+                                
 
                                 const data = {
                                     model: 'gpt-3.5-turbo',

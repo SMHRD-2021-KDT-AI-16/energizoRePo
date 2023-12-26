@@ -69,6 +69,7 @@
                 </label>
                 <button id="checkButton" class="btnset btnset-line btnset-lg" onclick="checkI()">중복확인</button>
               </div>
+              <span id="resultCheck"></span>
               <div class="inputset inputset-lg inputset-label">
                 <label>
                   <h6 class="inputset-tit"> 비밀번호<span>*</span>
