@@ -1,8 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="ko"><head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="imagetoolbar" content="no">
@@ -29,30 +26,30 @@
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
+          <a class="header-logo" href="main.jsp?id=${member.id}" title="오늘의 메뉴"></a>
         </h1>
       </div>
       <div class="header-center">
         <ul class="header-gnblist">
           <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
+            <a class="header-gnblink" href="calendar.jsp?id=${member.id}">
               <span>캘린더</span>
             </a>
             
           </li>
           <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
+            <a class="header-gnblink" href="main.jsp?id=${member.id}">
               <span>AI 식단 추천</span>
             </a>
             
           </li>
           <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
+            <a class="header-gnblink" href="board.jsp?id=${member.id}">
               <span>레시피 저장소</span>
             </a>
           </li>
           <li class="header-gnbitem">
-            <a class="header-gnblink" href="javascript:void(0)">
+            <a class="header-gnblink" href="youtube.jsp">
               <span>레시피 영상</span>
             </a>
           </li>
@@ -60,7 +57,11 @@
       </div>
       <div class="header-right">
         <div class="header-utils">
-          <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
+          <a href="mypage.jsp" class="btn-profile header-utils-btn" title="마이페이지"></a>
+          <button class="btn-close header-utils-btn" title="close"></button>
+        </div>
+       <div class="header-utils">
+          <a href="LogoutService.do" class="btn-search header-utils-btn" title="로그아웃"></a>
           <button class="btn-close header-utils-btn" title="close"></button>
         </div>
       </div>
@@ -82,7 +83,7 @@
             <div class="contents-tit">
               
               <h3>
-                <strong>홍길동</strong>님 안녕하세요!
+                <strong>${member.name}</strong>님 안녕하세요!
               </h3>
             </div>
             
@@ -91,29 +92,26 @@
             <ul class="contents-list">
               <li class="contents-item">
                 <strong>아이디</strong>
-                <span>hong123</span>
-              </li>
-              <li class="contents-item">
-                <strong>비밀번호</strong>
-                <span>1234</span>
+                <span>${member.id}</span>
               </li>
               <li class="contents-item">
                 <strong>이름</strong>
-                <span>홍길동</span>
+                <span>${member.name}</span>
               </li>
               <li class="contents-item">
-                <strong>나이</strong>
-                <span>20</span>
+                <strong>생년월일</strong>
+                <span>${member.age}</span>
               </li>
               <li class="contents-item">
                 <strong>성별</strong>
-                <span>남</span>
+                <span>${member.gender}</span>
               </li>
              
             </ul>
             <div class="contents-btn">
-              <a class="btnset" href="update.jsp?id=">내 정보 수정</a>
-              <a class="btnset btnset-ghost" href="deleteService.do?id=">회원탈퇴</a>
+              <a class="btnset" href="update.jsp?id=${member.id}">내 정보 수정</a>
+              <a class="btnset btnset-ghost" href="deleteService.do?id=${member.id}">회원탈퇴</a>
+             <!-- <a class="btnset" href="LogoutService.do?id=">로그아웃</a> -->
             </div>
           </div>
         </div>
@@ -218,5 +216,4 @@
 	}
 	// ]]>
 </script>
-</body>
-</html>
+</body></html>
