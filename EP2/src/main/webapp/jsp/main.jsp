@@ -152,24 +152,24 @@
                     <div class="header-center">
                         <ul class="header-gnblist">
                             <li class="header-gnbitem">
-                                <a class="header-gnblink" href="javascript:void(0)">
+                                <a class="header-gnblink" href="Gocalendar.do">
                                     <span>캘린더</span>
                                 </a>
 
                             </li>
                             <li class="header-gnbitem">
-                                <a class="header-gnblink" href="javascript:void(0)">
+                                <a class="header-gnblink" href="Gomain.do">
                                     <span>AI 식단 추천</span>
                                 </a>
 
                             </li>
                             <li class="header-gnbitem">
-                                <a class="header-gnblink" href="javascript:void(0)">
+                                <a class="header-gnblink" href="Goboard.do">
                                     <span>레시피 저장소</span>
                                 </a>
                             </li>
                             <li class="header-gnbitem">
-                                <a class="header-gnblink" href="javascript:void(0)">
+                                <a class="header-gnblink" href="Goyoutube.do">
                                     <span>레시피 영상</span>
                                 </a>
                             </li>
@@ -235,7 +235,7 @@
 
                 <div id="keyword_area">
 
-                    <span align="center">
+                    <div align="center">
                         <div id="keybox_purpose">
                             <span class="key_title">목적</span>
                             <span class="keyword_purpose">체중감소<input type="checkbox" value="체중감소"></span>
@@ -276,7 +276,7 @@
                             <span class="keyword_style">글루텐 프리<input type="checkbox" value="글루텐프리"></span>
                         </div>
                         <button id="btn_click" onclick="chatGPT()">추천받기</button>
-                    </span>
+                    </div>
                     <span>
                         <div id="result"></div>
 
@@ -291,11 +291,7 @@
                             });
 
                             function chatGPT() {
-<<<<<<< HEAD
                                 const api_key = "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"
-=======
-                                const api_key = "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"
->>>>>>> branch 'master' of https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo.git
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
@@ -318,11 +314,7 @@
                                             '나의 목적은 ' + purposeValues + '이고 ' +
                                             '피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고 ' +
                                             '식단 스타일은 ' + styleValues + '이야' +
-                                            '기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘.'+
-                                            '구성방식은 1.음식명: [내용]'+
-                                    		'2.식재료: [내용]'+
-                                    		'3.조리법 : [내용]'+
-                                    		'식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 이것을 토대로 추천해줘.'
+                                            '기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘. 구성방식은 1.음식명: [내용] 2.식재료: [내용] 3.조리법 : [내용] 식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 레시피 내용에 모든 줄마다 번호를 적어줘. 이것을 토대로 추천해줘.'
                                     },
                                 ];
 
