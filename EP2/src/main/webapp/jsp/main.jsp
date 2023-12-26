@@ -240,7 +240,7 @@
                             <span class="key_title">목적</span>
                             <span class="keyword_purpose">체중감소<input type="checkbox" value="체중감소"></span>
                             <span class="keyword_purpose">체중증가<input type="checkbox" value="체중증가"></span>
-                            <span class="keyword_purpose">비조리요리<input type="checkbox" value="비조리요리"></span>
+                            <span class="keyword_purpose">비조리<input type="checkbox" value="비조리요리"></span>
                             <span class="keyword_purpose">저당식<input type="checkbox" value="저당식"></span>
                             <span class="keyword_purpose">저염식<input type="checkbox" value="저염식"></span>
                         </div>
@@ -292,7 +292,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
@@ -310,37 +310,30 @@
                                 
                                 if (purposeValues.length===0 && ingre1Values.length===0 && ingre2Values.length===0 && styleValues.length===0) {
                                 	messages = [
-                                        { role: 'system', content: '도움이 필요하시면 말씀해주세요!' },
+                                        { role: 'system', content: 'You are a helpful assistant' },
                                         {
                                             role: 'user',
                                             content:
-                                            	'기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘.'+
-                                                '구성방식은 1.음식명: [내용]'+
-                                                '2.식재료: [내용]'+
-                                                '3.조리법 : [내용]'+
-                                                '식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 위의 음식명,식재료,조리법은 각각 한줄 씩 추천해줘.'
+                                            	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법 한줄로 추천해줘.'
                                         },
                                     ];
-                                }else{
-
+                                }else {
                                 	messages = [
-                                    { role: 'system', content: 'You are a helpful assistant.' },
-                                    {
-                                        role: 'user',
-                                        content:
-                                            '나의 목적은 ' + purposeValues + '이고 ' +
-                                            '피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고 ' +
-                                            '식단 스타일은 ' + styleValues + '이야' +
-                                            '기본 : 아침, 점심, 저녁, 각 메뉴는 하나씩만 알려줘.'+
-                                            '구성방식은 1.음식명: [내용]'+
-                                            '2.식재료: [내용]'+
-                                            '3.조리법 : [내용]'+
-                                            '식재료는 1인 기준 정량으로, 레시피는 자세히 알려주고 위의 음식명,식재료,조리법은 각각 한줄 씩 추천해줘.'
-                                    },
-                                ];
+                                        { role: 'system', content: 'You are a helpful assistant.' },
+                                        {
+                                            role: 'user',
+                                            content:
+                                            	'나의 목적은' + purposeValues + '이고' +
+                                            	'피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고' +
+                                            	'식단 스타일은 ' + styleValues + '이야' +
+                                            	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법 한줄로 추천해줘.'
+                                        },
+                                    ];
                                 }
-                                
-
                                 const data = {
                                     model: 'gpt-3.5-turbo',
                                     temperature: 0.5,
