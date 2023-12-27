@@ -58,8 +58,7 @@
 		parameterType="com.todaysmenu.model.MemberVO">
 		UPDATE USER_INFO
 		SET USER_PW = #{user_pw},
-		USER_NAME = #{user_name},
-		USER_BIRTHDATE = #{user_birthdate}
+		USER_NAME=#{user_name}
 		WHERE USER_ID = #{user_id}
 	</update>
 
