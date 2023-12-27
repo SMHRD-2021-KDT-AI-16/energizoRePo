@@ -266,8 +266,11 @@
                         <button id="btn_click" onclick="chatGPT()">추천받기</button>
                     </div>
                     <span>
-                        <div id="result"></div>
-
+                        <form action="Filtering.do" method="post" id="filterForm">
+               			 	<div id="result"></div>
+			                <input type="hidden" id="keywords" name="keywords">
+			                <input type="submit" value="Submit">
+			            </form>
                         <div id="loading">
                             <img src="https://studentrights.sen.go.kr/images/common/loading.gif">
                         </div>
@@ -280,7 +283,11 @@
 
                             function chatGPT() {
 
+<<<<<<< HEAD
                                 const api_key = "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"
+=======
+                                const api_key = "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"
+>>>>>>> branch 'master' of https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo.git
 
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
@@ -351,6 +358,10 @@
 
                                     document.getElementById('keywords').value = ''
                                 });
+                             // 이전에 결과를 pre 태그에 추가한 부분을 hidden input의 value에 설정
+                                const preText = document.querySelector('#result pre').innerText;
+                                document.getElementById('keywords').value = preText;
+                                
                             }
 
                         </script>

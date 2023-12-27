@@ -17,7 +17,7 @@ public class FilteringService implements command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String recipe = request.getParameter("result");
+		String recipe = request.getParameter("keywords");
 		String[] recipes = recipe.replace("\r\n\r\n", "\r\n").split("\r\n");
 		String[][] result = new String[3][3];
 		
