@@ -61,7 +61,11 @@
 		USER_NAME=#{user_name}
 		WHERE USER_ID = #{user_id}
 	</update>
-
+	<delete id="resign"
+		parameterType="com.todaysmenu.model.MemberVO">
+		DELETE FROM USER_INFO
+		WHERE USER_ID = #{user_id}
+	</delete>
 
 
 </mapper>

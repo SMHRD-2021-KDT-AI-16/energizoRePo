@@ -26,7 +26,7 @@ public class UpdateService implements command {
 		MemberDAO dao = new MemberDAO();
 		int result=dao.update(vo);
 		session.setAttribute("member", vo);
-		return "redirect:/Gomain.do";
+		return "redirect:/Gomypage.do";
 	}
 
 }

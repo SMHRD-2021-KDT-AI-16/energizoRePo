@@ -96,4 +96,12 @@ public class MemberDAO {
 		sqlsession.close();
 		return row;
 	}
+	public int resign(MemberVO vo) {
+		int row=0;
+		SqlSession sqlsession = factory.openSession(true);
+		row = sqlsession.delete("resign", vo);
+		sqlsession.close();
+		return row;
+				
+	}
 }
