@@ -2,40 +2,27 @@ package com.todaysmenu.model;
 
 public class RecipeVO {
 	
-	private String food_name;
-	private String step_num;
-	private String description;
-	
-	public RecipeVO(String food_name, String step_num, String description) {
-		this.food_name = food_name;
-		this.step_num = step_num;
-		this.description = description;
+	private String recipe_name;
+	private String recipe_ingre;
+	private String recipe_desc;
+	public String getRecipe_name() {
+		return recipe_name;
 	}
-
-	public String getFood_name() {
-		return food_name;
+	public void setRecipe_name(String recipe_name) {
+		this.recipe_name = recipe_name;
 	}
-
-	public void setFood_name(String food_name) {
-		this.food_name = food_name;
+	public String getRecipe_ingre() {
+		return recipe_ingre;
 	}
-
-	public String getStep_num() {
-		return step_num;
+	public void setRecipe_ingre(String recipe_ingre) {
+		this.recipe_ingre = recipe_ingre;
 	}
-
-	public void setStep_num(String step_num) {
-		this.step_num = step_num;
+	public String getRecipe_desc() {
+		return recipe_desc;
 	}
-
-	public String getDescription() {
-		return description;
+	public void setRecipe_desc(String recipe_desc) {
+		this.recipe_desc = recipe_desc;
 	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
 	
 	
 }

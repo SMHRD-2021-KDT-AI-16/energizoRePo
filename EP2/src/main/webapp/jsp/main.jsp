@@ -266,8 +266,11 @@
                         <button id="btn_click" onclick="chatGPT()">추천받기</button>
                     </div>
                     <span>
-                        <div id="result"></div>
-
+                        <form action="Filtering.do" method="post" id="filterForm">
+               			 	<div id="result"></div>
+			                <input type="hidden" id="keywords" name="keywords">
+			                <input type="submit" value="Submit">
+			            </form>
                         <div id="loading">
                             <img src="https://studentrights.sen.go.kr/images/common/loading.gif">
                         </div>
@@ -280,8 +283,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
-
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
@@ -303,8 +305,8 @@
                                             role: 'user',
                                             content:
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
-                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법 한줄로 추천해줘.'
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : 4.5.6., 저녁 : 7.8.9.'+
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
                                 }else {
@@ -317,8 +319,8 @@
                                             	'피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고' +
                                             	'식단 스타일은 ' + styleValues + '이야' +
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
-                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법 한줄로 추천해줘.'
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : 4.5.6., 저녁 : 7.8.9.'+
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
                                 }
@@ -351,6 +353,10 @@
 
                                     document.getElementById('keywords').value = ''
                                 });
+                             // 이전에 결과를 pre 태그에 추가한 부분을 hidden input의 value에 설정
+                                const preText = document.querySelector('#result pre').innerText;
+                                document.getElementById('keywords').value = preText;
+                                
                             }
 
                         </script>
