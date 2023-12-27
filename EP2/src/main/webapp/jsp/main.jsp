@@ -280,7 +280,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
@@ -303,7 +303,7 @@
                                             role: 'user',
                                             content:
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : 4.5.6., 저녁 : 7.8.9.'+
                                                 '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
@@ -317,7 +317,7 @@
                                             	'피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고' +
                                             	'식단 스타일은 ' + styleValues + '이야' +
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : 4.5.6., 저녁 : 7.8.9.'+
                                                 '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
