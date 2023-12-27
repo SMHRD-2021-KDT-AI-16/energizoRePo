@@ -21,9 +21,12 @@ public class UpdateService implements command {
 		vo.setUser_id(sessionVO.getUser_id());
 		vo.setUser_pw(request.getParameter("pw"));
 		vo.setUser_name(request.getParameter("name"));
+		vo.setUser_gender(sessionVO.getUser_gender());
+		vo.setUser_birthdate(sessionVO.getUser_birthdate());
 		MemberDAO dao = new MemberDAO();
 		int result=dao.update(vo);
-		return "redirect:/Gomain.do";
+		session.setAttribute("member", vo);
+		return "redirect:/Gomypage.do";
 	}
 
 }
