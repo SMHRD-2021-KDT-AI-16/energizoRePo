@@ -283,7 +283,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
 
 
@@ -353,11 +353,13 @@
                                     pre.innerHTML = "\n\n" + response.choices[0].message.content
                                     result.appendChild(pre)
 
-                                    document.getElementById('keywords').value = ''
+                                    document.getElementById('keywords').value = ""
+                                    const preText = document.querySelector('#result pre').innerText;
+                                    document.getElementById('keywords').value = preText;
                                 });
                              // 이전에 결과를 pre 태그에 추가한 부분을 hidden input의 value에 설정
-                                const preText = document.querySelector('#result pre').innerText;
-                                document.getElementById('keywords').value = preText;
+                                //const preText = document.querySelector('#result pre').innerText;
+                                //document.getElementById('keywords').value = preText;
                                 
                             }
 
