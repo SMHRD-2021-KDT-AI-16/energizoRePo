@@ -280,7 +280,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
@@ -304,7 +304,7 @@
                                             content:
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
                                                 '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
-                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법 한줄로 추천해줘.'
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
                                 }else {
@@ -318,7 +318,7 @@
                                             	'식단 스타일은 ' + styleValues + '이야' +
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
                                                 '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
-                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법 한줄로 추천해줘.'
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
                                 }
