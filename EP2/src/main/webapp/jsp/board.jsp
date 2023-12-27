@@ -1,3 +1,8 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.todaysmenu.model.MemberVO"%>
+<%@page import="com.todaysmenu.db.BoardDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.todaysmenu.model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -100,9 +105,15 @@
           <div class="textset textset-h2">
             <h2 class="textset-tit">레시피 저장소</h2>
           </div>
+          <%
+          HttpSession sess = request.getSession();
+          MemberVO mb = (MemberVO) sess.getAttribute("member");
+          List<BoardVO> boards = new BoardDAO().allBoard(mb.getUser_id());
+				pageContext.setAttribute("boards", boards);
+			%>
           
           <div class="contents-search">
-            <p class="contents-result"> 전체<span> 24</span>개 </p>
+            <p class="contents-result"> 전체<span> <%=boards.size() %></span>개 </p>
             <div class="contents-form">
               <div class="selectset selectset-lg">
                 
@@ -114,13 +125,11 @@
                   </li>
                 </ul>
               </div>
-              <div class="inputset inputset-lg">
-                <button class="inputset-icon icon-right icon-search btn" type="button" aria-label="아이콘"></button>
-                <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요." aria-label="내용">
-              </div>
+              
             </div>
           </div>
           <div class="tableset">
+          
             <table class="tableset-table table">
               <colgroup>
                 <col>
@@ -143,95 +152,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="tableset-mobile">24</td>
-                  
-                  <td class="tableset-tit tableset-order02">
-                    <a class="tableset-ico" href="javascript:void(0)">
-                      <span>안녕하세요. 문의드립니다.</span>
-                    </a>
-                  </td>
-                  <td class="tableset-order05">2023.01.01</td>
-                  
-                  
-                  
-                </tr>
-                <tr>
-                  <td class="tableset-mobile">23</td>
-                  
-                  <td class="tableset-tit tableset-order02">
-                    <a class="tableset-ico" href="javascript:void(0)">
-                      <span>안녕하세요. 문의드립니다.</span>
-                    </a>
-                  </td>
-                  <td class="tableset-order05">2023.01.01</td>
-                  
-                  
-                  
-                </tr>
-                <tr>
-                  <td class="tableset-mobile">22</td>
-                  
-                  <td class="tableset-tit tableset-order02">
-                    <a class="tableset-ico" href="javascript:void(0)">
-                      <span>안녕하세요. 문의드립니다.</span>
-                    </a>
-                  </td>
-                  <td class="tableset-order05">2023.01.01</td>
-                  
-                  
-                  
-                </tr>
-                <tr>
-                  <td class="tableset-mobile">21</td>
-                  
-                  <td class="tableset-tit tableset-order02">
-                    <a class="tableset-ico" href="javascript:void(0)">
-                      <span>안녕하세요. 문의드립니다.</span>
-                    </a>
-                  </td>
-                  <td class="tableset-order05">2023.01.01</td>
-                  
-                  
-                  
-                </tr>
-                <tr>
-                  <td class="tableset-mobile">20</td>
-                 
-                  <td class="tableset-tit tableset-order02">
-                    <a class="tableset-ico" href="javascript:void(0)">
-                      <span>안녕하세요. 문의드립니다.</span>
-                    </a>
-                  </td>
-                  <td class="tableset-order05">2023.01.01</td>
-                  
-                  
-                  
-                </tr>
-                <tr>
-                  <td class="tableset-mobile">19</td>
-                  
-                  <td class="tableset-tit tableset-order02">
-                    <a class="tableset-ico" href="javascript:void(0)">
-                      <span>안녕하세요. 문의드립니다.</span>
-                    </a>
-                  </td>
-                  <td class="tableset-order05">2023.01.01</td>
-                  
-                  
-                  
-                </tr>
-                <tr>
-                  <td class="tableset-mobile">18</td>
-                  
-                  <td class="tableset-tit tableset-order02">
-                    <a class="tableset-ico" href="javascript:void(0)">
-                      <span>안녕하세요. 문의드립니다.</span>
-                    </a>
-                  </td>
-                  <td class="tableset-order05">2023.01.01</td>
-                  
-                  
+              <c:forEach var="b" items="${boards}" varStatus="s">
+				<tr>
+					<td class="tableset-mobile"> ${s.count} </td>
+					<td class="tableset-tit tableset-order02"><a class="tableset-ico" href="board_write.jsp?num=${b.b_num}"> <span>${b.b_title}</span></a></td>
+					<td class="tableset-order05"> ${b.created_at}</td>
+				</tr>
+			</c:forEach>
+                
                   
                 </tr>
               </tbody>
