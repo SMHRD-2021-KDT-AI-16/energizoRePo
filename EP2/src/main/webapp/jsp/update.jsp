@@ -82,7 +82,7 @@
           <div class="textset textset-h2">
             <h2 class="textset-tit">내 정보 수정</h2>
           </div>
-          <form action="UpdateService.do" method="post">
+          <form action="Update.do" method="post">
           <div class="contents-form">
             <div class="contents-form-bottom">
             
@@ -107,7 +107,7 @@
                 <label>
                   <h6 class="inputset-tit"> 나이
                   </h6>
-                  <input type="text" class="inputset-input form-control" placeholder="20" aria-label="내용"
+                  <input type="date" class="inputset-input form-control" placeholder="20" aria-label="내용"
                     required="">
                 </label>
               </div>
