@@ -88,9 +88,9 @@
             
               <div class="inputset inputset-lg inputset-label">
                 <label>
-                  <h6 class="inputset-tit"> 비밀번호
+                  <h6 class="inputset-tit" > 비밀번호
                   </h6>
-                  <input type="password" class="inputset-input form-control" placeholder="변경하실 비밀번호를 입력해 주세요."
+                  <input type="password" name = "pw" class="inputset-input form-control" placeholder="변경하실 비밀번호를 입력해 주세요."
                     aria-label="내용" required="">
                 </label>
               </div>
@@ -98,7 +98,7 @@
                 <label>
                   <h6 class="inputset-tit"> 이름
                   </h6>
-                  <input type="text" class="inputset-input form-control" placeholder="홍길동" aria-label="내용"
+                  <input type="text" name = "name" class="inputset-input form-control" placeholder="홍길동" aria-label="내용"
                     required="">
                 </label>
               </div>
