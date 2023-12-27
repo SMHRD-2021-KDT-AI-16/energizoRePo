@@ -8,6 +8,32 @@
 	<packaging>war</packaging>
 	<!-- 라이브러리들 기술하는 공간 -->
 	<dependencies>
+		
+		
+		
+		<!-- Spring Framework Core -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>5.3.9</version> <!-- 원하는 버전으로 수정 -->
+    </dependency>
+
+    <!-- Spring Web MVC -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>5.3.9</version> <!-- 원하는 버전으로 수정 -->
+    </dependency>
+
+    <!-- Spring Core -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>5.3.9</version> <!-- 원하는 버전으로 수정 -->
+    </dependency>
+		
+		
+		
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
