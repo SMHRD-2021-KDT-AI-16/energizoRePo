@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +30,7 @@
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="Gomain.do" title="hooms"></a>
+          <a class="header-logo" href="Gomain.do" title="홈"></a>
         </h1>
       </div>
       <div class="header-center">
@@ -46,10 +47,17 @@
                                 </a>
 
                             </li>
-                            <li class="header-gnbitem">
+ 							<li class="header-gnbitem">
+                            	<c:if test="${member != null }">
                                 <a class="header-gnblink" href="Goboard.do">
                                     <span>레시피 저장소</span>
                                 </a>
+                                </c:if>
+                                <c:if test="${member == null }">
+                                <a class="header-gnblink" onclick="loginPLZ()">
+                                    <span>레시피 저장소</span>
+                                </a>
+                                </c:if>
                             </li>
                             <li class="header-gnbitem">
                                 <a class="header-gnblink" href="Goyoutube.do">
@@ -59,6 +67,13 @@
                         </ul>
       </div>
       <div class="header-right">
+      <c:if test="${member == null }">
+      	<div class="header-utils">
+          <a href="Gologin.do" class="btn-profile header-utils-btn" title="로그인"></a>
+          <button class="btn-close header-utils-btn" title="close"></button>
+        </div>
+      </c:if>
+      <c:if test="${member != null }">
         <div class="header-utils">
           <a href="Gomypage.do" class="btn-profile header-utils-btn" title="마이페이지"></a>
           <button class="btn-close header-utils-btn" title="close"></button>
@@ -67,6 +82,7 @@
           <a href="Logout.do" class="btn-search header-utils-btn" title="로그아웃"></a>
           <button class="btn-close header-utils-btn" title="close"></button>
         </div>
+      </c:if>
       </div>
       
     </div>
@@ -254,6 +270,9 @@
   <script src="../resources/js/script.js"></script>
 <!-- Code injected by live-server -->
 <script>
+	function loginPLZ(){
+		alert('로그인 후 이용이 가능합니다')
+	}
 	// <![CDATA[  <-- For SVG support
 	if ('WebSocket' in window) {
 		(function () {

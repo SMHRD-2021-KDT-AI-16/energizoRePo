@@ -102,6 +102,7 @@
                     required="">
                 </label>
               </div>
+              <!--
               <div class="inputset inputset-lg inputset-label">
                 <label>
                   <h6 class="inputset-tit"> 나이
@@ -110,7 +111,7 @@
                     required="">
                 </label>
               </div>
-              <!--
+              
               <div class="inputset inputset-lg inputset-label">
                 <label>
                   <h6 class="inputset-tit"> 성별
