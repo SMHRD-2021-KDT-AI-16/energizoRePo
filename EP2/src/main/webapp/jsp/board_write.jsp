@@ -1,3 +1,5 @@
+<%@page import="com.todaysmenu.db.BoardDAO"%>
+<%@page import="com.todaysmenu.model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -29,7 +31,7 @@
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="Gomain.do" title="hooms"></a>
+          <a class="header-logo" href="Gomain.do" title="홈"></a>
         </h1>
       </div>
       <div class="header-center">
@@ -88,6 +90,11 @@
     </div>
     <!-- [E]hooms-N58 -->
     <!-- [S]hooms-N37 -->
+    <%
+				// num : 게시글을 식별할 수 있는 고유 번호
+		int num = Integer.parseInt(request.getParameter("num"));
+		BoardVO board = new BoardDAO().detailBoard(num);
+	%>
     <div class="hooms-N37" data-bid="goLqA8AT7W" id="">
       <div class="contents-inner">
         <div class="contents-container container-md">
@@ -95,19 +102,19 @@
           </div>
           <div class="contents-titgroup">
             <h5 class="contents-tit">
-              <span>안녕하세요. 문의드립니다.</span>
+              <span><%=board.getB_title() %></span>
             </h5>
             <span class="contents-date">
-               2023.01.01 </span>
+               <%=board.getCreated_at() %> </span>
           </div>
           <div class="contents-group">
             <div class="contents-group-top">
               
-              <p class="contents-ask"> 템플릿 하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들고 HTML 코드 산출물을 다운받아 본인의 호스팅에 옮겨 자유롭게 추가 개발을 할 수 있습니다. 코로나19로 전 세계의 온라인이 일상화, 디지털 전환의 가속화로 IT 인재 확보의 경쟁이 치열해 지면서 시니어급의 전문가 확보 경쟁으로 과도한 연봉 인상 등 자금력이 부족한 중소기업은 인재를 채용하는데 더 어려움을 겪고 있습니다. 작업 페이지가 많은 금융, 공공기관, 대형 SI 프로젝트인 경우 전체 분량의 50% 이상이 같은 패턴의 반복되는 비 생산적 중복 업무로 이루어져 있어, 업무의 비 생산성을 가지고 있습니다. 웹 페이지 산출물이 나오는 과정은 3명의 전문가들의 각각의 시간을 할애하여 생산하는 부분을 템플릿 하우스를 사용하면 1사람이 원 클릭과 드래그앤 드랍 방식을 통해 웹 페이지를 10분 만에 생성하고 코드 편집과 코드 산출물 다운로드 기능을 통해 더 자유롭게 개발할 수 있습니다. </p>
+              <p class="contents-ask"> <%=board.getB_content() %> </p>
             </div>
           </div>
           <div class="contents-btn">
-            <a class="btnset" href="javascript:void(0)">목록으로</a>
+            <a class="btnset" href="Goboard.do">목록으로</a>
           </div>
         </div>
       </div>

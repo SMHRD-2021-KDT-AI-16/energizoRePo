@@ -11,6 +11,7 @@
 <properties resource="com/todaysmenu/db/db.properties"></properties>
 	<!-- mapper파일에서 사용가능한 자료형의 별칭을 부여하는 방법 -->
 		<typeAliases>
+			<typeAlias type="com.todaysmenu.model.BoardVO" alias="Board"/>
 		</typeAliases>
 
 	<!-- 3. environments : 연결할 db들에 대한 정보를 기술하는 태그 -->

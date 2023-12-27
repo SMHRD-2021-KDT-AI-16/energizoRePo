@@ -7,4 +7,8 @@
 	<select id="allBoard" parameterType="String" resultType="com.todaysmenu.model.BoardVO">
 		select b_num, b_title, b_content, to_char(created_at,'yyyy-mm-dd') as created_at, user_id from board_info where user_id=#{user_id}
 	</select>
+	
+	<select id="detailBoard" resultType="Board">
+		select * from board_info where b_num=#{num}
+	</select>
 </mapper>
