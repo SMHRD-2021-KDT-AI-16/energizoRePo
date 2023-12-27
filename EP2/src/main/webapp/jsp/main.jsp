@@ -283,9 +283,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
-
-
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
@@ -354,11 +352,12 @@
                                     result.appendChild(pre)
 
                                     document.getElementById('keywords').value = ''
+                                    
+                                    // 이전에 결과를 pre 태그에 추가한 부분을 hidden input의 value에 설정
+                                    const preText = document.querySelector('#result pre').innerText;
+                                    document.getElementById('keywords').value = preText;
+                                    	
                                 });
-                             // 이전에 결과를 pre 태그에 추가한 부분을 hidden input의 value에 설정
-                                const preText = document.querySelector('#result pre').innerText;
-                                document.getElementById('keywords').value = preText;
-                                
                             }
 
                         </script>

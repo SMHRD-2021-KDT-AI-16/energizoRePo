@@ -18,6 +18,7 @@ public class FilteringService implements command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String recipe = request.getParameter("keywords");
+		System.out.println(recipe);
 		String[] recipes = recipe.replace("\r\n\r\n", "\r\n").split("\r\n");
 		String[][] result = new String[3][3];
 		
