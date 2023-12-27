@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <!DOCTYPE html>
     <html>
 
@@ -145,7 +146,7 @@
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="Gomain.do" title="hooms"></a>
+          <a class="header-logo" href="Gomain.do" title="홈"></a>
         </h1>
       </div>
       <div class="header-center">
@@ -162,10 +163,17 @@
                                 </a>
 
                             </li>
-                            <li class="header-gnbitem">
+							<li class="header-gnbitem">
+                            	<c:if test="${member != null }">
                                 <a class="header-gnblink" href="Goboard.do">
                                     <span>레시피 저장소</span>
                                 </a>
+                                </c:if>
+                                <c:if test="${member == null }">
+                                <a class="header-gnblink" onclick="loginPLZ()">
+                                    <span>레시피 저장소</span>
+                                </a>
+                                </c:if>
                             </li>
                             <li class="header-gnbitem">
                                 <a class="header-gnblink" href="Goyoutube.do">
@@ -175,6 +183,13 @@
                         </ul>
       </div>
       <div class="header-right">
+      <c:if test="${member == null }">
+      	<div class="header-utils">
+          <a href="Gologin.do" class="btn-profile header-utils-btn" title="로그인"></a>
+          <button class="btn-close header-utils-btn" title="close"></button>
+        </div>
+      </c:if>
+      <c:if test="${member != null }">
         <div class="header-utils">
           <a href="Gomypage.do" class="btn-profile header-utils-btn" title="마이페이지"></a>
           <button class="btn-close header-utils-btn" title="close"></button>
@@ -183,6 +198,7 @@
           <a href="Logout.do" class="btn-search header-utils-btn" title="로그아웃"></a>
           <button class="btn-close header-utils-btn" title="close"></button>
         </div>
+      </c:if>
       </div>
       
     </div>
@@ -277,6 +293,10 @@
 
 
                         <script>
+	                        function loginPLZ(){
+	                    		alert('로그인 후 이용이 가능합니다')
+	                    	}
+                        
                             $(document).ready(function () {
                                 $('#loading').hide();
                             });
@@ -305,7 +325,7 @@
                                             role: 'user',
                                             content:
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ... , 총 12줄로만 답변해줘'+
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : 4.5.6., 저녁 : 7.8.9.'+
                                                 '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
@@ -319,7 +339,7 @@
                                             	'피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고' +
                                             	'식단 스타일은 ' + styleValues + '이야' +
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '답변 예시 = 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ... , 총 12줄로만 답변해줘'+
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : 4.5.6., 저녁 : 7.8.9.'+
                                                 '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
@@ -351,13 +371,15 @@
                                     pre.innerHTML = "\n\n" + response.choices[0].message.content
                                     result.appendChild(pre)
 
-                                    document.getElementById('keywords').value = ''
-                                    
-                                    // 이전에 결과를 pre 태그에 추가한 부분을 hidden input의 value에 설정
+                                    document.getElementById('keywords').value = ""
                                     const preText = document.querySelector('#result pre').innerText;
                                     document.getElementById('keywords').value = preText;
-                                    	
                                 });
+
+                             // 이전에 결과를 pre 태그에 추가한 부분을 hidden input의 value에 설정
+                                //const preText = document.querySelector('#result pre').innerText;
+                                //document.getElementById('keywords').value = preText;
+                                
                             }
 
                         </script>

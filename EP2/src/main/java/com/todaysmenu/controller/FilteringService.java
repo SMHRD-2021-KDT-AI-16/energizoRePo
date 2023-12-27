@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.todaysmenu.db.MemberDAO;
+import com.todaysmenu.model.BoardVO;
 import com.todaysmenu.model.MealVO;
 import com.todaysmenu.model.MemberVO;
 import com.todaysmenu.model.RecipeVO;
@@ -71,14 +72,19 @@ public class FilteringService implements command {
 		dRecipe.setRecipe_ingre(result[2][1]);
 		dRecipe.setRecipe_desc(result[2][2]);
 		
-		
 		dao.recipeJoin(bRecipe);
 		dao.recipeJoin(lRecipe);
 		dao.recipeJoin(dRecipe);
 		
-		
-		
-		
+		BoardVO vo = new BoardVO();
+		String food_name = ("아침 : "+result[0][0]+", 점심 : "+result[1][0]+", 저녁 :"+ result[2][0]);
+		vo.setB_title(food_name);
+		vo.setB_content(recipe);
+		vo.setUser_id(member.getUser_id());
+		int row = dao.boardJoin(vo);
+		if(row>0) {
+			System.out.println("성공!");
+		}
 		
 		
 		

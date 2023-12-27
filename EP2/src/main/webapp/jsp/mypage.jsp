@@ -112,8 +112,8 @@
              
             </ul>
             <div class="contents-btn">
-              <a class="btnset" href="update.jsp?id=">내 정보 수정</a>
-              <a class="btnset btnset-ghost" href="DeleteService.do?id=${member.user_id}">회원탈퇴</a>
+              <a class="btnset" href="Goupdate.do">내 정보 수정</a>
+              <a class="btnset btnset-ghost" href="DeleteService.do">회원탈퇴</a>
             </div>
           </div>
         </div>

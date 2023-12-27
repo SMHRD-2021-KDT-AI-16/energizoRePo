@@ -3,6 +3,7 @@ package com.todaysmenu.db;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.todaysmenu.model.BoardVO;
 import com.todaysmenu.model.MealVO;
 import com.todaysmenu.model.MemberVO;
 import com.todaysmenu.model.RecipeVO;
@@ -80,5 +81,19 @@ public class MemberDAO {
 
 		return row;
 	}
+	public int boardJoin(BoardVO vo) {
+		int row=0;
+		SqlSession sqlsession = factory.openSession(true);
+		row = sqlsession.insert("insertBoard",vo);
+		sqlsession.close();
+		return row;
+	}
 
+	public int update(MemberVO vo) {
+		int row =0;
+		SqlSession sqlsession = factory.openSession(true);
+		row = sqlsession.update("update", vo);
+		sqlsession.close();
+		return row;
+	}
 }
