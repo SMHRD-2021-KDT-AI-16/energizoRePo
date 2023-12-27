@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -143,9 +144,9 @@
 	        // 요청이 성공할 경우 무엇을 할지?
 	        success: function(data){
 	            if(data =='true'){
-	                $('#resultCheck').text('이미 있는 아이디입니다')
+	                $('#resultCheck').text('이미 사용 중인 아이디입니다').css('color', 'red')
 	            } else if (data =='false'){
-	                $('#resultCheck').text('사용할 수 있는 아이디입니다')
+	                $('#resultCheck').text('사용할 수 있는 아이디입니다').css('color', 'blue')
 	                // 여기서 회원가입 페이지로 넘어가도록 구현 추가
 	                // 예: window.location.href = "회원가입완료페이지URL";
 	            }   

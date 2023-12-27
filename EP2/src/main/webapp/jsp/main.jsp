@@ -280,7 +280,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
