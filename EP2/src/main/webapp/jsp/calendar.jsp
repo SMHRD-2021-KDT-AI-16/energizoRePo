@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <!DOCTYPE html>
     <html>
 
@@ -85,12 +86,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
         <!-- [S]hooms-N54 -->
-        <header class="hooms-N54" data-bid="odLQa88Okr" id="">
+        <header class="hooms-N55" data-bid="uClqa8c34N" id="">
             <div class="header-inner">
                 <div class="header-container container-lg">
                     <div class="header-left">
                         <h1 class="header-title">
-                            <a class="header-logo" href="javascript:void(0)" title="hooms"></a>
+                            <a class="header-logo" href="Gomain.do" title="홈"></a>
                         </h1>
                     </div>
                     <div class="header-center">
@@ -105,26 +106,44 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a class="header-gnblink" href="Gomain.do">
                                     <span>AI 식단 추천</span>
                                 </a>
-
-                            </li>
-                            <li class="header-gnbitem">
+							<li class="header-gnbitem">
+                            	<c:if test="${member != null }">
                                 <a class="header-gnblink" href="Goboard.do">
                                     <span>레시피 저장소</span>
                                 </a>
+                                </c:if>
+                                <c:if test="${member == null }">
+                                <a class="header-gnblink" onclick="loginPLZ()">
+                                    <span>레시피 저장소</span>
+                                </a>
+                                </c:if>
                             </li>
-                            <li class="header-gnbitem">
+                            </li>
+                           <li class="header-gnbitem">
                                 <a class="header-gnblink" href="Goyoutube.do">
                                     <span>레시피 영상</span>
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="header-right">
-                        <div class="header-utils">
-                            <a href="javascript:void(0);" class="btn-profile header-utils-btn" title="profile"></a>
-                            <button class="btn-close header-utils-btn" title="close"></button>
-                        </div>
-                    </div>
+				      </div>
+				      <div class="header-right">
+				      <c:if test="${member == null }">
+				      	<div class="header-utils">
+				          <a href="Gologin.do" class="btn-profile header-utils-btn" title="로그인"></a>
+				          <button class="btn-close header-utils-btn" title="close"></button>
+				        </div>
+				      </c:if>
+				      <c:if test="${member != null }">
+				        <div class="header-utils">
+				          <a href="Gomypage.do" class="btn-profile header-utils-btn" title="마이페이지"></a>
+				          <button class="btn-close header-utils-btn" title="close"></button>
+				        </div>
+				       <div class="header-utils">
+				          <a href="Logout.do" class="btn-search header-utils-btn" title="로그아웃"></a>
+				          <button class="btn-close header-utils-btn" title="close"></button>
+				        </div>
+				      </c:if>
+				      </div>
                 </div>
             </div>
             <div class="header-dim"></div>
@@ -146,6 +165,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                                     <div id='calendar'></div>
                                     <script>
+	                                    function loginPLZ(){
+	        	                    		alert('로그인 후 이용이 가능합니다')
+	        	                    	}
+                                    
                                         document.addEventListener('DOMContentLoaded', function () {
                                             var calendarEl = document.getElementById('calendar');
                                             // new FullCalendar.Calendar(대상 DOM객체, {속성:속성값, 속성2:속성값2..})
