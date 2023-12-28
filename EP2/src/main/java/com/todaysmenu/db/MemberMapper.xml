@@ -66,6 +66,12 @@
 		DELETE FROM USER_INFO
 		WHERE USER_ID = #{user_id}
 	</delete>
+	
+
+	<select id="showyoutube" parameterType="String" resultType="com.todaysmenu.model.YoutubeVO">
+		SELECT *
+		FROM YOUTUBE_INFO WHERE YOUTUBE_NAME = #{youtube_name}
+	</select>
 
 
 </mapper>

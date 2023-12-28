@@ -234,8 +234,23 @@
             </div>
 
             <div class="th-layout-content">
-
-                <div id="blank_area"></div>
+<div class="hooms-N37" data-bid="goLqA8AT7W" id="">
+      <div class="contents-inner">
+        <div class="contents-container container-md">
+          <div class="textset textset-h2">
+            <h2 class="textset-tit">AI 식단 추천</h2>
+          </div>
+          
+          <div class="contents-group">
+            <div class="contents-group-top">
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+               <!--   <div id="blank_area"></div> -->
 
                 <div id="keyword_area">
 

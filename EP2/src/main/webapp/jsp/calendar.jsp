@@ -212,22 +212,17 @@ document.addEventListener('DOMContentLoaded', function() {
                                                 },
                                                 editable: true,
                                                 dayMaxEvents: true, // allow "more" link when too many events
-                                                events: function (info, successCallback, failureCallback) {
-                                                    // Make an AJAX request to fetch events from the server
-                                                    $.ajax({
-                                                        type: "GET",
-                                                        url: "calendar.do?method=data", // Update this URL according to your backend endpoint
-                                                        dataType: "json",
-                                                        success: function (data) {
-                                                            // Upon success, pass the2 received events to FullCalendar
-                                                            successCallback(data);
-                                                        },
-                                                        error: function () {
-                                                            // Handle error if AJAX request fails
-                                                            failureCallback();
-                                                        }
-                                                    });
-                                                }
+                                                events: [
+                                            	 	{
+                                                        title: 'Birthday Party',
+                                                        start: '2023-12-26'
+                                                      },
+                                                      {
+                                                        title: 'Click for Google',
+                                                        url: 'http://google.com/',
+                                                        start: '2023-12-28'
+                                                      }
+                                          		]
                                             });
 
                                             calendar.render();

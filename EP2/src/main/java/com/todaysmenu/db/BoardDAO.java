@@ -26,4 +26,18 @@ public class BoardDAO {
 		}
 		return boards;
 	}
+	
+	public BoardVO detailBoard(int num) {
+		BoardVO board = null;
+		SqlSession sqlsession = factory.openSession();
+		try {
+			board 
+			= sqlsession.selectOne("detailBoard", num);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			sqlsession.close();
+		}
+		return board;
+	}
 }
