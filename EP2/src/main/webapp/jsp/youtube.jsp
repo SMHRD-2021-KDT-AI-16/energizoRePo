@@ -31,8 +31,8 @@
     HttpSession sessions = request.getSession();
     List<YoutubeVO> currentPageList = (List<YoutubeVO>) sessions.getAttribute("currentPageList");
     List<YoutubeVO> youtube = (List<YoutubeVO>) sessions.getAttribute("youtube");
+    int pages = (int)sessions.getAttribute("page");
     String youtube_name = (String)sessions.getAttribute("youtube_name");
-    System.out.print(currentPageList.get(0).getYoutube_title());
 %>
 <%
 // currentPageList의 데이터 개수를 가져옵니다.
@@ -173,22 +173,59 @@ int totalPages = (int) Math.ceil((double) totalDataCount / pageSize);
             </div>
           </div>
           <nav class="pagiset pagiset-line">
+           <% if(pages!=1){ %>
             <div class="pagiset-ctrl">
               <a class="pagiset-link pagiset-first" href="Youtube.do?page=1&youtube_name=<%=youtube_name%>">
                 <span class="visually-hidden">처음</span>
               </a>
             </div>
+
+            <div class="pagiset-ctrl">
+              <a class="pagiset-link pagiset-prev" href="Youtube.do?page=<%=pages-1%>&youtube_name=<%=youtube_name%>">
+                <span class="visually-hidden">이전</span>
+              </a>
+            </div>
+            <%}else{ %>
+            <div class="pagiset-ctrl">
+              <p class="pagiset-link pagiset-first" >
+                <span class="visually-hidden">처음</span>
+              </p>
+            </div>
+
+            <div class="pagiset-ctrl">
+              <p class="pagiset-link pagiset-prev">
+                <span class="visually-hidden">이전</span>
+              </p>
+            </div>
+			<%} %>
             <div class="pagiset-list">
 				<c:forEach begin="1" end="<%=totalPages%>" var="pageNumber">
     				<a class="pagiset-link" href="Youtube.do?page=${pageNumber}&youtube_name=<%=youtube_name%>">${pageNumber}</a>
 			    </c:forEach>
             </div>
-            
+			<% if(pages!=totalPages){ %>
+            <div class="pagiset-ctrl">
+              <a class="pagiset-link pagiset-next" href="Youtube.do?page=<%=pages+1%>&youtube_name=<%=youtube_name%>">
+                <span class="visually-hidden">다음</span>
+              </a>
+            </div>
             <div class="pagiset-ctrl">
               <a class="pagiset-link pagiset-last" href="Youtube.do?page=<%=totalPages%>&youtube_name=<%=youtube_name%>">
                 <span class="visually-hidden">마지막</span>
               </a>
             </div>
+            <%} else{%>
+            <div class="pagiset-ctrl">
+              <p class="pagiset-link pagiset-next">
+                <span class="visually-hidden">다음</span>
+              </p>
+            </div>
+            <div class="pagiset-ctrl">
+              <p class="pagiset-link pagiset-last">
+                <span class="visually-hidden">마지막</span>
+              </p>
+            </div>
+            <%} %>
           </nav>
         </div>
       </div>
