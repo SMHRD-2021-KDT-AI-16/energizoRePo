@@ -68,9 +68,13 @@
 	</delete>
 	
 
-	<select id="showyoutube" parameterType="String" resultType="com.todaysmenu.model.YoutubeVO">
+	<select id="showyoutube" resultType="com.todaysmenu.model.YoutubeVO">
 		SELECT *
 		FROM YOUTUBE_INFO WHERE YOUTUBE_NAME = #{youtube_name}
+	</select>
+	<select id="showyoutubeAll" resultType="com.todaysmenu.model.YoutubeVO">
+		SELECT *
+		FROM YOUTUBE_INFO
 	</select>
 
 
