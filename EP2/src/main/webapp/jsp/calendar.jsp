@@ -46,84 +46,13 @@
                                 <span>캘린더</span>
                             </a>
 
-
-        <!-- <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay'
-      },
-      initialDate: '2023-12-12',
-      navLinks: true, // can click day/week names to navigate views
-      selectable: true,
-      selectMirror: true,
-      select: function(arg) {
-        var title = prompt('Event Title:');
-        if (title) {
-          calendar.addEvent({
-            title: title,
-            start: arg.start,
-            end: arg.end,
-            allDay: arg.allDay
-          })
-        }
-        calendar.unselect()
-      },
-      eventClick: function(arg) {
-        if (confirm('Are you sure you want to delete this event?')) {
-          arg.event.remove()
-        }
-      },
-      editable: true,
-      dayMaxEvents: true, // allow "more" link when too many events
-      events: [
-    	 	{
-              title: 'Birthday Party',
-              start: '2023-12-26'
-            },
-            {
-              title: 'Click for Google',
-              url: 'http://google.com/',
-              start: '2023-12-28'
-            }
-		]
-    });
-
-    calendar.render();
-  });
-</script> -->
-
-
-    </head>
-
-    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-        <!-- [S]hooms-N54 -->
-        <header class="hooms-N55" data-bid="uClqa8c34N" id="">
-            <div class="header-inner">
-                <div class="header-container container-lg">
-                    <div class="header-left">
-                        <h1 class="header-title">
-                            <a class="header-logo" href="Gomain.do" title="홈"></a>
-                        </h1>
-                    </div>
-                    <div class="header-center">
-                        <ul class="header-gnblist">
-                            <li class="header-gnbitem">
-                                <a class="header-gnblink" href="Gocalendar.do">
-                                    <span>캘린더</span>
-                                </a>
-
-                            </li>
-                            <li class="header-gnbitem">
-                                <a class="header-gnblink" href="Gomain.do">
-                                    <span>AI 식단 추천</span>
-                                </a>
-							<li class="header-gnbitem">
-                            	<c:if test="${member != null }">
+                        </li>
+                        <li class="header-gnbitem">
+                            <a class="header-gnblink" href="Gomain.do">
+                                <span>AI 식단 추천</span>
+                            </a>
+                        <li class="header-gnbitem">
+                            <c:if test="${member != null }">
                                 <a class="header-gnblink" href="BoardSelect.do">
                                     <span>레시피 저장소</span>
                                 </a>
@@ -180,6 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                             <div id='calendar'></div>
                             <script>
+                            function loginPLZ(){
+                            	alert('로그인 후 이용이 가능합니다')
+                            }
+                            
                                 document.addEventListener('DOMContentLoaded', function () {
                                     var calendarEl = document.getElementById('calendar');
                                     // new FullCalendar.Calendar(대상 DOM객체, {속성:속성값, 속성2:속성값2..})
