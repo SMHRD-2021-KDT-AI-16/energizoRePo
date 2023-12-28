@@ -53,7 +53,7 @@
 
                             </li>
                             <li class="header-gnbitem">
-                                <a class="header-gnblink" href="Goboard.do">
+                                <a class="header-gnblink" href="BoardSelect.do">
                                     <span>레시피 저장소</span>
                                 </a>
                             </li>
@@ -105,15 +105,10 @@
           <div class="textset textset-h2">
             <h2 class="textset-tit">레시피 저장소</h2>
           </div>
-          <%
-          HttpSession sess = request.getSession();
-          MemberVO mb = (MemberVO) sess.getAttribute("member");
-          List<BoardVO> boards = new BoardDAO().allBoard(mb.getUser_id());
-				pageContext.setAttribute("boards", boards);
-			%>
+         
           
           <div class="contents-search">
-            <p class="contents-result"> 전체<span> <%=boards.size() %></span>개 </p>
+            <p class="contents-result"> 전체<span> ${boards.size() }</span>개 </p>
             <div class="contents-form">
               <div class="selectset selectset-lg">
                 
@@ -152,9 +147,9 @@
                 </tr>
               </thead>
               <tbody>
-              <c:forEach var="b" items="${boards}" varStatus="s">
+              <c:forEach var="b" items="${currBList}">
 				<tr>
-					<td class="tableset-mobile"> ${s.count} </td>
+					<td class="tableset-mobile"> ${b.b_idx} </td>
 					<td class="tableset-tit tableset-order02"><a class="tableset-ico" href="Goboard_write.do?num=${b.b_num}"> <span>${b.b_title}</span></a></td>
 					<td class="tableset-order05"> ${b.created_at}</td>
 				</tr>
@@ -165,34 +160,40 @@
               </tbody>
             </table>
           </div>
-          <div class="contents-btn">
-            <a class="btnset modalset-btn" href="javascript:void(0)">상담 문의</a>
-          </div>
+          
           <nav class="pagiset pagiset-line">
             <div class="pagiset-ctrl">
-              <a class="pagiset-link pagiset-first" href="javascript:void(0)">
+            <c:if test="${Bpage > 1 }">
+              <a class="pagiset-link pagiset-first" href="BoardSelect.do?page=1">
                 <span class="visually-hidden">처음</span>
               </a>
+              </c:if>
             </div>
             <div class="pagiset-ctrl">
-              <a class="pagiset-link pagiset-prev" href="javascript:void(0)">
+            <c:if test="${startPage != 1 }">
+              <a class="pagiset-link pagiset-prev" href="BoardSelect.do?page=${startPage - bPageSize}">
                 <span class="visually-hidden">이전</span>
               </a>
+             </c:if>
             </div>
             <div class="pagiset-list">
-              <a class="pagiset-link active-fill" href="javascript:void(0)">1</a>
-              <a class="pagiset-link" href="javascript:void(0)">2</a>
-              <a class="pagiset-link" href="javascript:void(0)">3</a>
+            <c:forEach begin="${startPage }" end="${endPage }" var="i">
+              <a class="pagiset-link active-fill" href="BoardSelect.do?page=${i }">${i}</a>
+             </c:forEach>
             </div>
             <div class="pagiset-ctrl">
-              <a class="pagiset-link pagiset-next" href="javascript:void(0)">
+            <c:if test="${endPage != totalPages }">
+              <a class="pagiset-link pagiset-next" href="BoardSelect.do?page=${startPage + bPageSize}">
                 <span class="visually-hidden">다음</span>
               </a>
+              </c:if>
             </div>
             <div class="pagiset-ctrl">
-              <a class="pagiset-link pagiset-last" href="javascript:void(0)">
+            <c:if test="${Bpage < totalPages }">
+              <a class="pagiset-link pagiset-last" href="BoardSelect.do?page=${totalPages }">
                 <span class="visually-hidden">마지막</span>
               </a>
+              </c:if>
             </div>
           </nav>
         </div>
