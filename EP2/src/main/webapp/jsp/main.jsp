@@ -264,7 +264,7 @@
                             <span class="keyword_purpose">저염식<input type="checkbox" value="저염식"></span>
                         </div>
                         <div id="keybox_ingre1">
-                            <span class="key_title">피해야할 식재료1</span>
+                            <span class="key_title">피해야할 식재료</span>
                             <span class="keyword_ingre1">카페인<input type="checkbox" value="카페인"></span>
                             <span class="keyword_ingre1">샐러리<input type="checkbox" value="샐러리"></span>
                             <span class="keyword_ingre1">갑각류<input type="checkbox" value="갑각류"></span>
@@ -275,7 +275,6 @@
                             <span class="keyword_ingre1">우유<input type="checkbox" value="우유"></span>
                         </div>
                         <div id="keybox_ingre2">
-                            <span class="key_title">피해야할 식재료2</span>
                             <span class="keyword_ingre2">연체동물<input type="checkbox" value="연체동물"></span>
                             <span class="keyword_ingre2">겨자<input type="checkbox" value="겨자"></span>
                             <span class="keyword_ingre2">참깨<input type="checkbox" value="참깨"></span>
