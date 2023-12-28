@@ -53,7 +53,7 @@
                             </a>
                         <li class="header-gnbitem">
                             <c:if test="${member != null }">
-                                <a class="header-gnblink" href="Goboard.do">
+                                <a class="header-gnblink" href="BoardSelect.do">
                                     <span>레시피 저장소</span>
                                 </a>
                             </c:if>
@@ -109,6 +109,10 @@
 
                             <div id='calendar'></div>
                             <script>
+                            function loginPLZ(){
+                            	alert('로그인 후 이용이 가능합니다')
+                            }
+                            
                                 document.addEventListener('DOMContentLoaded', function () {
                                     var calendarEl = document.getElementById('calendar');
                                     // new FullCalendar.Calendar(대상 DOM객체, {속성:속성값, 속성2:속성값2..})
