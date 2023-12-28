@@ -163,8 +163,10 @@
                                             failure: function () {
                                                 // 데이터 가져오기에 실패한 경우의 처리
                                             }
+                                        },
+                                        eventRender: function(event, element) {
+                                            event.end = event.start; // 시작 시간과 종료 시간을 동일하게 설정하여 종료 시간을 표시하지 않음
                                         }
-
 
                                     });
 
