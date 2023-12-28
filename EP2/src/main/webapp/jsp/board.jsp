@@ -160,7 +160,9 @@
               </tbody>
             </table>
           </div>
-          
+          <div class="contents-btn">
+            <a class="modalset-btn"></a>
+          </div>
           <nav class="pagiset pagiset-line">
             <div class="pagiset-ctrl">
             <c:if test="${Bpage > 1 }">
