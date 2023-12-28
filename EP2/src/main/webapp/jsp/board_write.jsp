@@ -49,7 +49,7 @@
 
                             </li>
                             <li class="header-gnbitem">
-                                <a class="header-gnblink" href="Goboard.do">
+                                <a class="header-gnblink" href="BoardSelect.do">
                                     <span>레시피 저장소</span>
                                 </a>
                             </li>
@@ -114,7 +114,7 @@
             </div>
           </div>
           <div class="contents-btn">
-            <a class="btnset" href="Goboard.do">목록으로</a>
+            <a class="btnset" href="BoardSelect.do?page=${Bpage }">목록으로</a>
           </div>
         </div>
       </div>

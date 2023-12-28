@@ -47,7 +47,7 @@
 
                             </li>
                             <li class="header-gnbitem">
-                                <a class="header-gnblink" href="Goboard.do">
+                                <a class="header-gnblink" href="BoardSelect.do">
                                     <span>레시피 저장소</span>
                                 </a>
                             </li>
