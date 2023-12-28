@@ -84,8 +84,8 @@ public class FilteringService implements command {
 		if(row>0) {
 			System.out.println("성공!");
 		}
-		
-		
+		MealVO BMVO = new MealVO();
+		BMVO.setMeal_menu(food_name);
 		
 		return "Gomain.do";
 	}
