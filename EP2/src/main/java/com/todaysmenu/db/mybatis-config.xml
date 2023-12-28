@@ -46,6 +46,7 @@
 
 		<mapper resource="com/todaysmenu/db/MemberMapper.xml" />
 		<mapper resource="com/todaysmenu/db/BoardMapper.xml"/>
+		<mapper resource="com/todaysmenu/db/calendarMapper.xml"/>
 
 
 	</mappers>
