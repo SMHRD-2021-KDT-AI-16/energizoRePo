@@ -155,7 +155,7 @@
               <c:forEach var="b" items="${boards}" varStatus="s">
 				<tr>
 					<td class="tableset-mobile"> ${s.count} </td>
-					<td class="tableset-tit tableset-order02"><a class="tableset-ico" href="board_write.jsp?num=${b.b_num}"> <span>${b.b_title}</span></a></td>
+					<td class="tableset-tit tableset-order02"><a class="tableset-ico" href="Goboard_write.do?num=${b.b_num}"> <span>${b.b_title}</span></a></td>
 					<td class="tableset-order05"> ${b.created_at}</td>
 				</tr>
 			</c:forEach>

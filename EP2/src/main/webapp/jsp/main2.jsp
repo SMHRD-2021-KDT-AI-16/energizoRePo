@@ -146,7 +146,7 @@
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="Gomain.do" title="hooms"></a>
+          <a class="header-logo" href="Gomain.do" title="홈"></a>
         </h1>
       </div>
       <div class="header-center">
@@ -163,7 +163,7 @@
                                 </a>
 
                             </li>
-                            <li class="header-gnbitem">
+							<li class="header-gnbitem">
                             	<c:if test="${member != null }">
                                 <a class="header-gnblink" href="Goboard.do">
                                     <span>레시피 저장소</span>
@@ -234,8 +234,23 @@
             </div>
 
             <div class="th-layout-content">
-
-                <div id="blank_area"></div>
+<div class="hooms-N37" data-bid="goLqA8AT7W" id="">
+      <div class="contents-inner">
+        <div class="contents-container container-md">
+          <div class="textset textset-h2">
+            <h2 class="textset-tit">AI 식단 추천</h2>
+          </div>
+          
+          <div class="contents-group">
+            <div class="contents-group-top">
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+               <!--   <div id="blank_area"></div> -->
 
                 <div id="keyword_area">
 
@@ -282,18 +297,39 @@
                         <button id="btn_click" onclick="chatGPT()">추천받기</button>
                     </div>
                     <span>
-                        <div id="result"></div>
-
+                        <form action="Filtering.do" method="post" id="filterForm">
+               			 	<div id="result"></div>
+			                <input type="hidden" id="keywords" name="keywords">
+			                <input type="submit" value="Submit">
+			                
+			            </form>
+			            <div class="hooms-N36" data-bid="uqlQA9EIsb">
+			                <div class="contents-btn">
+            					<a class="btnset modalset-btn" href="javascript:void(0)">상담 문의</a>
+          					</div>
+          					</div>
+			            <div id="modalSet1" class="modalset">
+        <div class="modal-header">
+          <h6 class="modal-title">1:1 문의</h6>
+        </div>
+        <div class="modal-body">
+          <p> 로그인이 필요한 서비스입니다. <br> 로그인하시겠습니까? </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btnset btnset-ghost modal-close">취소</button>
+          <a href="javascript:void(0)" class="btnset btnset-confirm">확인</a>
+        </div>
+      </div>
+      <div class="modalset-dim"></div>
                         <div id="loading">
                             <img src="https://studentrights.sen.go.kr/images/common/loading.gif">
                         </div>
 
 
                         <script>
-                        	function loginPLZ(){
-                        		alert('로그인 후 이용이 가능합니다')
-                        	}
-                        
+	                        function loginPLZ(){
+	                    		alert('로그인 후 이용이 가능합니다')
+	                    	}
                         
                             $(document).ready(function () {
                                 $('#loading').hide();
@@ -301,7 +337,8 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+
+                                const api_key = "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"
 
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
@@ -324,8 +361,8 @@
                                             role: 'user',
                                             content:
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
-                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법 한줄로 추천해줘.'
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : 4.5.6., 저녁 : 7.8.9.'+
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
                                 }else {
@@ -338,8 +375,8 @@
                                             	'피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고' +
                                             	'식단 스타일은 ' + styleValues + '이야' +
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
-                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법 한줄로 추천해줘.'
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : 4.5.6., 저녁 : 7.8.9.'+
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.'
                                         },
                                     ];
                                 }
@@ -370,8 +407,14 @@
                                     pre.innerHTML = "\n\n" + response.choices[0].message.content
                                     result.appendChild(pre)
 
-                                    document.getElementById('keywords').value = ''
+                                    document.getElementById('keywords').value = ""
+                                    const preText = document.querySelector('#result pre').innerText;
+                                    document.getElementById('keywords').value = preText;
                                 });
+                             // 이전에 결과를 pre 태그에 추가한 부분을 hidden input의 value에 설정
+                                //const preText = document.querySelector('#result pre').innerText;
+                                //document.getElementById('keywords').value = preText;
+                                
                             }
 
                         </script>
