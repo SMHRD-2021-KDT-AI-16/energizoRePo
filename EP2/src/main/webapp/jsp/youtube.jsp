@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="java.util.List, com.todaysmenu.model.YoutubeVO" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -25,6 +26,24 @@
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<%
+    // 위에서 이미 세션에 List를 저장했으므로 여기에서는 세션에서 List를 가져오기만 합니다.
+    HttpSession sessions = request.getSession();
+    List<YoutubeVO> currentPageList = (List<YoutubeVO>) sessions.getAttribute("currentPageList");
+    List<YoutubeVO> youtube = (List<YoutubeVO>) sessions.getAttribute("youtube");
+    String youtube_name = (String)sessions.getAttribute("youtube_name");
+    System.out.print(currentPageList.get(0).getYoutube_title());
+%>
+<%
+// currentPageList의 데이터 개수를 가져옵니다.
+int totalDataCount = youtube.size();
+
+// 한 페이지당 보여줄 데이터 개수를 설정합니다. 예를 들어, 20개씩 보여줄 것이라면:
+int pageSize = 20;
+
+// 전체 페이지 수를 계산합니다. Math.ceil을 사용하여 올림합니다.
+int totalPages = (int) Math.ceil((double) totalDataCount / pageSize);
+%>
   <!-- [S]hooms-N54 -->
    <header class="hooms-N55" data-bid="uClqa8c34N" id="">
     <div class="header-container container-lg">
@@ -113,24 +132,24 @@
           <div class="tabset tabset-brick">
             <ul class="tabset-list tabset-sm tabset-fill">
               <li class="tabset-item">
-                <a class="tabset-link" href="javascript:void(0)">
+                <a class="tabset-link" href="Youtube.do?youtube_name=뚝딱이형">
                   <span>뚝딱이형</span>
                 </a>
               </li>
               <li class="tabset-item">
-                <a class="tabset-link" href="javascript:void(0)">
+                <a class="tabset-link" href="Youtube.do?youtube_name=자취의신">
                   <span>자취의신</span>
                 </a>
               </li>
               <li class="tabset-item">
-                <a class="tabset-link" href="javascript:void(0)">
+                <a class="tabset-link" href="Youtube.do?youtube_name=백종원">
                   <span>백종원의 쿠킹로그</span>
                 </a>
               </li>
             </ul>
           </div>
           <div class="contents-search">
-            <p class="contents-result"> 전체<span> 24</span>개 </p>
+            <p class="contents-result"> 전체<span> ${youtube.size()}</span>개 </p>
             <div class="inputset">
               <button class="inputset-icon icon-right icon-search btn" type="button" aria-label="아이콘"></button>
               <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요." aria-label="내용">
@@ -138,119 +157,35 @@
           </div>
           <div class="contents-group">
             <div class="contents-cardlist contents-cardlist-active">
-              <a href="javascript:void(0)" class="cardset">
+ 				<c:forEach var="item" items="${currentPageList}">
+              <a href=${item.getYoutube_url() } class="cardset">
                 <figure class="cardset-figure">
-                  <img class="cardset-img" src="../resources/images/img_press_01_1.png" alt="이미지">
+                  <img class="cardset-img" src="${item.getYoutube_img() }" alt="이미지">
                 </figure>
                 <div class="cardset-body">
                   <div class="cardset-tit-group">
-                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
+                    <h5 class="cardset-tit"> ${item.getYoutube_name()} </h5>
                   </div>
-                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
+                  <p class="cardset-desc">${item.getYoutube_title()}</p>
                 </div>
               </a>
-              <a href="javascript:void(0)" class="cardset">
-                <figure class="cardset-figure">
-                  <img class="cardset-img" src="../resources/images/img_press_01_2.png" alt="이미지">
-                </figure>
-                <div class="cardset-body">
-                  <div class="cardset-tit-group">
-                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
-                  </div>
-                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
-                </div>
-              </a>
-              <a href="javascript:void(0)" class="cardset">
-                <figure class="cardset-figure">
-                  <img class="cardset-img" src="../resources/images/img_press_01_3.png" alt="이미지">
-                </figure>
-                <div class="cardset-body">
-                  <div class="cardset-tit-group">
-                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
-                  </div>
-                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
-                </div>
-              </a>
-              <a href="javascript:void(0)" class="cardset">
-                <figure class="cardset-figure">
-                  <img class="cardset-img" src="../resources/images/img_press_01_4.png" alt="이미지">
-                </figure>
-                <div class="cardset-body">
-                  <div class="cardset-tit-group">
-                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
-                  </div>
-                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
-                </div>
-              </a>
-              <a href="javascript:void(0)" class="cardset">
-                <figure class="cardset-figure">
-                  <img class="cardset-img" src="../resources/images/img_press_01_1.png" alt="이미지">
-                </figure>
-                <div class="cardset-body">
-                  <div class="cardset-tit-group">
-                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
-                  </div>
-                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
-                </div>
-              </a>
-              <a href="javascript:void(0)" class="cardset">
-                <figure class="cardset-figure">
-                  <img class="cardset-img" src="../resources/images/img_press_01_2.png" alt="이미지">
-                </figure>
-                <div class="cardset-body">
-                  <div class="cardset-tit-group">
-                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
-                  </div>
-                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
-                </div>
-              </a>
-              <a href="javascript:void(0)" class="cardset">
-                <figure class="cardset-figure">
-                  <img class="cardset-img" src="../resources/images/img_press_01_3.png" alt="이미지">
-                </figure>
-                <div class="cardset-body">
-                  <div class="cardset-tit-group">
-                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
-                  </div>
-                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
-                </div>
-              </a>
-              <a href="javascript:void(0)" class="cardset">
-                <figure class="cardset-figure">
-                  <img class="cardset-img" src="../resources/images/img_press_01_4.png" alt="이미지">
-                </figure>
-                <div class="cardset-body">
-                  <div class="cardset-tit-group">
-                    <h5 class="cardset-tit"> 템플릿하우스, 웹페이지를 더 쉽고 빠르게! </h5>
-                  </div>
-                  <p class="cardset-desc"> 템플릿하우스는 원 클릭과 드래그앤 드랍만으로도 누구나 쉽고 아름답게 웹 페이지를 만들 수 있습니다. </p>
-                </div>
-              </a>
+              </c:forEach>
             </div>
           </div>
           <nav class="pagiset pagiset-line">
             <div class="pagiset-ctrl">
-              <a class="pagiset-link pagiset-first" href="javascript:void(0)">
+              <a class="pagiset-link pagiset-first" href="Youtube.do?page=1&youtube_name=<%=youtube_name%>">
                 <span class="visually-hidden">처음</span>
               </a>
             </div>
-            <div class="pagiset-ctrl">
-              <a class="pagiset-link pagiset-prev" href="javascript:void(0)">
-                <span class="visually-hidden">이전</span>
-              </a>
-            </div>
             <div class="pagiset-list">
-              <a class="pagiset-link active-fill" href="javascript:void(0)">1</a>
-              <a class="pagiset-link" href="javascript:void(0)">2</a>
-              <a class="pagiset-link" href="javascript:void(0)">3</a>
+				<c:forEach begin="1" end="<%=totalPages%>" var="pageNumber">
+    				<a class="pagiset-link" href="Youtube.do?page=${pageNumber}&youtube_name=<%=youtube_name%>">${pageNumber}</a>
+			    </c:forEach>
             </div>
+            
             <div class="pagiset-ctrl">
-              <a class="pagiset-link pagiset-next" href="javascript:void(0)">
-                <span class="visually-hidden">다음</span>
-              </a>
-            </div>
-            <div class="pagiset-ctrl">
-              <a class="pagiset-link pagiset-last" href="javascript:void(0)">
+              <a class="pagiset-link pagiset-last" href="Youtube.do?page=<%=totalPages%>&youtube_name=<%=youtube_name%>">
                 <span class="visually-hidden">마지막</span>
               </a>
             </div>

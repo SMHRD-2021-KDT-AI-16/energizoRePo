@@ -24,6 +24,7 @@ import com.todaysmenu.controller.LoginService;
 import com.todaysmenu.controller.LogoutService;
 import com.todaysmenu.controller.ResignService;
 import com.todaysmenu.controller.UpdateService;
+import com.todaysmenu.controller.YoutubeSelectService;
 import com.todaysmenu.controller.command;
 
 @WebServlet("*.do")
@@ -50,6 +51,7 @@ public class FrontController extends HttpServlet {
 		map.put("jsp/Filtering.do", new FilteringService());
 		map.put("jsp/Update.do", new UpdateService());
 		map.put("jsp/Resign.do", new ResignService());
+		map.put("jsp/Youtube.do", new YoutubeSelectService());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
