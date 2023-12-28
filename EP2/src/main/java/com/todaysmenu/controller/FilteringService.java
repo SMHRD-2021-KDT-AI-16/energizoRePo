@@ -19,6 +19,7 @@ public class FilteringService implements command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String recipe = request.getParameter("keywords");
+		
 		String[] recipes = recipe.replace("\r\n\r\n", "\r\n").split("\r\n");
 		String[][] result = new String[3][3];
 		
@@ -78,14 +79,15 @@ public class FilteringService implements command {
 		BoardVO vo = new BoardVO();
 		String food_name = ("아침 : "+result[0][0]+", 점심 : "+result[1][0]+", 저녁 :"+ result[2][0]);
 		vo.setB_title(food_name);
+		System.out.println(recipe);
 		vo.setB_content(recipe);
 		vo.setUser_id(member.getUser_id());
 		int row = dao.boardJoin(vo);
 		if(row>0) {
 			System.out.println("성공!");
 		}
-		MealVO BMVO = new MealVO();
-		BMVO.setMeal_menu(food_name);
+		String cal_title = ("아침 :"+result[0][0]+"\n점심 : "+result[1][0]+"\n저녁 :"+ result[2][0]);
+		
 		
 		return "Gomain.do";
 	}
