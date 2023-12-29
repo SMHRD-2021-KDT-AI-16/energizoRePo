@@ -92,6 +92,8 @@ public class FilteringService implements command {
 		String cal_title = ("아침 :"+result[0][0]+"\n점심 : "+result[1][0]+"\n저녁 :"+ result[2][0]);
 		calVO.setId(member.getUser_id());
 		calVO.setTitle(cal_title);
+		calVO.setTextcolor("black");
+		calVO.setBackgroundcolor("white");
 		CalDAO calDAO = new CalDAO();
 		calDAO.calenderJoin(calVO);
 		

@@ -13,7 +13,7 @@
 	</select>
 	
 	<insert id="calendarJoin" parameterType="com.todaysmenu.model.CalVO">
-		INSERT INTO CALENDER (ID,TITLE,START1)
-		VALUES(${id},${title},SYSDATE+1)
+		INSERT INTO CALENDAR (ID,TITLE,START1,TEXTCOLOR,BACKGROUNDCOLOR)
+		VALUES(#{id},#{title},(SYSDATE+1),#{textcolor},#{backgroundcolor})
 	</insert>
 </mapper>
