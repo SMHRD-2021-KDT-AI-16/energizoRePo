@@ -19,7 +19,7 @@
 	</insert>
 	<select id="login" parameterType="com.todaysmenu.model.MemberVO"
 		resultType="com.todaysmenu.model.MemberVO">
-		SELECT * FROM USER_INFO
+		SELECT USER_ID, USER_PW, USER_NAME, USER_GENDER, TO_CHAR(USER_BIRTHDATE, 'YYYY-MM-DD') AS USER_BIRTHDATE FROM USER_INFO
 		WHERE USER_ID = #{user_id}
 		AND
 		USER_PW = #{user_pw}

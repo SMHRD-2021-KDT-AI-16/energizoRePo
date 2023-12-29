@@ -32,11 +32,12 @@ public class LoginService implements command {
 			// 6-2 세션영역에 로그인정보를 담아주기
 			session.setAttribute("member", result);
 			// 7 main.jsp로 redirect 방식 이동
-			return "redirect:/Gomain.do";
+			response.getWriter().print(true);
 		} else {
 			System.out.println("로그인 실패");
-			return "login.jsp";
+			response.getWriter().print(false);
 		}
+		return null;
 	}
 
 }
