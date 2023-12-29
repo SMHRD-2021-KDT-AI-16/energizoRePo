@@ -158,7 +158,7 @@ int totalPages = (int) Math.ceil((double) totalDataCount / pageSize);
           <div class="contents-group">
             <div class="contents-cardlist contents-cardlist-active">
  				<c:forEach var="item" items="${currentPageList}">
-              <a href=${item.getYoutube_url() } class="cardset">
+              <a href=${item.getYoutube_url() } target="_blank" class="cardset">
                 <figure class="cardset-figure">
                   <img class="cardset-img" src="${item.getYoutube_img() }" alt="이미지">
                 </figure>
