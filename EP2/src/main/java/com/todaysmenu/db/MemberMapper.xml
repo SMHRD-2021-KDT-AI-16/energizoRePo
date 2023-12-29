@@ -38,7 +38,7 @@
 		INSERT INTO MEAL_INFO
 		(MEAL_NUM,MEAL_TYPE,MEAL_MENU,USER_ID,MEALED_AT)
 		VALUES
-		(1,#{meal_type},#{meal_menu},#{user_id},SYSDATE)
+		(1,#{meal_type},#{meal_menu},#{user_id},SYSDATE+1)
 	</insert>
 	<insert id="insertRecipe"
 		parameterType="com.todaysmenu.model.RecipeVO">

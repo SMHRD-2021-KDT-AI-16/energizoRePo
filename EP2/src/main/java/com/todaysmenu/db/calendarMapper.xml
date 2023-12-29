@@ -7,9 +7,13 @@
 
 	<select id="calendar" resultType="com.todaysmenu.model.CalVO">
 		<!-- select * from calendar -->
-		select ID, TITLE, 
+		select USER_ID, TITLE, 
 		TO_char(start1, 'YYYY-MM-DD') START1,
 		TEXTCOLOR, BACKGROUNDCOLOR from calendar
 	</select>
 	
+	<insert id="calendarJoin" parameterType="com.todaysmenu.model.CalVO">
+		INSERT INTO CALENDAR (ID,TITLE,START1,TEXTCOLOR,BACKGROUNDCOLOR)
+		VALUES(#{id},#{title},(SYSDATE+1),#{textcolor},#{backgroundcolor})
+	</insert>
 </mapper>
