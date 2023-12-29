@@ -56,13 +56,15 @@
             #blank_area {
                 height: 200px;
             }
-
+            
             #keyword_area {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
                 align-items: center
+            }
+            #keyword_area2 {
             }
 
             form>div {
@@ -73,47 +75,175 @@
             #keybox_ingre1,
             #keybox_ingre2,
             #keybox_style {
-                margin: 20px;
+                margin: 50px;
             }
 
             .keyword_purpose,
             .keyword_ingre1,
             .keyword_ingre2,
             .keyword_style {
-                box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
-                border-radius: 20px;
+              width: 180px;
+			  height: 40px;
+			  color: #fff;
+			  border-radius: 5px;
+			  padding: 10px 25px;
+			  font-weight: 500;
+			  background: transparent;
+			  background-color: rgb(245, 245, 245);
+			  cursor: pointer;
+			  transition: all 0.3s ease;
+			  position: relative;
+			  display: inline-block;
+			   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+			   7px 7px 20px 0px rgba(0,0,0,.1),
+			   4px 4px 5px 0px rgba(0,0,0,.1);
+			  outline: none;
                 border: none;
-                outline: none;
-                font-size: 13px;
-                font-weight: bold;
-                padding: 10px 30px;
-                margin: 14px;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                cursor: pointer;
-                transition: transform 80ms ease-in;
-                background-color: rgb(250, 250, 250);
+  				color: #000;
+            }
+              
+            
+            .keyword_purpose :after {
+            position: absolute;
+			  content: "";
+			  width: 0;
+			  height: 100%;
+			  top: 0;
+			  left: 0;
+			  direction: rtl;
+			  z-index: -1;
+			  box-shadow:
+			   -7px -7px 20px 0px #fff9,
+			   -4px -4px 5px 0px #fff9,
+			   7px 7px 20px 0px #0002,
+			   4px 4px 5px 0px #0001;
+			  transition: all 0.3s ease;
             }
 
-            .keyword:active {
-                box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+            .keyword_ingre1 :after{
+            position: absolute;
+			  content: "";
+			  width: 0;
+			  height: 100%;
+			  top: 0;
+			  left: 0;
+			  direction: rtl;
+			  z-index: -1;
+			  box-shadow:
+			   -7px -7px 20px 0px #fff9,
+			   -4px -4px 5px 0px #fff9,
+			   7px 7px 20px 0px #0002,
+			   4px 4px 5px 0px #0001;
+			  transition: all 0.3s ease;
             }
+
+            .keyword_ingre2 :after{
+            position: absolute;
+			  content: "";
+			  width: 0;
+			  height: 100%;
+			  top: 0;
+			  left: 0;
+			  direction: rtl;
+			  z-index: -1;
+			  box-shadow:
+			   -7px -7px 20px 0px #fff9,
+			   -4px -4px 5px 0px #fff9,
+			   7px 7px 20px 0px #0002,
+			   4px 4px 5px 0px #0001;
+			  transition: all 0.3s ease;
+            }
+            
+            .keyword_style :after {
+            position: absolute;
+			  content: "";
+			  width: 0;
+			  height: 100%;
+			  top: 0;
+			  left: 0;
+			  direction: rtl;
+			  z-index: -1;
+			  box-shadow:
+			   -7px -7px 20px 0px #fff9,
+			   -4px -4px 5px 0px #fff9,
+			   7px 7px 20px 0px #0002,
+			   4px 4px 5px 0px #0001;
+			  transition: all 0.3s ease;
+            }
+            
+            .keyword_purpose :hover{
+			  color: #000;
+			}
+
+            .keyword_ingre1 :hover {
+			  color: #000;
+			}
+
+            .keyword_ingre2 :hover{
+			  color: #000;
+			}
+
+            .keyword_style :hover {
+			  color: #000;
+			}
+			
+			.keyword_purpose :hover:after{
+			  left: auto;
+			  right: 0;
+			  width: 100%;
+			}
+
+            .keyword_ingre1 :hover:after {
+			  left: auto;
+			  right: 0;
+			  width: 100%;
+			}
+
+            .keyword_ingre2 :hover:after{
+			  left: auto;
+			  right: 0;
+			  width: 100%;
+			}
+
+            .keyword_style :hover:after {
+			  left: auto;
+			  right: 0;
+			  width: 100%;
+			}
+			
+			.keyword_purpose :active{
+			  top: 2px;
+			}
+
+            .keyword_ingre1 :active {
+			  top: 2px;
+			}
+
+            .keyword_ingre2 :active{
+			  top: 2px;
+			}
+
+            .keyword_style :active {
+			  top: 2px;
+			}
 
             .key_title {
-                box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
-                border-radius: 20px;
+              background-color:rgb(80, 80, 80);
+              width: 180px;
+			  height: 40px;
+			  color: #fff;
+			  border-radius: 5px;
+			  padding: 10px 25px;
+			  font-weight: 500
+			  cursor: pointer;
+			  transition: all 0.3s ease;
+			  position: relative;
+			  display: inline-block;
+			   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+			   7px 7px 20px 0px rgba(0,0,0,.1),
+			   4px 4px 5px 0px rgba(0,0,0,.1);
+			  outline: none;
                 border: none;
-                outline: none;
-                font-size: 13px;
-                font-weight: bold;
-                padding: 10px 30px;
-                margin: 14px;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                cursor: pointer;
-                transition: transform 80ms ease-in;
-                background-color: black;
-                color: white;
             }
 
             #btn_click {
@@ -129,11 +259,31 @@
                 text-transform: uppercase;
                 cursor: pointer;
                 transition: transform 80ms ease-in;
-                background-color: rgb(250, 250, 250);
+                background-color: rgb(245, 245, 245);
 
             }
 
             #btn_click:active {
+                box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+            }
+            #btn_click2 {
+                box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+                border-radius: 20px;
+                border: none;
+                outline: none;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 10px 30px;
+                margin: 14px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: transform 80ms ease-in;
+                background-color: rgb(245, 245, 245);
+
+            }
+
+            #btn_click2:active {
                 box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
             }
         </style>
@@ -207,8 +357,8 @@
   </header>
         <!-- [E]hooms-N54 -->
         <main class="th-layout-main th-layout-side">
-            <div class="th-layout-sideleft">
-                <!-- [S]hooms-N42 -->
+            <!-- <div class="th-layout-sideleft">
+                [S]hooms-N42
                 <div class="hooms-N42" data-bid="hHLqA9wR9d" id="">
                     <div class="contents-inner">
                         <div class="contents-container container-md">
@@ -230,8 +380,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- [E]hooms-N42 -->
-            </div>
+                [E]hooms-N42
+            </div> -->
 
             <div class="th-layout-content">
 <div class="hooms-N37" data-bid="goLqA8AT7W" id="">
@@ -254,9 +404,9 @@
 
                 <div id="keyword_area">
 
-                    <div align="center">
+                    <div align="center" id="keyword_area2">
                         <div id="keybox_purpose">
-                            <span class="key_title">목적</span>
+                            <span class="key_title">목적</span><br><br>
                             <span class="keyword_purpose">체중감소<input type="checkbox" value="체중감소"></span>
                             <span class="keyword_purpose">체중증가<input type="checkbox" value="체중증가"></span>
                             <span class="keyword_purpose">비조리<input type="checkbox" value="비조리요리"></span>
@@ -264,7 +414,7 @@
                             <span class="keyword_purpose">저염식<input type="checkbox" value="저염식"></span>
                         </div>
                         <div id="keybox_ingre1">
-                            <span class="key_title">피해야할 식재료</span>
+                            <span class="key_title">피해야할 식재료</span><br><br>
                             <span class="keyword_ingre1">카페인<input type="checkbox" value="카페인"></span>
                             <span class="keyword_ingre1">샐러리<input type="checkbox" value="샐러리"></span>
                             <span class="keyword_ingre1">갑각류<input type="checkbox" value="갑각류"></span>
@@ -285,7 +435,7 @@
                             <span class="keyword_ingre2">이스트<input type="checkbox" value="이스트"></span>
                         </div>
                         <div id="keybox_style">
-                            <span class="key_title">식단 스타일</span>
+                            <span class="key_title">식단 스타일</span><br><br>
                             <span class="keyword_style">채식주의<input type="checkbox" value="채식주의"></span>
                             <span class="keyword_style">비건식<input type="checkbox" value="비건식"></span>
                             <span class="keyword_style">키토제닉<input type="checkbox" value="키토제닉"></span>
@@ -295,11 +445,17 @@
                         </div>
                         <button id="btn_click" onclick="chatGPT()">추천받기</button>
                     </div>
-                    <span>
-                        <form action="Filtering.do" method="post" id="filterForm">
-               			 	<div id="result"></div>
-			                <input type="hidden" id="keywords" name="keywords">
-			                <input type="submit" value="Submit">
+                    </div>
+                    <div id="recommend"  align="center">
+                        <form action="Filtering.do" method="post" id="filterForm" align="center">
+	               			 	<div id="result"></div>
+				                <input type="hidden" id="keywords" name="keywords">
+				                <c:if test="${member != null }">
+				                	<input type="submit" value="저장하기" id="btn_click2">
+                            	</c:if>
+                            	<c:if test="${member == null }">
+			               			<input type="submit" value="저장하기" id="btn_click2" onclick="return loginPLZ2()">
+                            	</c:if>
 			            </form>
                         <div id="loading">
                             <img src="https://studentrights.sen.go.kr/images/common/loading.gif">
@@ -310,14 +466,19 @@
 	                        function loginPLZ(){
 	                    		alert('로그인 후 이용이 가능합니다')
 	                    	}
+	                        function loginPLZ2(){
+	                    		alert('로그인 후 이용이 가능합니다')
+	                    		return false;
+	                    	}
                         
                             $(document).ready(function () {
                                 $('#loading').hide();
+                                $('#filterForm input[type="submit"]').hide();
                             });
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
@@ -375,6 +536,7 @@
                                     data: JSON.stringify(data),
                                 }).then(function (response) {
                                     $('#loading').hide();
+                                    $('#filterForm input[type="submit"]').show();
                                     console.log(response)
                                     let result = document.getElementById('result')
 
@@ -397,9 +559,9 @@
                             }
 
                         </script>
-                    </span>
+                    </div>
 
-                </div>
+                
                 <!-- [S]hooms-N17 -->
                 <div class="hooms-N17" data-bid="UwLqa9WdPl">
                     <div class="contents-inner" align="center">
