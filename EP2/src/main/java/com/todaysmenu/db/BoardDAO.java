@@ -40,4 +40,11 @@ public class BoardDAO {
 		}
 		return board;
 	}
+
+	public int deletBoard(BoardVO vo) {
+		int row =0;
+		SqlSession sqlsession = factory.openSession();
+		sqlsession.delete("deleteBoard", vo);
+		return row;
+	}
 }
