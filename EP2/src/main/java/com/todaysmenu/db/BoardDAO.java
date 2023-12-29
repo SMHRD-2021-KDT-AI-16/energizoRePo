@@ -43,8 +43,9 @@ public class BoardDAO {
 
 	public int deletBoard(BoardVO vo) {
 		int row =0;
-		SqlSession sqlsession = factory.openSession();
-		sqlsession.delete("deleteBoard", vo);
+		SqlSession sqlsession = factory.openSession(true);
+		row = sqlsession.delete("deleteBoard", vo);
+		sqlsession.close();
 		return row;
 	}
 }
