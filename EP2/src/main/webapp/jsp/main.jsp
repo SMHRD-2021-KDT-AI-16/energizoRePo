@@ -450,7 +450,12 @@
                         <form action="Filtering.do" method="post" id="filterForm" align="center">
 	               			 	<div id="result"></div>
 				                <input type="hidden" id="keywords" name="keywords">
-				                <input type="submit" value="저장하기" id="btn_click2">
+				                <c:if test="${member != null }">
+				                	<input type="submit" value="저장하기" id="btn_click2">
+                            	</c:if>
+                            	<c:if test="${member == null }">
+			               			<input type="submit" value="저장하기" id="btn_click2" onclick="return loginPLZ2()">
+                            	</c:if>
 			            </form>
                         <div id="loading">
                             <img src="https://studentrights.sen.go.kr/images/common/loading.gif">
@@ -460,6 +465,10 @@
                         <script>
 	                        function loginPLZ(){
 	                    		alert('로그인 후 이용이 가능합니다')
+	                    	}
+	                        function loginPLZ2(){
+	                    		alert('로그인 후 이용이 가능합니다')
+	                    		return false;
 	                    	}
                         
                             $(document).ready(function () {
