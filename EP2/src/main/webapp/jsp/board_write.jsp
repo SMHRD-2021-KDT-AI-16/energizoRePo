@@ -105,7 +105,8 @@
               <span><%=board.getB_title() %></span>
             </h5>
             <span class="contents-date">
-               <%=board.getCreated_at() %> </span>
+               <%=board.getCreated_at() %> <a href="BoardDelete.do?num=<%=board.getB_num() %>" id="delete">삭제</a></span>
+            
           </div>
           <div class="contents-group">
             <div class="contents-group-top">
@@ -121,9 +122,7 @@
     </div>
     <!-- [E]hooms-N37 -->
   </main>
-  <!-- [S]hooms-N57 -->
   
-  <!-- [E]hooms-N57 -->
   <script src="../resources/js/setting.js"></script>
   <script src="../resources/js/plugin.js"></script>
   <script src="../resources/js/template.js"></script>

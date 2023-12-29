@@ -480,6 +480,7 @@
 
                                 const api_key = "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"
 
+
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
                                 const ingre2Checkboxes = document.querySelectorAll('#keybox_ingre2 input[type="checkbox"]:checked');
