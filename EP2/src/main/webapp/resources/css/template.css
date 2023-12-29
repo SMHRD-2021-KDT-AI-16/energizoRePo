@@ -130,7 +130,7 @@ sup { top: -0.5em; }
 a { display: inline-block; color: var(--link-color); text-decoration: none; }
 a:hover { color: var(--link-hover-color); }
 a:not([href]):not([class]),
-a:not([href]):not([class]):hover { color: inherit; text-decoration: none; }
+a:not([href]):not([class]):hover { color: inherit; text-decoration: none;}
 pre,
 code,
 kbd,
