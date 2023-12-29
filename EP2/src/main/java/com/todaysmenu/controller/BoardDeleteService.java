@@ -14,10 +14,10 @@ public class BoardDeleteService implements command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String b_title = request.getParameter("title");
+		int num = Integer.parseInt("num");
 		BoardDAO dao = new BoardDAO();
 		BoardVO vo = new BoardVO();
-		vo.setB_title(b_title);
+		vo.setB_num(num);
 		dao.deletBoard(vo);
 		return "redirect:/Goboard.do";
 	}

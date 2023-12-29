@@ -9,12 +9,12 @@ import lombok.Setter;
 @Getter
 public class BoardVO {
 	
-	private int b_idx;
-	private String b_num;
+	private int b_num;
 	private String b_title;
 	private String b_content;
 	private String created_at;
 	private String user_id;
+	
 	
 	
 }
