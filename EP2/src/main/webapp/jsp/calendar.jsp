@@ -65,7 +65,7 @@
                         </li>
                         </li>
                         <li class="header-gnbitem">
-                            <a class="header-gnblink" href="Goyoutube.do">
+                            <a class="header-gnblink" href="Youtube.do">
                                 <span>레시피 영상</span>
                             </a>
                         </li>
