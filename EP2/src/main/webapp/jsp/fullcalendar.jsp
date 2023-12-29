@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      initialDate: '2023-12-25', // 초기 로딩 날짜.
+      initialDate: '2023-12-29', // 초기 로딩 날짜.
       navLinks: true, // can click day/week names to navigate views
       selectable: true,
       selectMirror: true,
@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
     	  console.log(arg);
 
         var title = prompt('입력할 일정:');
-    // title 값이 있을때, 화면에 calendar.addEvent() json형식으로 일정을 추가
+     //title 값이 있을때, 화면에 calendar.addEvent() json형식으로 일정을 추가
         if (title) {
           calendar.addEvent({
             title: title,
             start: arg.start,
             end: arg.end,
-            allDay: arg.allDay,
-            backgroundColor:"yellow",
+           allDay: arg.allDay,
+           backgroundColor:"yellow",
             textColor:"blue"
           })
         }
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     	  console.log("#등록된 일정 클릭#");
     	  console.log(arg.event);
     	  
-        if (confirm('Are you sure you want to delete this event?')) {
+        if (confirm('이 식단을 삭제하시겠습니까?')) {
           arg.event.remove()
         }
       },
@@ -62,8 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
               url: "calendar.do?method=data", // Update this URL according to your backend endpoint
               dataType: "json",
               success: function (data) {
-                  // Upon success, pass the2 received events to FullCalendar
+                  // Upon success, pass the received events to FullCalendar
                   successCallback(data);
+                  arg.event.remove()
               },
               error: function () {
                   // Handle error if AJAX request fails
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
               }
           });
       }
-      });
+    });
 
     calendar.render();
   });
