@@ -135,14 +135,14 @@
                                             var title = prompt('입력할 일정:');
                                             // title 값이 있을때, 화면에 calendar.addEvent() json형식으로 일정을 추가
                                             if (title) {
-                                                calendar.addEvent({
-                                                    title: title,
-                                                    start: arg.start,
-                                                    end: arg.end,
-                                                    allDay: arg.allDay,
-                                                    backgroundColor: "white",
-                                                    textColor: "black"
-                                                })
+                                             //   calendar.addEvent({
+                                             //       title: title,
+                                             //       start: arg.start,
+                                             //       end: arg.end,
+                                             //       allDay: arg.allDay,
+                                             //       backgroundColor: "white",
+                                             //       textColor: "black"
+                                              //  })
                                             }
                                             calendar.unselect()
                                         },
@@ -158,23 +158,27 @@
                                         editable: true,
                                         dayMaxEvents: true, // allow "more" link when too many events
                                         events: {
+                                        	///CalendarController.do
                                             url: 'CalendarController.do', // 여기에는 서블릿의 URL을 넣어야 합니다.
                                             method: 'GET',
                                             success: function (data) {
                                                 console.log(data)
                                                 // 받아온 데이터를 FullCalendar에 설정
                                                 
-                                                calendar.addEventSource(data);
+                                                //calendar.addEventSource(data);
                                                 
                                             },
                                             failure: function () {
                                                 // 데이터 가져오기에 실패한 경우의 처리
                                             }
-                                        },
-                                        eventRender: function(event, element) {
-                                            event.end = event.start; // 시작 시간과 종료 시간을 동일하게 설정하여 종료 시간을 표시하지 않음
-                                            
                                         }
+                                        ,
+                                     
+                                       // eventRender: function(event, element) {
+                                       //     event.end = event.start; // 시작 시간과 종료 시간을 동일하게 설정하여 종료 시간을 표시하지 않음
+                                       //     console.log(event.title);
+                                       //     console.log(data.title);
+                                       // }
                                     });
 
                                     calendar.render();
