@@ -82,21 +82,7 @@
   <!-- [E]hooms-N54 -->
   <main class="th-layout-main ">
     <!-- [S]hooms-N36 -->
-    <div class="hooms-N36" data-bid="Wvlqa9dSTn" id="">
-      <div id="modalSet1" class="modalset">
-        <div class="modal-header">
-          <h6 class="modal-title">1:1 문의</h6>
-        </div>
-        <div class="modal-body">
-          <p> 로그인이 필요한 서비스입니다. <br> 로그인하시겠습니까? </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btnset btnset-ghost modal-close">취소</button>
-          <a href="javascript:void(0)" class="btnset btnset-confirm">확인</a>
-        </div>
-      </div>
-      <div class="modalset-dim"></div>
-    </div>
+ 
     <!-- [E]hooms-N36 -->
     <!-- [S]hooms-N36 -->
     <div class="hooms-N36" data-bid="uqlQA9EIsb">
@@ -160,7 +146,9 @@
               </tbody>
             </table>
           </div>
-          
+          <div class="contents-btn">
+            <a class="modalset-btn"></a>
+          </div>
           <nav class="pagiset pagiset-line">
             <div class="pagiset-ctrl">
             <c:if test="${Bpage > 1 }">
@@ -198,19 +186,7 @@
           </nav>
         </div>
       </div>
-      <div id="modalSet1" class="modalset">
-        <div class="modal-header">
-          <h6 class="modal-title">1:1 문의</h6>
-        </div>
-        <div class="modal-body">
-          <p> 로그인이 필요한 서비스입니다. <br> 로그인하시겠습니까? </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btnset btnset-ghost modal-close">취소</button>
-          <a href="javascript:void(0)" class="btnset btnset-confirm">확인</a>
-        </div>
-      </div>
-      <div class="modalset-dim"></div>
+ 
     </div>
     <!-- [E]hooms-N36 -->
     <!-- [S]hooms-N2 -->

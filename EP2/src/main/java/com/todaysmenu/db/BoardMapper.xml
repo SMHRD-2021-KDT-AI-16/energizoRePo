@@ -5,10 +5,14 @@
  
 <mapper namespace="com.todaysmenu.db.BoardDAO">
 	<select id="allBoard" resultType="com.todaysmenu.model.BoardVO">
-		select rownum as b_idx, b_num, b_title, b_content, to_char(created_at,'yyyy-mm-dd') as created_at, user_id from board_info where user_id=#{user_id}
+	select *
+	from(select rownum as b_idx, a.*
+	from(select b_num, b_title, to_char(created_at,'yyyy.mm.dd')as created_at, user_id
+	from board_info where user_id = #{user_id} order by b_num)a)
+	order by b_idx desc
 	</select>
 	
 	<select id="detailBoard" resultType="Board">
-		select rownum as b_idx, b_num, b_title, b_content, to_char(created_at, 'yyyy-mm-dd hh24:mm') as created_at, user_id from board_info where b_num=#{num}
+		select b_num, b_title, b_content, to_char(created_at, 'yyyy.mm.dd hh24:mm') as created_at, user_id from board_info where b_num=#{num}
 	</select>
 </mapper>
