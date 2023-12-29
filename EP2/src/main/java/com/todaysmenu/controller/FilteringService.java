@@ -7,8 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.todaysmenu.db.CalDAO;
 import com.todaysmenu.db.MemberDAO;
 import com.todaysmenu.model.BoardVO;
+import com.todaysmenu.model.CalVO;
 import com.todaysmenu.model.MealVO;
 import com.todaysmenu.model.MemberVO;
 import com.todaysmenu.model.RecipeVO;
@@ -86,8 +88,12 @@ public class FilteringService implements command {
 		if(row>0) {
 			System.out.println("성공!");
 		}
+		CalVO calVO= new CalVO();
 		String cal_title = ("아침 :"+result[0][0]+"\n점심 : "+result[1][0]+"\n저녁 :"+ result[2][0]);
-		
+		calVO.setId(member.getUser_id());
+		calVO.setTitle(cal_title);
+		CalDAO calDAO = new CalDAO();
+		calDAO.calenderJoin(calVO);
 		
 		return "Gomain.do";
 	}
