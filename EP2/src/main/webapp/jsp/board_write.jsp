@@ -110,7 +110,7 @@
           <div class="contents-group">
             <div class="contents-group-top">
               
-              <p class="contents-ask"> <%=board.getB_content() %> </p>
+              <pre class="contents-ask"> <%=board.getB_content() %> </pre>
             </div>
           </div>
           <div class="contents-btn">

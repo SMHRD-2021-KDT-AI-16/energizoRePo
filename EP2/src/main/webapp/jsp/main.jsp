@@ -313,6 +313,7 @@
                         
                             $(document).ready(function () {
                                 $('#loading').hide();
+                                $('#filterForm input[type="submit"]').hide();
                             });
 
                             function chatGPT() {
@@ -375,6 +376,7 @@
                                     data: JSON.stringify(data),
                                 }).then(function (response) {
                                     $('#loading').hide();
+                                    $('#filterForm input[type="submit"]').show();
                                     console.log(response)
                                     let result = document.getElementById('result')
 

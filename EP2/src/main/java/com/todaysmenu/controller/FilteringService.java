@@ -7,8 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.todaysmenu.db.CalDAO;
 import com.todaysmenu.db.MemberDAO;
 import com.todaysmenu.model.BoardVO;
+import com.todaysmenu.model.CalVO;
 import com.todaysmenu.model.MealVO;
 import com.todaysmenu.model.MemberVO;
 import com.todaysmenu.model.RecipeVO;
@@ -19,7 +21,7 @@ public class FilteringService implements command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String recipe = request.getParameter("keywords");
-		System.out.println(recipe);
+		
 		String[] recipes = recipe.replace("\r\n\r\n", "\r\n").split("\r\n");
 		String[][] result = new String[3][3];
 		
@@ -79,14 +81,21 @@ public class FilteringService implements command {
 		BoardVO vo = new BoardVO();
 		String food_name = ("아침 : "+result[0][0]+", 점심 : "+result[1][0]+", 저녁 :"+ result[2][0]);
 		vo.setB_title(food_name);
+		System.out.println(recipe);
 		vo.setB_content(recipe);
 		vo.setUser_id(member.getUser_id());
 		int row = dao.boardJoin(vo);
 		if(row>0) {
 			System.out.println("성공!");
 		}
-		
-		
+		CalVO calVO= new CalVO();
+		String cal_title = ("아침 :"+result[0][0]+"\n점심 : "+result[1][0]+"\n저녁 :"+ result[2][0]);
+		calVO.setId(member.getUser_id());
+		calVO.setTitle(cal_title);
+		calVO.setTextcolor("black");
+		calVO.setBackgroundcolor("white");
+		CalDAO calDAO = new CalDAO();
+		calDAO.calenderJoin(calVO);
 		
 		return "Gomain.do";
 	}
