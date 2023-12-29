@@ -6,16 +6,17 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.todaysmenu.model.CalVO;
+import com.todaysmenu.model.MemberVO;
 
 public class CalDAO {
 
 	private SqlSessionFactory factory = SqlSessionManager.getFactory();
 
-	public List<CalVO> calendar() {
+	public List<CalVO> calendar(MemberVO member) {
 
 		SqlSession sqlsession = factory.openSession(true);
 
-		List<CalVO> cal = sqlsession.selectList("calendar");
+		List<CalVO> cal = sqlsession.selectList("calendar",member);
 
 		sqlsession.close();
 
