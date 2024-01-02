@@ -68,7 +68,9 @@
             }
 
             form>div {
-                margin: 30px;
+                margin: auto;
+                max-width: 50rem;
+                text-align: left;
             }
 
             #keybox_purpose,
@@ -478,7 +480,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');

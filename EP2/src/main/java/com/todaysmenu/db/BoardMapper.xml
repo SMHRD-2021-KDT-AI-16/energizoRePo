@@ -13,7 +13,7 @@
 	</select>
 	
 	<select id="detailBoard" resultType="Board">
-		select b_num, b_title, b_content, to_char(created_at, 'yyyy.mm.dd hh24:mm') as created_at, user_id from board_info where b_num=#{num}
+		select b_num, b_title, b_content, to_char(created_at, 'yyyy.mm.dd hh24:mi') as created_at, user_id from board_info where b_num=#{num}
 	</select>
 	<delete id="deleteBoard" parameterType="Board">
 	DELETE FROM BOARD_INFO WHERE B_NUM = #{b_num}
