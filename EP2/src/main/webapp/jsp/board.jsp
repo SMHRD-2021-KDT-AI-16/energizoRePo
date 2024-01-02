@@ -166,7 +166,14 @@
             </div>
             <div class="pagiset-list">
             <c:forEach begin="${startPage }" end="${endPage }" var="i">
+            <c:choose>
+            <c:when test="${i == Bpage }">
               <a class="pagiset-link active-fill" href="BoardSelect.do?page=${i }">${i}</a>
+             </c:when>
+             <c:otherwise>
+             <a class="pagiset-link" href="BoardSelect.do?page=${i }">${i}</a>
+             </c:otherwise>
+             </c:choose>
              </c:forEach>
             </div>
             <div class="pagiset-ctrl">
