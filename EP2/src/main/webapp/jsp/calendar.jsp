@@ -124,7 +124,7 @@
                                             center: 'title',
                                             right: 'dayGridMonth,timeGridWeek,timeGridDay'
                                         },
-                                        initialDate: '2023-12-29', // 초기 로딩 날짜.
+                                        initialDate: '2024-01-04', // 초기 로딩 날짜.
                                         navLinks: true, // can click day/week names to navigate views
                                         selectable: true,
                                         selectMirror: true,
@@ -135,14 +135,14 @@
                                             var title = prompt('입력할 일정:');
                                             // title 값이 있을때, 화면에 calendar.addEvent() json형식으로 일정을 추가
                                             if (title) {
-                                             //   calendar.addEvent({
-                                             //       title: title,
-                                             //       start: arg.start,
-                                             //       end: arg.end,
-                                             //       allDay: arg.allDay,
-                                             //       backgroundColor: "white",
-                                             //       textColor: "black"
-                                              //  })
+                                                calendar.addEvent({
+                                                    title: title,
+                                                    start: arg.start,
+                                                    end: arg.end,
+                                                    allDay: arg.allDay,
+                                                    backgroundColor: "white",
+                                                    textColor: "black"
+                                               })
                                             }
                                             calendar.unselect()
                                         },
