@@ -68,7 +68,9 @@
             }
 
             form>div {
-                margin: 30px;
+                margin: auto;
+                max-width: 50rem;
+                text-align: left;
             }
 
             #keybox_purpose,
