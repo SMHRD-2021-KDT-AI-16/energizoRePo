@@ -411,7 +411,6 @@
                             <span class="key_title">목적</span><br><br>
                             <span class="keyword_purpose">체중감소<input type="checkbox" value="체중감소"></span>
                             <span class="keyword_purpose">체중증가<input type="checkbox" value="체중증가"></span>
-                            <span class="keyword_purpose">비조리<input type="checkbox" value="비조리요리"></span>
                             <span class="keyword_purpose">저당식<input type="checkbox" value="저당식"></span>
                             <span class="keyword_purpose">저염식<input type="checkbox" value="저염식"></span>
                         </div>
@@ -420,7 +419,7 @@
                             <span class="keyword_ingre1">카페인<input type="checkbox" value="카페인"></span>
                             <span class="keyword_ingre1">샐러리<input type="checkbox" value="샐러리"></span>
                             <span class="keyword_ingre1">갑각류<input type="checkbox" value="갑각류"></span>
-                            <span class="keyword_ingre1">달걀<input type="checkbox" value="달걀"></span>
+                            <span class="keyword_ingre1">달걀<input type="checkbox" value="달걀"></span><br>
                             <span class="keyword_ingre1">생선<input type="checkbox" value="생선"></span>
                             <span class="keyword_ingre1">글루텐<input type="checkbox" value="글루텐"></span>
                             <span class="keyword_ingre1">땅콩<input type="checkbox" value="땅콩"></span>
@@ -430,7 +429,7 @@
                             <span class="keyword_ingre2">연체동물<input type="checkbox" value="연체동물"></span>
                             <span class="keyword_ingre2">겨자<input type="checkbox" value="겨자"></span>
                             <span class="keyword_ingre2">참깨<input type="checkbox" value="참깨"></span>
-                            <span class="keyword_ingre2">대두<input type="checkbox" value="대두"></span>
+                            <span class="keyword_ingre2">대두<input type="checkbox" value="대두"></span><br>
                             <span class="keyword_ingre2">견과<input type="checkbox" value="견과"></span>
                             <span class="keyword_ingre2">밀<input type="checkbox" value="밀"></span>
                             <span class="keyword_ingre2">젖당<input type="checkbox" value="젖당"></span>
@@ -438,10 +437,8 @@
                         </div>
                         <div id="keybox_style">
                             <span class="key_title">식단 스타일</span><br><br>
-                            <span class="keyword_style">채식주의<input type="checkbox" value="채식주의"></span>
                             <span class="keyword_style">비건식<input type="checkbox" value="비건식"></span>
                             <span class="keyword_style">키토제닉<input type="checkbox" value="키토제닉"></span>
-                            <span class="keyword_style">유제품 미포함<input type="checkbox" value="유제품 미포함"></span>
                             <span class="keyword_style">저탄수화물<input type="checkbox" value="저탄수화물"></span>
                             <span class="keyword_style">글루텐 프리<input type="checkbox" value="글루텐프리"></span>
                         </div>
@@ -480,7 +477,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
