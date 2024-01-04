@@ -288,6 +288,14 @@
             #btn_click2:active {
                 box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
             }
+            
+            .i1{
+            	display: none;
+            }
+            .i1:checked + label{
+            	background-color: gray;
+            	color: white;
+            }
         </style>
 
     </head>
@@ -409,38 +417,62 @@
                     <div align="center" id="keyword_area2">
                         <div id="keybox_purpose">
                             <span class="key_title">목적</span><br><br>
-                            <span class="keyword_purpose">체중감소<input type="checkbox" value="체중감소"></span>
-                            <span class="keyword_purpose">체중증가<input type="checkbox" value="체중증가"></span>
-                            <span class="keyword_purpose">저당식<input type="checkbox" value="저당식"></span>
-                            <span class="keyword_purpose">저염식<input type="checkbox" value="저염식"></span>
+                            <input type="checkbox" value="체중감소" id="체중감소" class="i1">
+                            <label for="체중감소" class="keyword_purpose">체중감소</label>
+                            <input type="checkbox" value="체중증가" id="체중증가" class="i1">
+                            <label for="체중증가" class="keyword_purpose">체중증가</label>
+                            <input type="checkbox" value="저당식" id="저당식" class="i1">
+                            <label for="저당식" class="keyword_purpose">저당식</label>
+                            <input type="checkbox" value="저염식" id="저염식" class="i1">
+                            <label for="저염식" class="keyword_purpose">저염식</label>
                         </div>
                         <div id="keybox_ingre1">
                             <span class="key_title">피해야할 식재료</span><br><br>
-                            <span class="keyword_ingre1">카페인<input type="checkbox" value="카페인"></span>
-                            <span class="keyword_ingre1">샐러리<input type="checkbox" value="샐러리"></span>
-                            <span class="keyword_ingre1">갑각류<input type="checkbox" value="갑각류"></span>
-                            <span class="keyword_ingre1">달걀<input type="checkbox" value="달걀"></span><br>
-                            <span class="keyword_ingre1">생선<input type="checkbox" value="생선"></span>
-                            <span class="keyword_ingre1">글루텐<input type="checkbox" value="글루텐"></span>
-                            <span class="keyword_ingre1">땅콩<input type="checkbox" value="땅콩"></span>
-                            <span class="keyword_ingre1">우유<input type="checkbox" value="우유"></span>
+                            <input type="checkbox" value="카페인" id="카페인" class="i1">
+                            <label for="카페인" class="keyword_ingre1">카페인</label>
+                            <input type="checkbox" value="샐러리" id="샐러리" class="i1">
+                            <label for="샐러리" class="keyword_ingre1">샐러리</label>
+                            <input type="checkbox" value="갑각류" id="갑각류" class="i1">
+                            <label for="갑각류" class="keyword_ingre1">갑각류</label>
+                            <input type="checkbox" value="달걀" id="달걀" class="i1">
+                            <label for="달걀" class="keyword_ingre1">달걀</label><br>
+                            <input type="checkbox" value="생선" id="생선" class="i1">
+                            <label for="생선" class="keyword_ingre1">생선</label>
+                            <input type="checkbox" value="글루텐" id="글루텐" class="i1">
+                            <label for="글루텐" class="keyword_ingre1">글루텐</label>
+                            <input type="checkbox" value="땅콩" id="땅콩" class="i1">
+                            <label for="땅콩" class="keyword_ingre1">땅콩</label>
+                            <input type="checkbox" value="우유" id="우유" class="i1">
+                            <label for="우유" class="keyword_ingre1">우유</label>
                         </div>
                         <div id="keybox_ingre2">
-                            <span class="keyword_ingre2">연체동물<input type="checkbox" value="연체동물"></span>
-                            <span class="keyword_ingre2">겨자<input type="checkbox" value="겨자"></span>
-                            <span class="keyword_ingre2">참깨<input type="checkbox" value="참깨"></span>
-                            <span class="keyword_ingre2">대두<input type="checkbox" value="대두"></span><br>
-                            <span class="keyword_ingre2">견과<input type="checkbox" value="견과"></span>
-                            <span class="keyword_ingre2">밀<input type="checkbox" value="밀"></span>
-                            <span class="keyword_ingre2">젖당<input type="checkbox" value="젖당"></span>
-                            <span class="keyword_ingre2">이스트<input type="checkbox" value="이스트"></span>
+                            <input type="checkbox" value="연체동물" class="i1" id="연체동물">
+                            <label for="연체동물" class="keyword_ingre2">연체동물</label>
+                            <input type="checkbox" value="겨자" class="i1" id="겨자">
+                            <label for="겨자" class="keyword_ingre2">겨자</label>
+                            <input type="checkbox" value="참깨" class="i1" id="참깨">
+                            <label for="참깨" class="keyword_ingre2">참깨</label>
+                            <input type="checkbox" value="대두" class="i1" id="대두">
+                            <label for="대두" class="keyword_ingre2">대두</label><br>
+                            <input type="checkbox" value="견과" class="i1" id="견과">
+                            <label for="견과" class="keyword_ingre2">견과</label>
+                            <input type="checkbox" value="밀" class="i1" id="밀">
+                            <label for="밀" class="keyword_ingre2">밀</label>
+                            <input type="checkbox" value="젖당" class="i1" id="젖당">
+                            <label for="젖당" class="keyword_ingre2">젖당</label>
+                            <input type="checkbox" value="이스트" class="i1" id="이스트">
+                            <label for="이스트" class="keyword_ingre2">이스트</label>
                         </div>
                         <div id="keybox_style">
                             <span class="key_title">식단 스타일</span><br><br>
-                            <span class="keyword_style">비건식<input type="checkbox" value="비건식"></span>
-                            <span class="keyword_style">키토제닉<input type="checkbox" value="키토제닉"></span>
-                            <span class="keyword_style">저탄수화물<input type="checkbox" value="저탄수화물"></span>
-                            <span class="keyword_style">글루텐 프리<input type="checkbox" value="글루텐프리"></span>
+                            <input type="checkbox" value="비건식" class="i1" id="비건식">
+                            <label for="비건식" class="keyword_style">비건식</label>
+                            <input type="checkbox" value="키토제닉" class="i1" id="키토제닉">
+                            <label for="키토제닉" class="keyword_style">키토제닉</label>
+                            <input type="checkbox" value="저탄수화물" class="i1" id="저탄수화물">
+                            <label for="저탄수화물" class="keyword_style">저탄수화물</label>
+                            <input type="checkbox" value="글루텐프리" class="i1" id="글루텐프리">
+                            <label for="글루텐프리" class="keyword_style">글루텐 프리</label>
                         </div>
                         <button id="btn_click" onclick="chatGPT()">추천받기</button>
                     </div>
@@ -477,12 +509,16 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
+                                console.log(purposeCheckboxes);
                                 const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
+                                console.log(ingre1Checkboxes);
                                 const ingre2Checkboxes = document.querySelectorAll('#keybox_ingre2 input[type="checkbox"]:checked');
+                                console.log(ingre2Checkboxes);
                                 const styleCheckboxes = document.querySelectorAll('#keybox_style input[type="checkbox"]:checked');
+                                console.log(styleCheckboxes);
 
                                 // 가져온 값을 배열로 변환
                                 const purposeValues = Array.from(purposeCheckboxes).map(checkbox => checkbox.value).join(', ');
