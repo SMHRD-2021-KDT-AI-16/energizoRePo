@@ -334,7 +334,7 @@ progress { vertical-align: baseline; }
  .textset .textset-link { padding: 0 3.4rem; margin-top: 4rem; }
  }
 /* Textset : Textset-H2 */
-.textset.textset-h2 .textset-tit { margin-bottom: 0; font-family: var(--ff-ko2); line-height: var(--lh-h2); font-size: var(--fs-h2); font-weight: 400 }
+.textset.textset-h2 .textset-tit { margin-bottom: 0; font-family: var(--ff); line-height: var(--lh-h2); font-size: var(--fs-h2); font-weight: 400; text-align: center;}
 .textset.textset-h2 .textset-name { margin-bottom: 0.5rem; font-family: var(--ff-ko2); font-size: 2.4rem; color: var(--secondary); font-weight: 400; }
 @media (max-width: 768px){
  .textset.textset-h2 .textset-name { font-size: 1.2rem; }
