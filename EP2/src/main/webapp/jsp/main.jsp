@@ -478,13 +478,9 @@
                         const api_key = "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"
 
                         const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
-                        console.log(purposeCheckboxes);
                         const ingre1Checkboxes = document.querySelectorAll('#keybox_ingre1 input[type="checkbox"]:checked');
-                        console.log(ingre1Checkboxes);
                         const ingre2Checkboxes = document.querySelectorAll('#keybox_ingre2 input[type="checkbox"]:checked');
-                        console.log(ingre2Checkboxes);
                         const styleCheckboxes = document.querySelectorAll('#keybox_style input[type="checkbox"]:checked');
-                        console.log(styleCheckboxes);
 
                         const purposeValues = Array.from(purposeCheckboxes).map(checkbox => checkbox.value).join(', ');
                         const ingre1Values = Array.from(ingre1Checkboxes).map(checkbox => checkbox.value).join(', ');
@@ -519,7 +515,6 @@
                                 },
                             ];
                         }
-                        console.log(messages);
                         const data = {
                             model: 'gpt-3.5-turbo',
                             temperature: 0.5,
@@ -538,7 +533,6 @@
                         }).then(function (response) {
                             $('#loading').hide();
                             $('#filterForm input[type="submit"]').show();
-                            console.log(response)
                             let result = document.getElementById('result')
 
                             result.innerHTML = '';
