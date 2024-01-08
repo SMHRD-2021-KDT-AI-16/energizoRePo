@@ -60,8 +60,10 @@
   - API로부터의 응답을 받으면, 결과를 DOM에 추가하고 특정 요소에 값을 설정합니다.
   - API에서 생성된 응답 메시지의 내용을 화면에 출력합니다.
 
-- **Axios 비동기 요청** :pushpin: [코드 확인]()
-  - URL의 모양새인 경우, 컨텐츠를 등록하는 POST 요청을 비동기로 날립니다.
+![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/df0a3f55-a80f-4881-8c6f-855b85001e8e)
+
+- ** POST 요청** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/9f23cfa466962fbf3f28a4fa1a5d556152078ac8/EP2/src/main/webapp/jsp/main.jsp#L447C20-L447C69)
+  - <form> 요소를 사용하여 컨텐츠를 저장하는 POST 요청을 서버로 전송
 
 ### 4.3. Controller
 
