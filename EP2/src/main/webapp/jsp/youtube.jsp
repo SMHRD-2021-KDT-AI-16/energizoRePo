@@ -150,10 +150,10 @@ int totalPages = (int) Math.ceil((double) totalDataCount / pageSize);
           </div>
           <div class="contents-search">
             <p class="contents-result"> 전체<span> ${youtube.size()}</span>개 </p>
-            <div class="inputset">
+            <!-- <div class="inputset">
               <button class="inputset-icon icon-right icon-search btn" type="button" aria-label="아이콘"></button>
               <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요." aria-label="내용">
-            </div>
+            </div> -->
           </div>
           <div class="contents-group">
             <div class="contents-cardlist contents-cardlist-active">
@@ -163,10 +163,10 @@ int totalPages = (int) Math.ceil((double) totalDataCount / pageSize);
                   <img class="cardset-img" src="${item.getYoutube_img() }" alt="이미지">
                 </figure>
                 <div class="cardset-body">
-                  <div class="cardset-tit-group">
+                 <%--  <div class="cardset-tit-group">
                     <h5 class="cardset-tit"> ${item.getYoutube_name()} </h5>
-                  </div>
-                  <p class="cardset-desc">${item.getYoutube_title()}</p>
+                  </div> --%>
+                  <h5 class="cardset-tit">${item.getYoutube_title()}</h5>
                 </div>
               </a>
               </c:forEach>

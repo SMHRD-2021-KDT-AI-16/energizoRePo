@@ -13,8 +13,8 @@ import com.todaysmenu.model.BoardVO;
 import com.todaysmenu.model.MemberVO;
 
 public class BoardSelectService implements command {
-	int postsPerPage = 7;
-	int bPageSize = 3;
+	int postsPerPage = 10;
+	int bPageSize = 5;
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

@@ -35,7 +35,7 @@
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="Gomain.do" title="hooms"></a>
+          <a class="header-logo" href="Gomain.do" title="홈"></a>
         </h1>
       </div>
       <div class="header-center">
@@ -150,20 +150,33 @@
             <a class="modalset-btn"></a>
           </div>
           <nav class="pagiset pagiset-line">
+          <c:choose>
+            <c:when test="${Bpage != 1 }">
             <div class="pagiset-ctrl">
-            <c:if test="${Bpage > 1 }">
               <a class="pagiset-link pagiset-first" href="BoardSelect.do?page=1">
                 <span class="visually-hidden">처음</span>
               </a>
-              </c:if>
             </div>
             <div class="pagiset-ctrl">
-            <c:if test="${startPage != 1 }">
-              <a class="pagiset-link pagiset-prev" href="BoardSelect.do?page=${startPage - bPageSize}">
+              <a class="pagiset-link pagiset-prev" href="BoardSelect.do?page=${Bpage - 1}">
                 <span class="visually-hidden">이전</span>
               </a>
-             </c:if>
             </div>
+              </c:when>
+            <c:otherwise>
+            <div class="pagiset-ctrl">
+              <p class="pagiset-link pagiset-first" >
+                <span class="visually-hidden">처음</span>
+              </p>
+            </div>
+
+            <div class="pagiset-ctrl">
+              <p class="pagiset-link pagiset-prev">
+                <span class="visually-hidden">이전</span>
+              </p>
+            </div>
+             </c:otherwise>
+             </c:choose>
             <div class="pagiset-list">
             <c:forEach begin="${startPage }" end="${endPage }" var="i">
             <c:choose>
@@ -176,20 +189,32 @@
              </c:choose>
              </c:forEach>
             </div>
+            <c:choose>
+            <c:when test="${Bpage != totalPages }">
             <div class="pagiset-ctrl">
-            <c:if test="${endPage != totalPages }">
-              <a class="pagiset-link pagiset-next" href="BoardSelect.do?page=${startPage + bPageSize}">
+              <a class="pagiset-link pagiset-next" href="BoardSelect.do?page=${Bpage + 1}">
                 <span class="visually-hidden">다음</span>
               </a>
-              </c:if>
             </div>
             <div class="pagiset-ctrl">
-            <c:if test="${Bpage < totalPages }">
               <a class="pagiset-link pagiset-last" href="BoardSelect.do?page=${totalPages }">
                 <span class="visually-hidden">마지막</span>
               </a>
-              </c:if>
             </div>
+              </c:when>
+            <c:otherwise>
+            	<div class="pagiset-ctrl">
+              <p class="pagiset-link pagiset-next">
+                <span class="visually-hidden">다음</span>
+              </p>
+            </div>
+            <div class="pagiset-ctrl">
+              <p class="pagiset-link pagiset-last">
+                <span class="visually-hidden">마지막</span>
+              </p>
+            </div>
+              </c:otherwise>
+              </c:choose>
           </nav>
         </div>
       </div>
