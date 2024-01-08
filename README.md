@@ -29,7 +29,7 @@
 </br>
 
 ## 3. ERD 설계
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/final_erd.png)
+![](![ERD](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/61093141-56ff-4801-a7c8-2425162e076d))
 ![](https://github.com/JungHyung2/gitio.io/blob/master/assets/images/portfolio/p1.jpg)
 
 
