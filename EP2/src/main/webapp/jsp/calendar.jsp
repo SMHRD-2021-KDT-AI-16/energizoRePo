@@ -110,6 +110,7 @@
                             <div id='calendar'></div>
                             <script>
                             var cnt =0;
+                            var today = new Date();
                             function loginPLZ(){
                             	alert('로그인 후 이용이 가능합니다')
                             }
@@ -124,7 +125,7 @@
                                             center: 'title',
                                             right: 'dayGridMonth,timeGridWeek,timeGridDay'
                                         },
-                                        initialDate: '2023-12-29', // 초기 로딩 날짜.
+                                        initialDate: today, // 초기 로딩 날짜.
                                         navLinks: true, // can click day/week names to navigate views
                                         selectable: true,
                                         selectMirror: true,
