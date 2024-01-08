@@ -79,7 +79,7 @@ int totalPages = (int) Math.ceil((double) totalDataCount / pageSize);
                                 </c:if>
                             </li>
                             <li class="header-gnbitem">
-                                <a class="header-gnblink" href="Goyoutube.do">
+                                <a class="header-gnblink" href="Youtube.do">
                                     <span>레시피 영상</span>
                                 </a>
                             </li>
@@ -158,7 +158,7 @@ int totalPages = (int) Math.ceil((double) totalDataCount / pageSize);
           <div class="contents-group">
             <div class="contents-cardlist contents-cardlist-active">
  				<c:forEach var="item" items="${currentPageList}">
-              <a href=${item.getYoutube_url() } class="cardset">
+              <a href=${item.getYoutube_url() } target="_blank" class="cardset">
                 <figure class="cardset-figure">
                   <img class="cardset-img" src="${item.getYoutube_img() }" alt="이미지">
                 </figure>
@@ -200,7 +200,13 @@ int totalPages = (int) Math.ceil((double) totalDataCount / pageSize);
 			<%} %>
             <div class="pagiset-list">
 				<c:forEach begin="1" end="<%=totalPages%>" var="pageNumber">
+				<c:choose><c:when test="${pageNumber == page }">
+					<a class="pagiset-link active-fill" href="Youtube.do?page=${pageNumber}&youtube_name=<%=youtube_name%>">${pageNumber}</a>
+				</c:when>
+				<c:otherwise>
     				<a class="pagiset-link" href="Youtube.do?page=${pageNumber}&youtube_name=<%=youtube_name%>">${pageNumber}</a>
+    			</c:otherwise>
+    			</c:choose>
 			    </c:forEach>
             </div>
 			<% if(pages!=totalPages){ %>

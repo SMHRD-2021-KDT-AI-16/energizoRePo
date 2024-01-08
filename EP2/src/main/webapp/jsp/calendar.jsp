@@ -65,7 +65,7 @@
                         </li>
                         </li>
                         <li class="header-gnbitem">
-                            <a class="header-gnblink" href="Goyoutube.do">
+                            <a class="header-gnblink" href="Youtube.do">
                                 <span>레시피 영상</span>
                             </a>
                         </li>
@@ -109,6 +109,8 @@
 
                             <div id='calendar'></div>
                             <script>
+                            var cnt =0;
+                            var today = new Date();
                             function loginPLZ(){
                             	alert('로그인 후 이용이 가능합니다')
                             }
@@ -123,7 +125,7 @@
                                             center: 'title',
                                             right: 'dayGridMonth,timeGridWeek,timeGridDay'
                                         },
-                                        initialDate: '2023-12-25', // 초기 로딩 날짜.
+                                        initialDate: today, // 초기 로딩 날짜.
                                         navLinks: true, // can click day/week names to navigate views
                                         selectable: true,
                                         selectMirror: true,
@@ -134,14 +136,14 @@
                                             var title = prompt('입력할 일정:');
                                             // title 값이 있을때, 화면에 calendar.addEvent() json형식으로 일정을 추가
                                             if (title) {
-                                                calendar.addEvent({
-                                                    title: title,
-                                                    start: arg.start,
-                                                    end: arg.end,
-                                                    allDay: arg.allDay,
-                                                    backgroundColor: "green",
-                                                    textColor: "red"
-                                                })
+                                             //   calendar.addEvent({
+                                             //       title: title,
+                                             //       start: arg.start,
+                                             //       end: arg.end,
+                                             //       allDay: arg.allDay,
+                                             //       backgroundColor: "white",
+                                             //       textColor: "black"
+                                              //  })
                                             }
                                             calendar.unselect()
                                         },
@@ -150,28 +152,34 @@
                                             console.log("#등록된 일정 클릭#");
                                             console.log(arg.event);
 
-                                            if (confirm('Are you sure you want to delete this event?')) {
+                                            if (confirm('일정을 삭제하시겠습니까?')) {
                                                 arg.event.remove()
                                             }
                                         },
                                         editable: true,
                                         dayMaxEvents: true, // allow "more" link when too many events
                                         events: {
+                                        	///CalendarController.do
                                             url: 'CalendarController.do', // 여기에는 서블릿의 URL을 넣어야 합니다.
                                             method: 'GET',
                                             success: function (data) {
                                                 console.log(data)
                                                 // 받아온 데이터를 FullCalendar에 설정
-                                                calendar.addEventSource(data);
+                                                
+                                                //calendar.addEventSource(data);
+                                                
                                             },
                                             failure: function () {
                                                 // 데이터 가져오기에 실패한 경우의 처리
                                             }
-                                        },
-                                        eventRender: function(event, element) {
-                                            event.end = event.start; // 시작 시간과 종료 시간을 동일하게 설정하여 종료 시간을 표시하지 않음
                                         }
-
+                                        ,
+                                     
+                                       // eventRender: function(event, element) {
+                                       //     event.end = event.start; // 시작 시간과 종료 시간을 동일하게 설정하여 종료 시간을 표시하지 않음
+                                       //     console.log(event.title);
+                                       //     console.log(data.title);
+                                       // }
                                     });
 
                                     calendar.render();

@@ -58,7 +58,7 @@
           <h2 class="contents-title">오늘의 메뉴</h2>
           <p class="contents-text"> 매일 뭘 먹을지 고민하는 당신<br>맞춤 식단을 추천받고 식단 관리도 해보세요</p>
           <div class="hooms-N1" data-bid="mSLqaai0x3">
-          <a class="contents-link" href="Gomain.do" id="go">식단 추천받기</a>
+          <a class="contents-link" href="Gomain.do" id="go">시작하기</a>
           </div>
         </div>
       </div>

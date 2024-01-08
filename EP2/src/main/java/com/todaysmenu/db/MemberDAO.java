@@ -40,10 +40,7 @@ public class MemberDAO {
 		MemberVO login = sqlsession.selectOne("login", vo);
 		// 3. 연결객체 반납하기
 		sqlsession.close();
-		String birth = login.getUser_birthdate();
-		String birthday[] = birth.split(" ");
-		System.out.println(birthday[0]);
-		login.setUser_birthdate(birthday[0]);
+
 		// 4. 결과 반환하기
 		return login;
 	}

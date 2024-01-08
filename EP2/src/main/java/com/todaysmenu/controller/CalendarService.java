@@ -6,11 +6,13 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.todaysmenu.db.CalDAO;
 import com.todaysmenu.model.CalVO;
+import com.todaysmenu.model.MemberVO;
 
 public class CalendarService implements command {
 
@@ -19,8 +21,9 @@ public class CalendarService implements command {
 			throws ServletException, IOException {
 		
 		CalDAO calDao = new CalDAO();
-		
-		List<CalVO> events = calDao.calendar();
+		HttpSession session= request.getSession();
+		MemberVO member = (MemberVO) session.getAttribute("member");
+		List<CalVO> events = calDao.calendar(member);
 		System.out.println("events : "+events);
 		
 //		System.out.println("get : " + events.get(0).getStart());
@@ -35,7 +38,7 @@ public class CalendarService implements command {
 			json.addProperty("id", events.get(i).getId());
 			json.addProperty("title", events.get(i).getTitle());
 			json.addProperty("start", events.get(i).getStart());
-			//json.addProperty("end", events.get(i).getEnd());
+			json.addProperty("end", events.get(i).getStart());
 			json.addProperty("textColor", events.get(i).getTextcolor());
 			json.addProperty("backgroundColor", events.get(i).getBackgroundcolor());
 			

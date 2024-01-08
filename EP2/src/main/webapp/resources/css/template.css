@@ -135,7 +135,7 @@ pre,
 code,
 kbd,
 samp { font-family: var(--ff-mo); font-size: 1em; }
-pre { display: block; margin-top: 0; overflow: auto; font-size: 0.875em; }
+pre { display: block; margin-top: 0; overflow: auto; font-size: 0.875em; white-space: pre-wrap; }
 pre code { font-size: inherit; color: inherit; word-break: normal; }
 code { font-size: 0.875em; color: var(--code-color); word-wrap: break-word; }
 a>code { color: inherit; }
