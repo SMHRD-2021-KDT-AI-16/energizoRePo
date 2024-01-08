@@ -49,9 +49,16 @@
 ### 4.2. 사용자 요청
 ![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/fa4f2a53-7646-4676-94b7-7966ea7aeb30)
 
-- **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/95b4c4f06a2a5a74a00f81a3c3fcc003c994725f/index.html#L15C8-L15C26)
-  - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
-  - URL의 모양새가 아닌 경우, 에러 메세지를 띄웁니다.
+- **openAI API 요청** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/35be680d210a97496446ff8c8174d8c91f8dea27/EP2/src/main/webapp/jsp/main.jsp#L476C9-L476C9)
+- 사용자 입력에 따른 메시지 설정
+  - 사용자가 체크박스를 선택하지 않았을 때와 선택한 경우에 따라 다른 메시지를 구성합니다.
+  - 선택 여부에 따라 목적, 재료, 스타일 등을 메시지에 포함시킵니다.
+- OpenAI GPT-3.5 API 호출:
+  - 구성된 메시지를 OpenAI의 GPT-3.5 API에 전달하여 대화 생성을 요청합니다.
+  - API 호출을 위한 데이터를 구성하고, AJAX를 사용하여 비동기적으로 API에 요청을 보냅니다.
+- API 응답 처리:
+  - API로부터의 응답을 받으면, 결과를 DOM에 추가하고 특정 요소에 값을 설정합니다.
+  - API에서 생성된 응답 메시지의 내용을 화면에 출력합니다.
 
 - **Axios 비동기 요청** :pushpin: [코드 확인]()
   - URL의 모양새인 경우, 컨텐츠를 등록하는 POST 요청을 비동기로 날립니다.
