@@ -20,7 +20,6 @@ public class CalDAO {
 
 		sqlsession.close();
 
-		// System.out.println("cal : "+cal);
 
 		return cal;
 

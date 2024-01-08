@@ -6,39 +6,14 @@
 	<artifactId>Energizo_Project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<!-- 라이브러리들 기술하는 공간 -->
+
 	<dependencies>
-		      <dependency>
-           <groupId>com.google.code.gson</groupId>
-           <artifactId>gson</artifactId>
-           <version>2.8.8</version> <!-- 사용할 Gson 버전 -->
-       </dependency>
-		
-		
-		<!-- Spring Framework Core -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>5.3.9</version> <!-- 원하는 버전으로 수정 -->
-    </dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.8</version>
+		</dependency>
 
-    <!-- Spring Web MVC -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-webmvc</artifactId>
-        <version>5.3.9</version> <!-- 원하는 버전으로 수정 -->
-    </dependency>
-
-    <!-- Spring Core -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-core</artifactId>
-        <version>5.3.9</version> <!-- 원하는 버전으로 수정 -->
-    </dependency>
-		
-		
-		
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -46,22 +21,18 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- 3. JSP에서 간단하게 java코드를 tag로 사용할 수 있게 도와주는 라이브러리
-				JavaStanderdTagLibrary>> el이랑 짝꿍처럼 사용함.-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
 
-		<!-- 2. java코드와 sql구문을 자동으로 연결해주는mybatis 가져오는 방법 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>3.5.6</version>
 		</dependency>
 
-		<!-- 1. oracle db를 사용하겠다고 드라이버 라이브러리를 가져오는 방법-->
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc6</artifactId>

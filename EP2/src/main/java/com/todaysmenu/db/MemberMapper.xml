@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 1. 문법 정의 (어떤 태그 사용할건지 정의) : mapper 태그 사용하겠다. -->
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- 2. mapper : 안쪽에 sql구문을 작성할 수 있는 공간 namespace는 중복이 되지 않게만 선언 >> DAO랑 
-	이름을 이치시켜주는 습관을 들이면 편함. -->
 <mapper namespace="com.todaysmenu.db.MemberDAO">
-
-	<!-- id : sql구문을 구별할 수 있는 중복되지 않는 식별자 parameterType : DAO에서 받아오는 매개변수의 자료형(Full 
-		name으로 적어야함) >>java안에 있는 기본자료형(int 등)이라면 굳이 안써도됨! resultType : sql구문을 실행하고 
-		나서 반환하게 될 결과값의 자료형 (Full name으로 적어야함) >>java안에 있는 기본자료형(int 등)이라면 굳이 안써도됨! -->
 	<insert id="join" parameterType="com.todaysmenu.model.MemberVO">
 		INSERT INTO
 		USER_INFO(user_id,user_pw,user_name,user_gender,user_birthdate)

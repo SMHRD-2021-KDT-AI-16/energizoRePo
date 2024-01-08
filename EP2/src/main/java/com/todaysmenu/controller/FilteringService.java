@@ -85,9 +85,7 @@ public class FilteringService implements command {
 		vo.setB_content(recipe);
 		vo.setUser_id(member.getUser_id());
 		int row = dao.boardJoin(vo);
-		if(row>0) {
-			System.out.println("성공!");
-		}
+		
 		CalVO calVO= new CalVO();
 		String cal_title = ("아침 :"+result[0][0]+"\n점심 : "+result[1][0]+"\n저녁 :"+ result[2][0]);
 		calVO.setId(member.getUser_id());

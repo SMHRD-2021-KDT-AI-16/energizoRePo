@@ -50,8 +50,6 @@ public class BoardSelectService implements command {
 		session.setAttribute("totalPages", totalPages);
 		session.setAttribute("bPageSize", bPageSize);
 		
-		System.out.println(bPageSize);
-		
 		
 		return "Goboard.do";
 	}

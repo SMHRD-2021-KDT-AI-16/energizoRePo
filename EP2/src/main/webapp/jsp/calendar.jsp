@@ -106,11 +106,12 @@
 
                             <div id='calendar'></div>
                             <script>
-                                var cnt = 0;
-                                function loginPLZ() {
-                                    alert('로그인 후 이용이 가능합니다')
-                                }
-
+                            var cnt =0;
+                            var today = new Date();
+                            function loginPLZ(){
+                            	alert('로그인 후 이용이 가능합니다')
+                            }
+                            
                                 document.addEventListener('DOMContentLoaded', function () {
                                     var calendarEl = document.getElementById('calendar');
                                     // new FullCalendar.Calendar(대상 DOM객체, {속성:속성값, 속성2:속성값2..})
@@ -122,7 +123,9 @@
                                             center: 'title',
                                             right: 'dayGridMonth,timeGridWeek,timeGridDay'
                                         },
-                                        initialDate: now, // 초기 로딩 날짜.
+
+                                        initialDate: today, // 초기 로딩 날짜.
+
                                         navLinks: true, // can click day/week names to navigate views
                                         selectable: true,
                                         selectMirror: true,
@@ -131,6 +134,16 @@
 
                                             var title = prompt('입력할 일정:');
                                             // title 값이 있을때, 화면에 calendar.addEvent() json형식으로 일정을 추가
+                                            if (title) {
+                                                calendar.addEvent({
+                                                    title: title,
+                                                    start: arg.start,
+                                                    end: arg.end,
+                                                    allDay: arg.allDay,
+                                                    backgroundColor: "white",
+                                                    textColor: "black"
+                                               })
+                                            }
                                             calendar.unselect()
                                         },
                                         eventClick: function (arg) {
