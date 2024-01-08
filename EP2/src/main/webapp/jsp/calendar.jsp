@@ -5,17 +5,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="imagetoolbar" content="no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="title" content="웹사이트">
-    <meta name="description" content="웹사이트입니다.">
-    <meta name="keywords" content="키워드,키워드,키워드">
-    <meta property="og:title" content="웹사이트">
-    <meta property="og:description" content="웹사이트입니다">
-    <meta property="og:image" content="https://웹사이트/images/opengraph.png">
-    <meta property="og:url" content="https://웹사이트">
     <title>캘린더</title>
     <link rel="stylesheet" href="../resources/css/setting.css">
     <link rel="stylesheet" href="../resources/css/plugin.css">
@@ -156,7 +145,7 @@
                                         dayMaxEvents: true, // allow "more" link when too many events
                                         events: {
                                             ///CalendarController.do
-                                            url: 'CalendarController.do', // 여기에는 서블릿의 URL을 넣어야 합니다.
+                                            url: 'CalendarController.do',
                                             method: 'GET',
                                             success: function (data) {
 
@@ -181,24 +170,17 @@
                 </div>
             </div>
         </div>
-        <!-- [E]hooms-N32 -->
-        <!-- [S]hooms-N2 -->
         <div class="hooms-N2" data-bid="qklQa88OMk">
 
         </div>
-        <!-- [E]hooms-N2 -->
-        <!-- [S]hooms-N58 -->
         <div class="hooms-N58" data-bid="gnlQa88oN3">
             <div class="contents-container container-md">
                 <div class="tabset tabset-solid">
                 </div>
             </div>
         </div>
-        <!-- [E]hooms-N58 -->
-        <!-- [S]hooms-N32 -->
         <div class="hooms-N32" data-bid="Hylqa88oNP">
         </div>
-        <!-- [E]hooms-N32 -->
     </main>
 
     <script src="../resources/js/setting.js"></script>
@@ -206,9 +188,7 @@
     <script src="../resources/js/template.js"></script>
     <script src="../resources/js/common.js"></script>
     <script src="../resources/js/script.js"></script>
-    <!-- Code injected by live-server -->
     <script>
-        // <![CDATA[  <-- For SVG support
         if ('WebSocket' in window) {
             (function () {
                 function refreshCSS() {
@@ -242,7 +222,6 @@
         else {
             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
         }
-        // ]]>
     </script>
 </body>
 

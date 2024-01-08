@@ -5,17 +5,6 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="imagetoolbar" content="no">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="title" content="웹사이트">
-  <meta name="description" content="웹사이트입니다.">
-  <meta name="keywords" content="키워드,키워드,키워드">
-  <meta property="og:title" content="웹사이트">
-  <meta property="og:description" content="웹사이트입니다">
-  <meta property="og:image" content="https://웹사이트/images/opengraph.png">
-  <meta property="og:url" content="https://웹사이트">
   <title>회원가입</title>
   <link rel="stylesheet" href="../resources/css/setting.css">
   <link rel="stylesheet" href="../resources/css/plugin.css">
@@ -128,32 +117,23 @@
 	function checkDuplicate() {
 	    var inputI = $("#inputI").val();
 	    $.ajax({
-	        // 어디로 요청할건지?
 	        url : 'IdCheck.do',
-	        // 요청할 데이터(json,{key:value})
 	        data : {'inputI':inputI},
-	        // 요청방식
 	        type : 'get',
-	        // 요청이 성공할 경우 무엇을 할지?
 	        success: function(data){
 	            if(data =='true'){
 	                $('#resultCheck').text('이미 사용 중인 아이디입니다').css('color', 'red')
 	            } else if (data =='false'){
 	                $('#resultCheck').text('사용할 수 있는 아이디입니다').css('color', 'blue')
-	                // 여기서 회원가입 페이지로 넘어가도록 구현 추가
-	                // 예: window.location.href = "회원가입완료페이지URL";
 	            }   
 	        },
-	        //요청 실패시
 	        error : function(){
 	            alert('통신실패');
 	        }
 	    });
 	}
 	</script>
-  <!-- Code injected by live-server -->
   <script>
-    // <![CDATA[  <-- For SVG support
     if ('WebSocket' in window) {
       (function () {
         function refreshCSS() {
@@ -187,7 +167,6 @@
     else {
       console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
     }
-    // ]]>
   </script> 
 </body>
 </html>
