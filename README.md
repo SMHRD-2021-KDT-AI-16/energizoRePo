@@ -35,7 +35,7 @@
 
 ## 4. 핵심 기능
 이 서비스의 핵심 기능은 AI식단추천 기능입니다.  
-사용자는 키워드를 선택하고 추천받기를 누르면 끝입니다.
+사용자는 키워드를 선택하고 추천받기를 눌러 GPT로부터 식단을 추천을 받고, 사용자가 원할 경우 저장할 수 있습니다.
 이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.
 
 
@@ -47,7 +47,7 @@
 ![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/fc9feebf-dbbc-495f-b9f0-e6392f9997a7)
 
 ### 4.2. 사용자 요청
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
+![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/fa4f2a53-7646-4676-94b7-7966ea7aeb30)
 
 - **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/95b4c4f06a2a5a74a00f81a3c3fcc003c994725f/index.html#L15C8-L15C26)
   - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
