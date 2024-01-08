@@ -25,12 +25,11 @@
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-  <!-- [S]hooms-N55 -->
-  <header class="hooms-N55" data-bid="uJLQ6D34F4" id="">
+  <header class="hooms-N55" data-bid="uJLQ6D34F4">
     <div class="header-container container-lg">
       <div class="header-left">
         <h1 class="header-title">
-          <a class="header-logo" href="javascript:void(0)"></a>
+          <a class="header-logo" href="Gomain.do" title="홈"></a>
         </h1>
       </div>
       <div class="header-center">
@@ -47,10 +46,8 @@
   
     <div class="header-dim"></div>
   </header>
-  <!-- [E]hooms-N55 -->
   <main class="th-layout-main ">
-    <!-- [S]hooms-N53 -->
-    <div class="hooms-N53" data-bid="mhLq6d34I5" id="">
+    <div class="hooms-N53" data-bid="mhLq6d34I5">
       <div class="contents-inner">
         <div class="contents-container">
           <div class="textset textset-h2">
@@ -112,11 +109,8 @@
         </div>
       </div>
     </div>
-    <!-- [E]hooms-N53 -->
   </main>
-  <!-- [S]hooms-N57 -->
  
-  <!-- [E]hooms-N57 -->
   <script src="../resources/js/setting.js"></script>
   <script src="../resources/js/plugin.js"></script>
   <script src="../resources/js/template.js"></script>
@@ -133,7 +127,6 @@
 
 	function checkDuplicate() {
 	    var inputI = $("#inputI").val();
-	    console.log(inputI);
 	    $.ajax({
 	        // 어디로 요청할건지?
 	        url : 'IdCheck.do',

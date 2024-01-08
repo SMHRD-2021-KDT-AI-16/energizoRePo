@@ -461,7 +461,16 @@
                             <input type="checkbox" value="젖당" class="i1" id="젖당">
                             <label for="젖당" class="keyword_ingre2">젖당</label>
                             <input type="checkbox" value="이스트" class="i1" id="이스트">
-                            <label for="이스트" class="keyword_ingre2">이스트</label>
+                            <label for="이스트" class="keyword_ingre2">이스트</label><br>
+                            <input type="checkbox" value="오트밀" class="i1" id="오트밀">
+                            <label for="오트밀" class="keyword_ingre2">오트밀</label>
+                            <input type="checkbox" value="닭가슴살" class="i1" id="닭가슴살">
+                            <label for="닭가슴살" class="keyword_ingre2">닭가슴살</label>
+                            <input type="checkbox" value="오이" class="i1" id="오이">
+                            <label for="오이" class="keyword_ingre2">오이</label>
+                            <input type="checkbox" value="아보카도" class="i1" id="아보카도">
+                            <label for="아보카도" class="keyword_ingre2">아보카도</label>
+                            
                         </div>
                         <div id="keybox_style">
                             <span class="key_title">식단 스타일</span><br><br>
@@ -509,7 +518,7 @@
 
                             function chatGPT() {
 
-                                const api_key = "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"
+                                const api_key = "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"
 
                                 const purposeCheckboxes = document.querySelectorAll('#keybox_purpose input[type="checkbox"]:checked');
                                 console.log(purposeCheckboxes);
@@ -545,15 +554,16 @@
                                         {
                                             role: 'user',
                                             content:
-                                            	'나의 목적은' + purposeValues + '이고' +
-                                            	'피해야할 식재료는 ' + ingre1Values +', '+ ingre2Values + '이고' +
-                                            	'식단 스타일은 ' + styleValues + '이야' +
+                                            	'나의 목적은' + purposeValues + '이고, ' +
+                                            	'' + ingre1Values +', '+ ingre2Values + '는 모두 제외하고, ' +
+                                            	'식단 스타일은 ' + styleValues + '이야. ' +
                                             	'기본 : 아침, 점심, 저녁 각 한 번씩 메뉴를 추천해줘.'+
-                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n,2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
-                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘.그리고 무조건 총 12줄로만 답변해줘'
+                                                '예시는 아침 : 1.음식명: ...(줄바꿈)\n, 2.식재료: ...(줄바꿈)\n, 3.조리법 : ...(줄바꿈)\n, 점심 : ..., 저녁 : ...'+
+                                                '식재료는 1인 기준 정량으로, 레시피는 꼭 자세히 알려줘 위의 음식명 한줄, 식재료 한줄, 조리법은 무조건 한줄로 추천해줘. 그리고 전달해주는 내용은 무조건 총 12줄로만 답변해줘. 불필요한 멘트는 빼줘.'
                                         },
                                     ];
                                 }
+                                console.log(messages);
                                 const data = {
                                     model: 'gpt-3.5-turbo',
                                     temperature: 0.5,

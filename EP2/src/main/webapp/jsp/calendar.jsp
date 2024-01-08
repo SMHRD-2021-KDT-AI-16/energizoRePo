@@ -30,8 +30,7 @@
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-    <!-- [S]hooms-N54 -->
-    <header class="hooms-N55" data-bid="uClqa8c34N" id="">
+    <header class="hooms-N55" data-bid="uClqa8c34N">
         <div class="header-inner">
             <div class="header-container container-lg">
                 <div class="header-left">
@@ -93,10 +92,8 @@
         </div>
         <div class="header-dim"></div>
     </header>
-    <!-- [E]hooms-N54 -->
     <main class="th-layout-main ">
-        <!-- [S]hooms-N32 -->
-        <div class="hooms-N32" data-bid="eOLqA9CiBF" id="">
+        <div class="hooms-N32" data-bid="eOLqA9CiBF">
             <div class="contents-inner">
                 <div class="contents-container container-md">
                     <div class="textset textset-h2">
@@ -109,47 +106,34 @@
 
                             <div id='calendar'></div>
                             <script>
-                            var cnt =0;
-                            function loginPLZ(){
-                            	alert('로그인 후 이용이 가능합니다')
-                            }
-                            
+                                var cnt = 0;
+                                function loginPLZ() {
+                                    alert('로그인 후 이용이 가능합니다')
+                                }
+
                                 document.addEventListener('DOMContentLoaded', function () {
                                     var calendarEl = document.getElementById('calendar');
                                     // new FullCalendar.Calendar(대상 DOM객체, {속성:속성값, 속성2:속성값2..})
 
+                                    var now = new Date();
                                     var calendar = new FullCalendar.Calendar(calendarEl, {
                                         headerToolbar: {
                                             left: 'prev,next today',
                                             center: 'title',
                                             right: 'dayGridMonth,timeGridWeek,timeGridDay'
                                         },
-                                        initialDate: '2023-12-29', // 초기 로딩 날짜.
+                                        initialDate: now, // 초기 로딩 날짜.
                                         navLinks: true, // can click day/week names to navigate views
                                         selectable: true,
                                         selectMirror: true,
                                         // 이벤트명 : function(){} : 각 날짜에 대한 이벤트를 통해 처리할 내용..
                                         select: function (arg) {
-                                            console.log(arg);
 
                                             var title = prompt('입력할 일정:');
                                             // title 값이 있을때, 화면에 calendar.addEvent() json형식으로 일정을 추가
-                                            if (title) {
-                                             //   calendar.addEvent({
-                                             //       title: title,
-                                             //       start: arg.start,
-                                             //       end: arg.end,
-                                             //       allDay: arg.allDay,
-                                             //       backgroundColor: "white",
-                                             //       textColor: "black"
-                                              //  })
-                                            }
                                             calendar.unselect()
                                         },
                                         eventClick: function (arg) {
-                                            // 있는 일정 클릭시,
-                                            console.log("#등록된 일정 클릭#");
-                                            console.log(arg.event);
 
                                             if (confirm('일정을 삭제하시겠습니까?')) {
                                                 arg.event.remove()
@@ -158,27 +142,18 @@
                                         editable: true,
                                         dayMaxEvents: true, // allow "more" link when too many events
                                         events: {
-                                        	///CalendarController.do
+                                            ///CalendarController.do
                                             url: 'CalendarController.do', // 여기에는 서블릿의 URL을 넣어야 합니다.
                                             method: 'GET',
                                             success: function (data) {
-                                                console.log(data)
-                                                // 받아온 데이터를 FullCalendar에 설정
-                                                
-                                                //calendar.addEventSource(data);
-                                                
+
                                             },
                                             failure: function () {
                                                 // 데이터 가져오기에 실패한 경우의 처리
                                             }
                                         }
                                         ,
-                                     
-                                       // eventRender: function(event, element) {
-                                       //     event.end = event.start; // 시작 시간과 종료 시간을 동일하게 설정하여 종료 시간을 표시하지 않음
-                                       //     console.log(event.title);
-                                       //     console.log(data.title);
-                                       // }
+
                                     });
 
                                     calendar.render();
@@ -195,12 +170,12 @@
         </div>
         <!-- [E]hooms-N32 -->
         <!-- [S]hooms-N2 -->
-        <div class="hooms-N2" data-bid="qklQa88OMk" id="">
+        <div class="hooms-N2" data-bid="qklQa88OMk">
 
         </div>
         <!-- [E]hooms-N2 -->
         <!-- [S]hooms-N58 -->
-        <div class="hooms-N58" data-bid="gnlQa88oN3" id="">
+        <div class="hooms-N58" data-bid="gnlQa88oN3">
             <div class="contents-container container-md">
                 <div class="tabset tabset-solid">
                 </div>
@@ -208,13 +183,11 @@
         </div>
         <!-- [E]hooms-N58 -->
         <!-- [S]hooms-N32 -->
-        <div class="hooms-N32" data-bid="Hylqa88oNP" id="">
+        <div class="hooms-N32" data-bid="Hylqa88oNP">
         </div>
         <!-- [E]hooms-N32 -->
     </main>
-    <!-- [S]hooms-N57 -->
 
-    <!-- [E]hooms-N57 -->
     <script src="../resources/js/setting.js"></script>
     <script src="../resources/js/plugin.js"></script>
     <script src="../resources/js/template.js"></script>
