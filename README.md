@@ -34,16 +34,17 @@
 
 
 ## 4. 핵심 기능
-이 서비스의 핵심 기능은 컨텐츠 등록 기능입니다.  
-사용자는 단지 컨텐츠의 카테고리를 선택하고, URL만 입력하면 끝입니다.  
-이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.  
+이 서비스의 핵심 기능은 AI식단추천 기능입니다.  
+사용자는 키워드를 선택하고 추천받기를 누르면 끝입니다.
+이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.
+
 
 <details>
 <summary><b>핵심 기능 설명 펼치기</b></summary>
 <div markdown="1">
 
 ### 4.1. 전체 흐름
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/fc9feebf-dbbc-495f-b9f0-e6392f9997a7)
 
 ### 4.2. 사용자 요청
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
