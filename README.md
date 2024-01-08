@@ -72,8 +72,8 @@
 - **요청 처리** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/859f48bab53169d2bc7859a7a4cd24aba2271314/EP2/src/main/java/com/todaysmenu/frontcontroller/FrontController.java#L33) :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/859f48bab53169d2bc7859a7a4cd24aba2271314/EP2/src/main/java/com/todaysmenu/controller/FilteringService.java#L21)
   - Controller에서는 요청을 화면단에서 넘어온 요청을 받고, Service 계층에 로직 처리를 위임합니다.
 
-- **결과 응답** :pushpin: [코드 확인]()
-  - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단에 응답해줍니다.
+- **결과 응답** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/f4e13f1bdeacfdcc7ff73e45ab1e833ed40cdb9a/EP2/src/main/webapp/jsp/board.jsp#L114C1-L114C34)
+  - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단(게시판)에 나타내줍니다.
 
 ### 4.4. Service
 
