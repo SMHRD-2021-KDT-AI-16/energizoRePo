@@ -38,12 +38,7 @@ public class FrontController extends HttpServlet {
 		map.put("jsp/IdCheck.do", new IdCheckService());
 		map.put("jsp/Logout.do", new LogoutService());
 		map.put("jsp/BoardDelete.do", new BoardDeleteService());
-		//map.put("jsp/BoardInsert.do", new BoardInsertService());
 		map.put("jsp/BoardSelect.do", new BoardSelectService());
-		//map.put("jsp/BoardUpdate.do", new BoardUpdateService());
-		//map.put("jsp/CalendarInsert.do", new CalendarInsertService());
-		//map.put("jsp/CalendarDelete.do", new CalendarDeleteService());
-		//map.put("jsp/CalendarUpdate.do", new CalendarUpdateService());
 		map.put("jsp/Filtering.do", new FilteringService());
 		map.put("jsp/Update.do", new UpdateService());
 		map.put("jsp/Resign.do", new ResignService());
@@ -78,7 +73,6 @@ public class FrontController extends HttpServlet {
 			} else {
 				System.out.println(finalpath);
 				RequestDispatcher rd = request.getRequestDispatcher(finalpath);
-				//RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/" + finalpath);
 				rd.forward(request, response);
 			}
 		}

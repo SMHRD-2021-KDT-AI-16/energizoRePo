@@ -6,7 +6,6 @@ public class CalVO {
 	private String id;
 	private String title;
 	private String start1;
-	//private String end1;
 	private String textcolor;
 	private String backgroundcolor;
 	
@@ -30,12 +29,6 @@ public class CalVO {
 	public void setStart(String start) {
 		this.start1 = start;
 	}
-//	public String getEnd() {
-//		return end1;
-//	}
-//	public void setEnd(String end) {
-//		this.end1 = end;
-//	}
 	public String getTextcolor() {
 		return textcolor;
 	}

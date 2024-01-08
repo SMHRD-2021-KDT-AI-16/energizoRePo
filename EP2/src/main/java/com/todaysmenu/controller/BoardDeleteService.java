@@ -20,9 +20,6 @@ public class BoardDeleteService implements command {
 		BoardVO vo = new BoardVO();
 		vo.setB_num(num);
 		int row=dao.deletBoard(vo);
-		if(row ==1) {
-			System.out.println("성공");
-		}
 		return "BoardSelect.do";
 	}
 

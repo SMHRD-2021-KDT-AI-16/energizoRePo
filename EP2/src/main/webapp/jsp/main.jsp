@@ -365,10 +365,6 @@
 
                         <div class="contents-group">
                             <div class="contents-group-top">
-
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
