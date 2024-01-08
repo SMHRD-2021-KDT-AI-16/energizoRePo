@@ -47,7 +47,7 @@
 ![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/fc9feebf-dbbc-495f-b9f0-e6392f9997a7)
 
 ### 4.2. 사용자 요청
-![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/fa4f2a53-7646-4676-94b7-7966ea7aeb30)
+![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/c1034f0e-f8db-422d-935c-e7de08ef3696)
 
 - **openAI API 요청** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/35be680d210a97496446ff8c8174d8c91f8dea27/EP2/src/main/webapp/jsp/main.jsp#L476C9-L476C9)
 - 사용자 입력에 따른 메시지 설정
