@@ -24,12 +24,6 @@ public class CalendarService implements command {
 		HttpSession session= request.getSession();
 		MemberVO member = (MemberVO) session.getAttribute("member");
 		List<CalVO> events = calDao.calendar(member);
-		System.out.println("events : "+events);
-		
-//		System.out.println("get : " + events.get(0).getStart());
-//		System.out.println("get : " + events.get(0).getEnd());
-//		System.out.println("get : " + events.get(0).getTitle());
-		
 		
 		JsonArray jarray = new JsonArray();
 		
@@ -43,14 +37,7 @@ public class CalendarService implements command {
 			json.addProperty("backgroundColor", events.get(i).getBackgroundcolor());
 			
 			jarray.add(json);
-		}
-		
-//		Gson gson = new Gson();
-//		String jsonData = gson.toJson(events);
-		
-//		System.out.println("jsonData : " + jsonData);
-		
-		System.out.println("ja : " + jarray);
+		}	
 		
 		// JSON 형식의 데이터를 응답으로 보냄
 		response.setContentType("application/json");
