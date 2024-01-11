@@ -13,6 +13,7 @@
 ## 2. 사용 기술
 #### `Back-end`
   - Java 17
+  - Jsp/Servlet
   - Maven
   - Oracle SQLD
   - Gson Library
@@ -24,7 +25,6 @@
   - JS
   - Fullcalendar Library
   - openAI chatGPT API
-  - JSTL
 
 </br>
 
