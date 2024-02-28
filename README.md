@@ -1,5 +1,5 @@
 # :pushpin: Today`s Menu
-> 자취생을 위한 식단 관리 및 추천 서비스
+> openAI API를 활용한 chatGPT 기반 AI 식단 추천 및 관리 서비스
 
 </br>
 
