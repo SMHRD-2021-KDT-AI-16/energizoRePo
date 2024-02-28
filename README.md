@@ -29,8 +29,7 @@
 </br>
 
 ## 3. ERD 설계
-![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/61093141-56ff-4801-a7c8-2425162e076d)
-![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/a25a7b8f-0978-46d9-a012-1da8876edab4)
+![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/0acdf300-b934-4646-8ac7-331bb1ced34c)
 
 
 
