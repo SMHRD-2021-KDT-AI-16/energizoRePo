@@ -63,7 +63,7 @@
 ![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/df0a3f55-a80f-4881-8c6f-855b85001e8e)
 
 - **POST 요청** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/9f23cfa466962fbf3f28a4fa1a5d556152078ac8/EP2/src/main/webapp/jsp/main.jsp#L447C20-L447C69)
-  - form 요소를 사용하여 컨텐츠를 저장하는 POST 요청을 서버로 전송
+  - form 요소를 사용하여 컨텐츠를 저장하는 POST 요청을 서버로 전송.
 
 ### 4.3. Controller
 
@@ -100,8 +100,8 @@
 ![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/202ce7ac-6006-454e-bd77-d4c19a1c7fe2)
 ### 5.1. property 불일치 문제
 - fullcalendar의 날짜 관련 property는 start와 end였지만 오라클 SQLD에서는 해당 property가 예약어이기 때문에 사용 불가했습니다.
-- 이에 따라 다른 키워드를 쓸 수밖에 없었고 그 결과 property 불일치로 캘린더 화면단으로 등록이 불가했습니다
-- gson 라이브러리를 불러와 addProperty를 사용하여 property 재할당 후 json 전송하는 방식으로 해결하였습니다
+- 이에 따라 다른 키워드를 쓸 수밖에 없었고 그 결과 property 불일치로 캘린더 화면단으로 등록이 불가했습니다.
+- gson 라이브러리를 불러와 addProperty를 사용하여 property 재할당 후 json 전송하는 방식으로 해결하였습니다.
 
 
 ## 6. 그 외 트러블 슈팅
@@ -109,7 +109,7 @@
 <summary>비로그인 상태에서 컨텐츠 저장하기를 눌렀을 때 서버 오류</summary>
 <div markdown="1">
 
-- Javascript의 return false를 사용하여 제출을 방지하고 페이지 이동을 막음
+- Javascript의 return false를 사용하여 제출을 방지하고 페이지 이동을 막음.
 
 </div>
 </details>
@@ -118,7 +118,7 @@
 <summary>GitHub File 복제시 서버 오류 문제</summary>
 <div markdown="1">
   
-  - TomcatServer 삭제 후 Server 재설정으로 해
+  - TomcatServer 삭제 후 Server 재설정으로 해결.
   
 </div>
 </details>
