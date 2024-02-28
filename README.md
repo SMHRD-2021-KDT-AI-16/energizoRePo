@@ -98,7 +98,7 @@
 </br>
 
 ## 5. 핵심 트러블 슈팅
-![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/798f6607-33a7-4106-8bb1-c0aead7f5e3f)
+![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/202ce7ac-6006-454e-bd77-d4c19a1c7fe2)
 ### 5.1. property 불일치 문제
 - fullcalendar의 날짜 관련 property는 start와 end였지만 오라클 SQLD에서는 해당 property가 예약어이기 때문에 사용 불가했습니다.
 - 이에 따라 다른 키워드를 쓸 수밖에 없었고 그 결과 property 불일치로 캘린더 화면단으로 등록이 불가했습니다
