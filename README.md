@@ -77,7 +77,7 @@
 
 ### 4.4. Service
 
-![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/issues/7#issue-2157839196)
+![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/94268f6f-797d-441f-9c20-6d6ef0a3107c)
 
 - **API로부터 받은 응답내용 파싱** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/53ffdee5cf2997697bfcc45ccff2cd63d96273f2/EP2/src/main/java/com/todaysmenu/controller/FilteringService.java#L21)
   - API로부터 받은 내용을 FilteringService를 통해 음식명, 식재료, 조리법으로 구분하여 파싱합니다.
@@ -85,7 +85,7 @@
 
 ### 4.5. DAO
 
-![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/issues/8#issue-2157850826)
+![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/b12986f2-98e4-41d6-a807-c3341388812d)
 
 - **컨텐츠 저장** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/53ffdee5cf2997697bfcc45ccff2cd63d96273f2/EP2/src/main/java/com/todaysmenu/controller/FilteringService.java#L43)
   - 파싱이 끝난 컨텐츠는 DB에 저장합니다.
