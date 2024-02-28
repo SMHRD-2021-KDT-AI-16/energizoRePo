@@ -106,7 +106,7 @@
 
 ## 6. 그 외 트러블 슈팅
 <details>
-<summary>비로그인 상태에서 컨텐츠 저장하기를 눌렀을 때 서버 오류</summary>
+<summary>비로그인 상태에서 컨텐츠 저장하기를 눌렀을 때 Null값으로 인한 서버 오류</summary>
 <div markdown="1">
 
 - Javascript의 return false를 사용하여 제출을 방지하고 페이지 이동을 막음.
