@@ -40,7 +40,7 @@
 </br></br>
 (키워드 선택 화면)
 ![화면 캡처 2024-04-12 171459](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/73d73744-0aac-427b-80be-406829de0eee)   
-(로직과 추천 결과 화면)
+(프롬프트와 추천 결과 화면)
 ![화면 캡처 2024-04-12 164314](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/c0ac4832-4748-45ef-aa18-121ca4ea9d46)
 
 
