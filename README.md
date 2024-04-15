@@ -6,7 +6,7 @@
 ## 1. 제작 기간 & 참여 인원
 - 2023년 11월 28일 ~ 2024년 1월 5일
 - 팀 프로젝트
-- 최현민, 이은희, 주은혜, 김맹진, 박지승
+- 최현민(팀장), 이은희(부팀장), 주은혜, 김맹진, 박지승
 
 </br>
 
@@ -42,7 +42,7 @@
 ![화면 캡처 2024-04-12 171459](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/73d73744-0aac-427b-80be-406829de0eee)   
 (프롬프트와 추천 결과 화면)
 ![화면 캡처 2024-04-13 145808](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/a405a148-35a8-4c8f-be2d-32469c3fabde)   
-![화면 캡처 2024-04-13 145839](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/2511086e-df29-4522-a78f-3fdb3f681ee6)
+![추천 결과](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/7eaabcf9-9009-4eee-9c50-b460c318109a)   
 
 
 <details>
