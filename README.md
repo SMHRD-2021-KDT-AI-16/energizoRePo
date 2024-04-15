@@ -96,9 +96,15 @@
 - **컨텐츠 저장** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/53ffdee5cf2997697bfcc45ccff2cd63d96273f2/EP2/src/main/java/com/todaysmenu/controller/FilteringService.java#L43)
   - 파싱이 끝난 컨텐츠는 CalDAO, BoardDAO를 통해 DB에 저장합니다.
   - 저장된 컨텐츠는 다시 DAO - Service - Controller를 거쳐 화면단에 송출됩니다.
-  - ![calendar](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/d4bef1cb-428d-458c-a7c0-466c35edb38f)   
-![board list](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/d67a2c52-dc1b-4986-ad2f-e9f138d1e117)   
-![board detail](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/30e83442-78d9-4555-bc6d-9d38309139ca)   
+ 
+  - (캘린더 화면)
+  - ![calendar](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/d4bef1cb-428d-458c-a7c0-466c35edb38f)
+ 
+  - (저장된 레시피 목록 화면)
+  - ![board list](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/d67a2c52-dc1b-4986-ad2f-e9f138d1e117)
+ 
+  - (저장된 레시피 화면)
+  - ![board detail](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/30e83442-78d9-4555-bc6d-9d38309139ca)   
 
 </div>
 </details>
