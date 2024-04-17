@@ -1,4 +1,4 @@
-# :pushpin: Today`s Menu
+# 🍽 Today`s Menu
 > openAI API를 활용한 chatGPT 기반 AI 식단 추천 및 관리 서비스
 
 </br>
