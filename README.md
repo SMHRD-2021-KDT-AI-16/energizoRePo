@@ -38,9 +38,10 @@
 사용자는 키워드를 선택하고 추천받기를 눌러 GPT로부터 식단을 추천을 받고, 사용자가 원할 경우 저장할 수 있습니다.
 이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.
 </br></br>
-(키워드 선택 화면)
+- 키워드 선택 화면
 ![화면 캡처 2024-04-12 171459](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/73d73744-0aac-427b-80be-406829de0eee)   
-(프롬프트와 추천 결과 화면)
+
+- 프롬프트와 추천 결과 화면
 ![화면 캡처 2024-04-13 145808](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/a405a148-35a8-4c8f-be2d-32469c3fabde)   
 ![추천 결과](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/7eaabcf9-9009-4eee-9c50-b460c318109a)   
 
