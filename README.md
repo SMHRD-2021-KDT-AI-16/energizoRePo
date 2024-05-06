@@ -48,13 +48,6 @@
 사용자는 키워드를 선택하고 추천받기를 눌러 GPT로부터 식단을 추천을 받고, 사용자가 원할 경우 저장할 수 있습니다.
 이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.
 </br></br>
-- 키워드 선택 화면
-![화면 캡처 2024-04-12 171459](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/73d73744-0aac-427b-80be-406829de0eee)   
-
-- 프롬프트와 추천 결과 화면
-![화면 캡처 2024-04-13 145808](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/a405a148-35a8-4c8f-be2d-32469c3fabde)   
-![추천 결과](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/7eaabcf9-9009-4eee-9c50-b460c318109a)   
-
 
 <details>
 <summary><b>핵심 기능 설명 펼치기</b></summary>
@@ -107,42 +100,55 @@
 - **컨텐츠 저장** :pushpin: [코드 확인](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/blob/53ffdee5cf2997697bfcc45ccff2cd63d96273f2/EP2/src/main/java/com/todaysmenu/controller/FilteringService.java#L43)
   - 파싱이 끝난 컨텐츠는 CalDAO, BoardDAO를 통해 DB에 저장합니다.
   - 저장된 컨텐츠는 다시 DAO - Service - Controller를 거쳐 화면단에 송출됩니다.
- 
-  - (캘린더 화면) </br> ![calendar](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/d4bef1cb-428d-458c-a7c0-466c35edb38f)    
-  - (저장된 레시피 목록 화면) </br> ![board list](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/d67a2c52-dc1b-4986-ad2f-e9f138d1e117)    
-  - (저장된 레시피 화면) </br> ![board detail](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/30e83442-78d9-4555-bc6d-9d38309139ca)   
 
 </div>
 </details>
 
 </br>
 
-## 5. 핵심 트러블 슈팅
+## 5. 페이지
+- 시작 화면
+  - 시작하기 버튼을 누르면 메인 화면으로 이동합니다.   
+  ![intro](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/2e38c123-c941-4cc1-ae9a-31fd9a718d10)
+- 메인 화면
+  - 키워드를 선택하고 추천받기를 누르면 AI가 선택한 키워드에 맞춰 식단을 추천해줍니다.
+  - 저장하기를 누르면 추천받은 식단을 저장할 수 있습니다.(회원 한정)   
+    <img src="https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/73d73744-0aac-427b-80be-406829de0eee" width="300px" alt="키워드 선택"></img>
+    <img src="https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/7eaabcf9-9009-4eee-9c50-b460c318109a" width="600px" alt="추천 결과"></img>
+- 회원가입 및 회원가입 완료 화면   
+  <img src="https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/4fc947e0-b916-47be-b448-5f7cd245fbd4" width="300px" alt="회원가입"></img>
+  <img src="https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/27e51d22-5795-455d-bb21-be74b15f9eb1" width="600px" alt="회원가입 완료"></img>
+- 로그인 화면
+  - 가입 시 설정한 아이디와 비밀번호를 입력합니다. 둘 중 하나 이상 틀리면 알림을 띄워줍니다.
+  ![로그인 페이지](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/af47b190-54d7-4215-889e-80363c777817)
+- 레시피 저장소(회원 한정)
+  - 회원이 저장한 식단을 보여줍니다.   
+    <img src="https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/d67a2c52-dc1b-4986-ad2f-e9f138d1e117" width="450px" alt="식단 목록"></img>
+    <img src="https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/30e83442-78d9-4555-bc6d-9d38309139ca" width="450px" alt="저장된 식단"></img>
+- 캘린더 화면
+  - 회원이 저장한 식단을 다음날 기준으로 저장합니다.
+  - 회원은 저장된 식단을 보면서 식단 관리를 할 수 있습니다.   
+    ![calendar](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/d4bef1cb-428d-458c-a7c0-466c35edb38f)
+- 유튜브 레시피
+  - 인기 있는 레시피 채널 3곳의 영상을 크롤링으로 가져옵니다.
+    ![youtube page](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/c995f5a6-e016-4135-a4bd-96498f91766b)
+- 회원정보 화면
+  - 회원이 로그인을 한 상태라면 상단의 사람 모양 아이콘을 눌러 가입 시 입력한 정보를 확인하고 수정할 수 있습니다.   
+    ![my page](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/fee36cf5-8fd2-4880-9acd-3794277b6d42)
+
+## 6. 핵심 트러블 슈팅
 ![](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/141302317/202ce7ac-6006-454e-bd77-d4c19a1c7fe2)
-### 5.1. property 불일치 문제
+### 6.1. property 불일치 문제
 - fullcalendar의 날짜 관련 property는 start와 end였지만 오라클 SQLD에서는 해당 property가 예약어이기 때문에 사용 불가했습니다.
 - 이에 따라 다른 키워드를 쓸 수밖에 없었고 그 결과 property 불일치로 캘린더 화면단으로 등록이 불가했습니다.
 - gson 라이브러리를 불러와 addProperty를 사용하여 property 재할당 후 json 전송하는 방식으로 해결하였습니다.
 
 
-## 6. 그 외 트러블 슈팅
-<details>
-<summary>비로그인 상태에서 컨텐츠 저장하기를 눌렀을 때 Null값으로 인한 서버 오류</summary>
-<div markdown="1">
-
-- Javascript의 return false를 사용하여 제출을 방지하고 페이지 이동을 막음.
-
-</div>
-</details>
-
-<details>
-<summary>GitHub File 복제시 서버 오류 문제</summary>
-<div markdown="1">
-  
+## 7. 그 외 트러블 슈팅
+- 비로그인 상태에서 컨텐츠 저장하기를 눌렀을 때 Null값으로 인한 서버 오류
+  - Javascript의 return false를 사용하여 제출을 방지하고 페이지 이동을 막음.
+- GitHub File 복제시 서버 오류 문제
   - TomcatServer 삭제 후 Server 재설정으로 해결.
-  
-</div>
-</details>
 
 </br>
 <!--
