@@ -1,6 +1,5 @@
 # 🍽 Today`s Menu
 > openAI API를 활용한 chatGPT 기반 AI 식단 추천 및 관리 서비스
-> ![intro](https://github.com/SMHRD-2021-KDT-AI-16/energizoRePo/assets/144122046/2e38c123-c941-4cc1-ae9a-31fd9a718d10)
 
 </br>
 
